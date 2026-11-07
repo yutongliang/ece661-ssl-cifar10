@@ -1,0 +1,9 @@
+data/
+checkpoints/
+*.pt
+*.pt.last
+__pycache__/
+.ipynb_checkpoints/
+.env
+.venv/
+.DS_Store
