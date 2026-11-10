@@ -41,6 +41,8 @@ python train_classifier.py --fraction 1.0
 python pretrain_rotnet.py --epochs 100 --out checkpoints/rotnet.pt
 # Resume with the SAME total epochs and other settings as the original command
 python pretrain_rotnet.py --epochs 100 --out checkpoints/rotnet.pt --resume
+# DCC GPU pilot (2 epochs; excludes known-bad GPU nodes). Run from /work/$USER/ece661-project4
+mkdir -p slurm-logs && sbatch scripts/rotnet_pilot.sbatch
 
 # Linear evaluation on frozen features
 python linear_eval.py --checkpoint checkpoints/rotnet.pt
