@@ -1,0 +1,22 @@
+Job: 61863269 | phase: preflight | node: dcc-core-ferc-u-ab39-5-5 | restart: 0
+Environment: 2.10.0+cu126 0.25.0+cu126
+test_manifest_and_commands_cover_all_fifteen_without_finetuning (test_sweep.SweepTests.test_manifest_and_commands_cover_all_fifteen_without_finetuning) ... ok
+test_priority_filter_excludes_running_jobs_other_users_and_supervisor (test_sweep.SweepTests.test_priority_filter_excludes_running_jobs_other_users_and_supervisor) ... ok
+test_submission_freezes_source_and_gates_the_training_array (test_sweep.SweepTests.test_submission_freezes_source_and_gates_the_training_array) ... ok
+test_atomic_save_preserves_previous_checkpoint_on_failure (test_training.TrainingTests.test_atomic_save_preserves_previous_checkpoint_on_failure) ... ok
+test_cuda_requirement_and_nonfinite_loss_stop_before_checkpoint_commit (test_training.TrainingTests.test_cuda_requirement_and_nonfinite_loss_stop_before_checkpoint_commit) ... ok
+test_downstream_saves_and_logs_complete_settings (test_training.TrainingTests.test_downstream_saves_and_logs_complete_settings) ... ok
+test_frozen_features_and_balanced_subsets (test_training.TrainingTests.test_frozen_features_and_balanced_subsets) ... ok
+test_interrupted_resume_matches_uninterrupted_training (test_training.TrainingTests.test_interrupted_resume_matches_uninterrupted_training) ... ok
+test_non_cuda_autocast_does_not_call_torch_autocast (test_training.TrainingTests.test_non_cuda_autocast_does_not_call_torch_autocast) ... ok
+test_old_results_are_preserved_when_columns_are_added (test_training.TrainingTests.test_old_results_are_preserved_when_columns_are_added) ... ok
+test_planned_stop_and_milestones_preserve_full_schedule_on_resume (test_training.TrainingTests.test_planned_stop_and_milestones_preserve_full_schedule_on_resume) ... ok
+test_resume_rejects_missing_legacy_and_changed_settings (test_training.TrainingTests.test_resume_rejects_missing_legacy_and_changed_settings) ... ok
+test_rng_round_trip_after_weights_only_loading (test_training.TrainingTests.test_rng_round_trip_after_weights_only_loading) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 5.703s
+
+OK
+Prepared CIFAR-10: train 50000
+Prepared CIFAR-10: test 10000

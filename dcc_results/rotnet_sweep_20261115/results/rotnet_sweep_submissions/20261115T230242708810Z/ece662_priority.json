@@ -1,0 +1,2032 @@
+[
+  {
+    "job_id": "61847811",
+    "name": "cifar10_lrms3b_m5.ag_asi_L06_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61847812",
+    "name": "cifar10_lrms3b_m5.ag_asi_L07_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61847810",
+    "name": "cifar10_lrms3b_m5.ag_asi_L05_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61847809",
+    "name": "cifar10_lrms3b_m5.ag_asi_L03_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61847808",
+    "name": "cifar10_lrms3b_m5.ag_asi_L02_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61847806",
+    "name": "cifar10_lrms3b_m5.ag_asi_L00_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61847807",
+    "name": "cifar10_lrms3b_m5.ag_asi_L01_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61847805",
+    "name": "cifar10_lrms3b_m5.epiram_L12_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61847804",
+    "name": "cifar10_lrms3b_m5.epiram_L11_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61847803",
+    "name": "cifar10_lrms3b_m5.epiram_L10_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61847801",
+    "name": "cifar10_lrms3b_m5.epiram_L08_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61847802",
+    "name": "cifar10_lrms3b_m5.epiram_L09_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61847800",
+    "name": "cifar10_lrms3b_m5.epiram_L05_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61847799",
+    "name": "cifar10_lrms3b_m5.epiram_L04_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61847798",
+    "name": "cifar10_lrms3b_m5.epiram_L03_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61847796",
+    "name": "cifar10_lrms3b_m5.epiram_L01_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61847797",
+    "name": "cifar10_lrms3b_m5.epiram_L02_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61847795",
+    "name": "cifar10_lrms3b_m5.epiram_L00_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61847792",
+    "name": "cifar10_lrms3b_m5.sram_L10_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61847791",
+    "name": "cifar10_lrms3b_m5.sram_L06_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61847790",
+    "name": "cifar10_lrms3b_m5.sram_L05_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61847789",
+    "name": "cifar10_lrms3b_m5.sram_L04_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61847787",
+    "name": "cifar10_lrms3b_m5.sram_L02_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61847786",
+    "name": "cifar10_lrms3b_m5.sram_L01_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61847788",
+    "name": "cifar10_lrms3b_m5.sram_L03_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61844400",
+    "name": "cifar10_lrms3b_m4.pcmo_L08_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61844396",
+    "name": "cifar10_lrms3b_m4.pcmo_L02_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61846335",
+    "name": "cifar10_lrms3b_m5.hzo_fefet_L03_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61849176",
+    "name": "cifar10_lrms3b_m6.ag_asi_L11_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61849175",
+    "name": "cifar10_lrms3b_m6.ag_asi_L10_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61849174",
+    "name": "cifar10_lrms3b_m6.ag_asi_L09_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61849173",
+    "name": "cifar10_lrms3b_m6.ag_asi_L08_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61849172",
+    "name": "cifar10_lrms3b_m6.ag_asi_L07_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61849170",
+    "name": "cifar10_lrms3b_m6.ag_asi_L03_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61849171",
+    "name": "cifar10_lrms3b_m6.ag_asi_L06_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61849169",
+    "name": "cifar10_lrms3b_m6.ag_asi_L02_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61849166",
+    "name": "cifar10_lrms3b_m6.epiram_L12_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61849167",
+    "name": "cifar10_lrms3b_m6.ag_asi_L00_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61849168",
+    "name": "cifar10_lrms3b_m6.ag_asi_L01_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61849164",
+    "name": "cifar10_lrms3b_m6.epiram_L10_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61849165",
+    "name": "cifar10_lrms3b_m6.epiram_L11_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61849163",
+    "name": "cifar10_lrms3b_m6.epiram_L09_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61849162",
+    "name": "cifar10_lrms3b_m6.epiram_L05_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61849161",
+    "name": "cifar10_lrms3b_m6.epiram_L04_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61849160",
+    "name": "cifar10_lrms3b_m6.epiram_L03_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61849159",
+    "name": "cifar10_lrms3b_m6.epiram_L02_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61849157",
+    "name": "cifar10_lrms3b_m6.epiram_L00_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61849158",
+    "name": "cifar10_lrms3b_m6.epiram_L01_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61849156",
+    "name": "cifar10_lrms3b_m6.sram_L12_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61849153",
+    "name": "cifar10_lrms3b_m6.sram_L07_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61849154",
+    "name": "cifar10_lrms3b_m6.sram_L10_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61849155",
+    "name": "cifar10_lrms3b_m6.sram_L11_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61849151",
+    "name": "cifar10_lrms3b_m6.sram_L05_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61849152",
+    "name": "cifar10_lrms3b_m6.sram_L06_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61849150",
+    "name": "cifar10_lrms3b_m6.sram_L04_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61849149",
+    "name": "cifar10_lrms3b_m6.sram_L03_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61849148",
+    "name": "cifar10_lrms3b_m6.sram_L02_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61849147",
+    "name": "cifar10_lrms3b_m6.sram_L01_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61849146",
+    "name": "cifar10_lrms3b_m6.sram_L00_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61849144",
+    "name": "cifar10_lrms3b_m6.pcmo_L11_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61849145",
+    "name": "cifar10_lrms3b_m6.pcmo_L12_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61849143",
+    "name": "cifar10_lrms3b_m6.pcmo_L10_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61849140",
+    "name": "cifar10_lrms3b_m6.pcmo_L07_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61849141",
+    "name": "cifar10_lrms3b_m6.pcmo_L08_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61849142",
+    "name": "cifar10_lrms3b_m6.pcmo_L09_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61849138",
+    "name": "cifar10_lrms3b_m6.pcmo_L04_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61849139",
+    "name": "cifar10_lrms3b_m6.pcmo_L05_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61849137",
+    "name": "cifar10_lrms3b_m6.pcmo_L03_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61849136",
+    "name": "cifar10_lrms3b_m6.pcmo_L02_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61849135",
+    "name": "cifar10_lrms3b_m6.pcmo_L01_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61849134",
+    "name": "cifar10_lrms3b_m6.pcmo_L00_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61849133",
+    "name": "cifar10_lrms3b_m6.alox_hfo2_L12_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61849131",
+    "name": "cifar10_lrms3b_m6.alox_hfo2_L10_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61849132",
+    "name": "cifar10_lrms3b_m6.alox_hfo2_L11_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61849130",
+    "name": "cifar10_lrms3b_m6.alox_hfo2_L09_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61849128",
+    "name": "cifar10_lrms3b_m6.alox_hfo2_L05_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61849129",
+    "name": "cifar10_lrms3b_m6.alox_hfo2_L08_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61849127",
+    "name": "cifar10_lrms3b_m6.alox_hfo2_L04_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61849125",
+    "name": "cifar10_lrms3b_m6.alox_hfo2_L02_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61849126",
+    "name": "cifar10_lrms3b_m6.alox_hfo2_L03_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61849124",
+    "name": "cifar10_lrms3b_m6.alox_hfo2_L01_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61849123",
+    "name": "cifar10_lrms3b_m6.alox_hfo2_L00_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852062",
+    "name": "cifar10_lrms3b_m6.gst_pcm_L06_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852061",
+    "name": "cifar10_lrms3b_m6.gst_pcm_L03_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852059",
+    "name": "cifar10_lrms3b_m6.gst_pcm_L01_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852060",
+    "name": "cifar10_lrms3b_m6.gst_pcm_L02_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852058",
+    "name": "cifar10_lrms3b_m6.gst_pcm_L00_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852057",
+    "name": "cifar10_lrms3b_m6.ag_asi_L12_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852120",
+    "name": "cifar10_lrms3b_m8.alox_hfo2_L00_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852119",
+    "name": "cifar10_lrms3b_m7.epiram_L04_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852118",
+    "name": "cifar10_lrms3b_m7.epiram_L03_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852117",
+    "name": "cifar10_lrms3b_m7.epiram_L02_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852116",
+    "name": "cifar10_lrms3b_m7.epiram_L01_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852115",
+    "name": "cifar10_lrms3b_m7.epiram_L00_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852114",
+    "name": "cifar10_lrms3b_m7.sram_L12_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852113",
+    "name": "cifar10_lrms3b_m7.sram_L11_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852112",
+    "name": "cifar10_lrms3b_m7.sram_L10_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852111",
+    "name": "cifar10_lrms3b_m7.sram_L07_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852110",
+    "name": "cifar10_lrms3b_m7.sram_L06_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852109",
+    "name": "cifar10_lrms3b_m7.sram_L05_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852108",
+    "name": "cifar10_lrms3b_m7.sram_L04_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852107",
+    "name": "cifar10_lrms3b_m7.sram_L03_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852106",
+    "name": "cifar10_lrms3b_m7.sram_L02_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852105",
+    "name": "cifar10_lrms3b_m7.sram_L01_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852104",
+    "name": "cifar10_lrms3b_m7.sram_L00_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852103",
+    "name": "cifar10_lrms3b_m7.pcmo_L12_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852102",
+    "name": "cifar10_lrms3b_m7.pcmo_L11_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852101",
+    "name": "cifar10_lrms3b_m7.pcmo_L10_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852099",
+    "name": "cifar10_lrms3b_m7.pcmo_L09_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852098",
+    "name": "cifar10_lrms3b_m7.pcmo_L08_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852097",
+    "name": "cifar10_lrms3b_m7.pcmo_L07_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852096",
+    "name": "cifar10_lrms3b_m7.pcmo_L05_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852095",
+    "name": "cifar10_lrms3b_m7.pcmo_L04_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852094",
+    "name": "cifar10_lrms3b_m7.pcmo_L03_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852093",
+    "name": "cifar10_lrms3b_m7.pcmo_L02_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852092",
+    "name": "cifar10_lrms3b_m7.pcmo_L01_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852091",
+    "name": "cifar10_lrms3b_m7.pcmo_L00_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852090",
+    "name": "cifar10_lrms3b_m7.alox_hfo2_L12_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852089",
+    "name": "cifar10_lrms3b_m7.alox_hfo2_L11_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852088",
+    "name": "cifar10_lrms3b_m7.alox_hfo2_L10_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852087",
+    "name": "cifar10_lrms3b_m7.alox_hfo2_L06_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852086",
+    "name": "cifar10_lrms3b_m7.alox_hfo2_L05_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852085",
+    "name": "cifar10_lrms3b_m7.alox_hfo2_L04_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852084",
+    "name": "cifar10_lrms3b_m7.alox_hfo2_L03_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852083",
+    "name": "cifar10_lrms3b_m7.alox_hfo2_L02_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852082",
+    "name": "cifar10_lrms3b_m7.alox_hfo2_L01_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852081",
+    "name": "cifar10_lrms3b_m7.alox_hfo2_L00_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852080",
+    "name": "cifar10_lrms3b_m6.taox_hfox_L12_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852079",
+    "name": "cifar10_lrms3b_m6.taox_hfox_L11_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852078",
+    "name": "cifar10_lrms3b_m6.taox_hfox_L10_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852077",
+    "name": "cifar10_lrms3b_m6.taox_hfox_L09_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852076",
+    "name": "cifar10_lrms3b_m6.taox_hfox_L08_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852075",
+    "name": "cifar10_lrms3b_m6.taox_hfox_L07_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852074",
+    "name": "cifar10_lrms3b_m6.taox_hfox_L06_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852073",
+    "name": "cifar10_lrms3b_m6.taox_hfox_L05_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852072",
+    "name": "cifar10_lrms3b_m6.taox_hfox_L03_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852071",
+    "name": "cifar10_lrms3b_m6.taox_hfox_L02_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852070",
+    "name": "cifar10_lrms3b_m6.taox_hfox_L01_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852069",
+    "name": "cifar10_lrms3b_m6.taox_hfox_L00_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852068",
+    "name": "cifar10_lrms3b_m6.gst_pcm_L12_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852067",
+    "name": "cifar10_lrms3b_m6.gst_pcm_L11_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852066",
+    "name": "cifar10_lrms3b_m6.gst_pcm_L10_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852065",
+    "name": "cifar10_lrms3b_m6.gst_pcm_L09_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852064",
+    "name": "cifar10_lrms3b_m6.gst_pcm_L08_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61852063",
+    "name": "cifar10_lrms3b_m6.gst_pcm_L07_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854123",
+    "name": "cifar10_lrms3b_m8.ag_asi_L12_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854122",
+    "name": "cifar10_lrms3b_m8.ag_asi_L11_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854121",
+    "name": "cifar10_lrms3b_m8.ag_asi_L10_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854120",
+    "name": "cifar10_lrms3b_m8.ag_asi_L09_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854119",
+    "name": "cifar10_lrms3b_m8.ag_asi_L08_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854118",
+    "name": "cifar10_lrms3b_m8.ag_asi_L07_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854117",
+    "name": "cifar10_lrms3b_m8.ag_asi_L06_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854116",
+    "name": "cifar10_lrms3b_m8.ag_asi_L03_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854115",
+    "name": "cifar10_lrms3b_m8.ag_asi_L02_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854114",
+    "name": "cifar10_lrms3b_m8.ag_asi_L01_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854113",
+    "name": "cifar10_lrms3b_m8.ag_asi_L00_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854112",
+    "name": "cifar10_lrms3b_m8.epiram_L12_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854111",
+    "name": "cifar10_lrms3b_m8.epiram_L11_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854110",
+    "name": "cifar10_lrms3b_m8.epiram_L10_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854109",
+    "name": "cifar10_lrms3b_m8.epiram_L09_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854108",
+    "name": "cifar10_lrms3b_m8.epiram_L06_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854107",
+    "name": "cifar10_lrms3b_m8.epiram_L05_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854106",
+    "name": "cifar10_lrms3b_m8.epiram_L04_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854105",
+    "name": "cifar10_lrms3b_m8.epiram_L03_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854104",
+    "name": "cifar10_lrms3b_m8.epiram_L02_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854103",
+    "name": "cifar10_lrms3b_m8.epiram_L01_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854102",
+    "name": "cifar10_lrms3b_m8.epiram_L00_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854101",
+    "name": "cifar10_lrms3b_m8.sram_L12_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854100",
+    "name": "cifar10_lrms3b_m8.sram_L11_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854099",
+    "name": "cifar10_lrms3b_m8.sram_L10_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854098",
+    "name": "cifar10_lrms3b_m8.sram_L06_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854097",
+    "name": "cifar10_lrms3b_m8.sram_L05_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854096",
+    "name": "cifar10_lrms3b_m8.sram_L04_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854095",
+    "name": "cifar10_lrms3b_m8.sram_L03_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854094",
+    "name": "cifar10_lrms3b_m8.sram_L02_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854093",
+    "name": "cifar10_lrms3b_m8.sram_L01_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854092",
+    "name": "cifar10_lrms3b_m8.sram_L00_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854091",
+    "name": "cifar10_lrms3b_m8.pcmo_L12_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854090",
+    "name": "cifar10_lrms3b_m8.pcmo_L11_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854089",
+    "name": "cifar10_lrms3b_m8.pcmo_L10_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854088",
+    "name": "cifar10_lrms3b_m8.pcmo_L09_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854087",
+    "name": "cifar10_lrms3b_m8.pcmo_L08_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854086",
+    "name": "cifar10_lrms3b_m8.pcmo_L07_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854085",
+    "name": "cifar10_lrms3b_m8.pcmo_L05_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854084",
+    "name": "cifar10_lrms3b_m8.pcmo_L04_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854083",
+    "name": "cifar10_lrms3b_m8.pcmo_L03_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854082",
+    "name": "cifar10_lrms3b_m8.pcmo_L02_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854081",
+    "name": "cifar10_lrms3b_m8.pcmo_L01_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854080",
+    "name": "cifar10_lrms3b_m8.pcmo_L00_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854079",
+    "name": "cifar10_lrms3b_m8.alox_hfo2_L12_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854078",
+    "name": "cifar10_lrms3b_m8.alox_hfo2_L11_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854077",
+    "name": "cifar10_lrms3b_m8.alox_hfo2_L10_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854076",
+    "name": "cifar10_lrms3b_m8.alox_hfo2_L09_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854075",
+    "name": "cifar10_lrms3b_m8.alox_hfo2_L06_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854074",
+    "name": "cifar10_lrms3b_m8.alox_hfo2_L05_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854073",
+    "name": "cifar10_lrms3b_m8.alox_hfo2_L04_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854072",
+    "name": "cifar10_lrms3b_m8.alox_hfo2_L03_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854071",
+    "name": "cifar10_lrms3b_m8.alox_hfo2_L02_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854070",
+    "name": "cifar10_lrms3b_m8.alox_hfo2_L01_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854057",
+    "name": "cifar10_lrms3b_m7.taox_hfox_L12_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854056",
+    "name": "cifar10_lrms3b_m7.taox_hfox_L11_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854055",
+    "name": "cifar10_lrms3b_m7.taox_hfox_L10_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854054",
+    "name": "cifar10_lrms3b_m7.taox_hfox_L09_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854052",
+    "name": "cifar10_lrms3b_m7.taox_hfox_L08_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854051",
+    "name": "cifar10_lrms3b_m7.taox_hfox_L07_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854050",
+    "name": "cifar10_lrms3b_m7.taox_hfox_L06_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854049",
+    "name": "cifar10_lrms3b_m7.taox_hfox_L03_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854046",
+    "name": "cifar10_lrms3b_m7.taox_hfox_L02_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854045",
+    "name": "cifar10_lrms3b_m7.taox_hfox_L01_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854044",
+    "name": "cifar10_lrms3b_m7.taox_hfox_L00_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854043",
+    "name": "cifar10_lrms3b_m7.gst_pcm_L12_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854042",
+    "name": "cifar10_lrms3b_m7.gst_pcm_L11_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854041",
+    "name": "cifar10_lrms3b_m7.gst_pcm_L10_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854040",
+    "name": "cifar10_lrms3b_m7.gst_pcm_L09_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854039",
+    "name": "cifar10_lrms3b_m7.gst_pcm_L08_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854038",
+    "name": "cifar10_lrms3b_m7.gst_pcm_L07_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854037",
+    "name": "cifar10_lrms3b_m7.gst_pcm_L06_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854036",
+    "name": "cifar10_lrms3b_m7.gst_pcm_L03_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854035",
+    "name": "cifar10_lrms3b_m7.gst_pcm_L02_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854034",
+    "name": "cifar10_lrms3b_m7.gst_pcm_L01_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854033",
+    "name": "cifar10_lrms3b_m7.gst_pcm_L00_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854032",
+    "name": "cifar10_lrms3b_m7.ag_asi_L12_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854031",
+    "name": "cifar10_lrms3b_m7.ag_asi_L11_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854030",
+    "name": "cifar10_lrms3b_m7.ag_asi_L10_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854029",
+    "name": "cifar10_lrms3b_m7.ag_asi_L09_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854028",
+    "name": "cifar10_lrms3b_m7.ag_asi_L08_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854027",
+    "name": "cifar10_lrms3b_m7.ag_asi_L07_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854026",
+    "name": "cifar10_lrms3b_m7.ag_asi_L06_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854025",
+    "name": "cifar10_lrms3b_m7.ag_asi_L03_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854024",
+    "name": "cifar10_lrms3b_m7.ag_asi_L02_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854023",
+    "name": "cifar10_lrms3b_m7.ag_asi_L01_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854022",
+    "name": "cifar10_lrms3b_m7.ag_asi_L00_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854021",
+    "name": "cifar10_lrms3b_m7.epiram_L12_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854020",
+    "name": "cifar10_lrms3b_m7.epiram_L11_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854019",
+    "name": "cifar10_lrms3b_m7.epiram_L10_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854018",
+    "name": "cifar10_lrms3b_m7.epiram_L09_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854017",
+    "name": "cifar10_lrms3b_m7.epiram_L06_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854016",
+    "name": "cifar10_lrms3b_m7.epiram_L05_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854014",
+    "name": "cifar10_lrms3a_m5.hzo_fefet_L04_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854013",
+    "name": "cifar10_lrms3a_m4.taox_hfox_L00_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854012",
+    "name": "cifar10_lrms3a_m4.gst_pcm_L00_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854011",
+    "name": "cifar10_lrms3a_m4.ag_asi_L00_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854010",
+    "name": "cifar10_lrms3a_m1.taox_hfox_L11_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854009",
+    "name": "cifar10_lrms3a_m1.taox_hfox_L10_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854008",
+    "name": "cifar10_lrms3a_m1.taox_hfox_L09_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61854007",
+    "name": "cifar10_lrms3a_m1.taox_hfox_L08_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61858014",
+    "name": "cifar10_lrms3b_m3.taox_hfox_L00_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61858013",
+    "name": "cifar10_lrms3b_m3.gst_pcm_L12_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61858012",
+    "name": "cifar10_lrms3b_m3.gst_pcm_L11_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61858011",
+    "name": "cifar10_lrms3b_m3.gst_pcm_L10_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61858010",
+    "name": "cifar10_lrms3b_m3.gst_pcm_L09_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61858009",
+    "name": "cifar10_lrms3b_m3.sram_L11_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61858008",
+    "name": "cifar10_lrms3b_m3.sram_L10_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61858007",
+    "name": "cifar10_lrms3b_m3.sram_L09_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61858006",
+    "name": "cifar10_lrms3b_m3.sram_L07_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61858005",
+    "name": "cifar10_lrms3b_m3.sram_L06_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61858004",
+    "name": "cifar10_lrms3b_m3.sram_L05_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61858003",
+    "name": "cifar10_lrms3b_m3.sram_L04_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61858002",
+    "name": "cifar10_lrms3b_m3.sram_L03_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61858001",
+    "name": "cifar10_lrms3b_m3.sram_L02_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61858000",
+    "name": "cifar10_lrms3b_m3.sram_L01_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61857999",
+    "name": "cifar10_lrms3b_m3.sram_L00_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61858025",
+    "name": "cifar10_lrms3b_m3.taox_hfox_L12_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61858024",
+    "name": "cifar10_lrms3b_m3.taox_hfox_L11_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61858023",
+    "name": "cifar10_lrms3b_m3.taox_hfox_L10_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61858022",
+    "name": "cifar10_lrms3b_m3.taox_hfox_L09_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61858021",
+    "name": "cifar10_lrms3b_m3.taox_hfox_L08_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61858020",
+    "name": "cifar10_lrms3b_m3.taox_hfox_L07_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61858019",
+    "name": "cifar10_lrms3b_m3.taox_hfox_L06_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61858018",
+    "name": "cifar10_lrms3b_m3.taox_hfox_L05_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61858017",
+    "name": "cifar10_lrms3b_m3.taox_hfox_L03_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61858016",
+    "name": "cifar10_lrms3b_m3.taox_hfox_L02_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61858015",
+    "name": "cifar10_lrms3b_m3.taox_hfox_L01_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61860189",
+    "name": "cifar10_lrms3b_m8.taox_hfox_L01_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61860188",
+    "name": "cifar10_lrms3b_m8.taox_hfox_L00_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61860187",
+    "name": "cifar10_lrms3b_m8.gst_pcm_L12_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61860186",
+    "name": "cifar10_lrms3b_m8.gst_pcm_L11_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61860185",
+    "name": "cifar10_lrms3b_m8.gst_pcm_L10_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61860184",
+    "name": "cifar10_lrms3b_m8.gst_pcm_L09_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61860183",
+    "name": "cifar10_lrms3b_m8.gst_pcm_L08_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61860182",
+    "name": "cifar10_lrms3b_m8.gst_pcm_L07_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61860181",
+    "name": "cifar10_lrms3b_m8.gst_pcm_L06_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61860180",
+    "name": "cifar10_lrms3b_m8.gst_pcm_L03_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61860179",
+    "name": "cifar10_lrms3b_m8.gst_pcm_L02_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61860178",
+    "name": "cifar10_lrms3b_m8.gst_pcm_L01_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61860177",
+    "name": "cifar10_lrms3b_m8.gst_pcm_L00_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61847818",
+    "name": "cifar10_lrms3b_m5.gst_pcm_L00_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61847793",
+    "name": "cifar10_lrms3b_m5.sram_L11_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61847829",
+    "name": "cifar10_lrms3b_m5.taox_hfox_L00_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  },
+  {
+    "job_id": "61847828",
+    "name": "cifar10_lrms3b_m5.gst_pcm_L12_R00_s3",
+    "old_nice": 0,
+    "new_nice": 1000000,
+    "confirmed": true
+  }
+]

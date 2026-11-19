@@ -1,0 +1,137 @@
+Job: 61863270 | phase: pilots | node: dcc-core-gpu-ferc-s-aa32-1 | restart: 0
+GPU: NVIDIA RTX 5000 Ada Generation torch: 2.10.0+cu126
+pilot: rotnet_r20_b4096_lr0p3_seed0 | B=4096 (16384 rotated images) | lr=0.3
+RotNet pretraining | device=cuda | 12 steps/epoch
+epoch   1 | loss 4.9605 | rotation acc 0.2520 | seconds 23.88 | peak reserved GiB 16.61
+epoch   2 | loss 1.4160 | rotation acc 0.2559 | seconds 9.62 | peak reserved GiB 16.61
+epoch   3 | loss 1.3881 | rotation acc 0.2642 | seconds 9.55 | peak reserved GiB 16.61
+epoch   4 | loss 1.3809 | rotation acc 0.2650 | seconds 9.64 | peak reserved GiB 16.61
+epoch   5 | loss 1.3771 | rotation acc 0.2715 | seconds 9.60 | peak reserved GiB 16.61
+Stopped at epoch 5/1000; schedule is unchanged. Resume from /work/yl1064/ece661-rotnet-sweep/results/rotnet_sweep_submissions/20261115T230242708810Z/source/checkpoints/figure_b7/rotnet_r20_b4096_lr0p3_seed0/encoder.pt.last to finish.
+{"run_id": "rotnet_r20_b4096_lr0p3_seed0", "epochs_checked": 5, "schedule_epochs": 1000, "seconds_per_epoch": 9.603111139964312, "estimated_1000_epoch_hours": 2.667530872212309, "peak_reserved_GiB": 16.607421875, "torch_version": "2.10.0+cu126", "device": "cuda"}
+pilot: rotnet_r20_b4096_lr0p1_seed0 | B=4096 (16384 rotated images) | lr=0.1
+RotNet pretraining | device=cuda | 12 steps/epoch
+epoch   1 | loss 1.6061 | rotation acc 0.2553 | seconds 10.97 | peak reserved GiB 16.61
+epoch   2 | loss 1.3530 | rotation acc 0.3462 | seconds 10.19 | peak reserved GiB 16.61
+epoch   3 | loss 1.1757 | rotation acc 0.4598 | seconds 10.09 | peak reserved GiB 16.61
+epoch   4 | loss 1.1228 | rotation acc 0.4895 | seconds 10.23 | peak reserved GiB 16.61
+epoch   5 | loss 1.0916 | rotation acc 0.5138 | seconds 10.15 | peak reserved GiB 16.61
+Stopped at epoch 5/1000; schedule is unchanged. Resume from /work/yl1064/ece661-rotnet-sweep/results/rotnet_sweep_submissions/20261115T230242708810Z/source/checkpoints/figure_b7/rotnet_r20_b4096_lr0p1_seed0/encoder.pt.last to finish.
+{"run_id": "rotnet_r20_b4096_lr0p1_seed0", "epochs_checked": 5, "schedule_epochs": 1000, "seconds_per_epoch": 10.163258589571342, "estimated_1000_epoch_hours": 2.8231273859920396, "peak_reserved_GiB": 16.607421875, "torch_version": "2.10.0+cu126", "device": "cuda"}
+pilot: rotnet_r20_b4096_lr0p03_seed0 | B=4096 (16384 rotated images) | lr=0.03
+RotNet pretraining | device=cuda | 12 steps/epoch
+epoch   1 | loss 1.4525 | rotation acc 0.2570 | seconds 10.72 | peak reserved GiB 16.61
+epoch   2 | loss 1.3711 | rotation acc 0.3113 | seconds 10.40 | peak reserved GiB 16.61
+epoch   3 | loss 1.2808 | rotation acc 0.4063 | seconds 10.19 | peak reserved GiB 16.61
+epoch   4 | loss 1.1830 | rotation acc 0.4653 | seconds 10.15 | peak reserved GiB 16.61
+epoch   5 | loss 1.1422 | rotation acc 0.4883 | seconds 10.18 | peak reserved GiB 16.61
+Stopped at epoch 5/1000; schedule is unchanged. Resume from /work/yl1064/ece661-rotnet-sweep/results/rotnet_sweep_submissions/20261115T230242708810Z/source/checkpoints/figure_b7/rotnet_r20_b4096_lr0p03_seed0/encoder.pt.last to finish.
+{"run_id": "rotnet_r20_b4096_lr0p03_seed0", "epochs_checked": 5, "schedule_epochs": 1000, "seconds_per_epoch": 10.231635263655335, "estimated_1000_epoch_hours": 2.8421209065709263, "peak_reserved_GiB": 16.607421875, "torch_version": "2.10.0+cu126", "device": "cuda"}
+pilot: rotnet_r20_b2048_lr0p3_seed0 | B=2048 (8192 rotated images) | lr=0.3
+RotNet pretraining | device=cuda | 24 steps/epoch
+epoch   1 | loss 3.0069 | rotation acc 0.2499 | seconds 10.58 | peak reserved GiB 8.33
+epoch   2 | loss 1.3909 | rotation acc 0.2507 | seconds 10.02 | peak reserved GiB 8.33
+epoch   3 | loss 1.3842 | rotation acc 0.2590 | seconds 9.99 | peak reserved GiB 8.33
+epoch   4 | loss 1.3828 | rotation acc 0.2626 | seconds 10.01 | peak reserved GiB 8.33
+epoch   5 | loss 1.3816 | rotation acc 0.2679 | seconds 10.09 | peak reserved GiB 8.33
+Stopped at epoch 5/1000; schedule is unchanged. Resume from /work/yl1064/ece661-rotnet-sweep/results/rotnet_sweep_submissions/20261115T230242708810Z/source/checkpoints/figure_b7/rotnet_r20_b2048_lr0p3_seed0/encoder.pt.last to finish.
+{"run_id": "rotnet_r20_b2048_lr0p3_seed0", "epochs_checked": 5, "schedule_epochs": 1000, "seconds_per_epoch": 10.028569339308888, "estimated_1000_epoch_hours": 2.78571370536358, "peak_reserved_GiB": 8.326171875, "torch_version": "2.10.0+cu126", "device": "cuda"}
+pilot: rotnet_r20_b2048_lr0p1_seed0 | B=2048 (8192 rotated images) | lr=0.1
+RotNet pretraining | device=cuda | 24 steps/epoch
+epoch   1 | loss 1.4763 | rotation acc 0.3024 | seconds 11.00 | peak reserved GiB 8.33
+epoch   2 | loss 1.1432 | rotation acc 0.4811 | seconds 10.63 | peak reserved GiB 8.33
+epoch   3 | loss 1.0776 | rotation acc 0.5266 | seconds 10.49 | peak reserved GiB 8.33
+epoch   4 | loss 1.0365 | rotation acc 0.5518 | seconds 10.55 | peak reserved GiB 8.33
+epoch   5 | loss 1.0094 | rotation acc 0.5669 | seconds 10.63 | peak reserved GiB 8.33
+Stopped at epoch 5/1000; schedule is unchanged. Resume from /work/yl1064/ece661-rotnet-sweep/results/rotnet_sweep_submissions/20261115T230242708810Z/source/checkpoints/figure_b7/rotnet_r20_b2048_lr0p1_seed0/encoder.pt.last to finish.
+{"run_id": "rotnet_r20_b2048_lr0p1_seed0", "epochs_checked": 5, "schedule_epochs": 1000, "seconds_per_epoch": 10.576275556813926, "estimated_1000_epoch_hours": 2.9378543213372015, "peak_reserved_GiB": 8.326171875, "torch_version": "2.10.0+cu126", "device": "cuda"}
+pilot: rotnet_r20_b2048_lr0p03_seed0 | B=2048 (8192 rotated images) | lr=0.03
+RotNet pretraining | device=cuda | 24 steps/epoch
+epoch   1 | loss 1.4111 | rotation acc 0.2845 | seconds 10.93 | peak reserved GiB 8.33
+epoch   2 | loss 1.2319 | rotation acc 0.4355 | seconds 10.51 | peak reserved GiB 8.33
+epoch   3 | loss 1.1298 | rotation acc 0.4971 | seconds 10.44 | peak reserved GiB 8.33
+epoch   4 | loss 1.0956 | rotation acc 0.5243 | seconds 10.45 | peak reserved GiB 8.33
+epoch   5 | loss 1.0694 | rotation acc 0.5381 | seconds 10.47 | peak reserved GiB 8.33
+Stopped at epoch 5/1000; schedule is unchanged. Resume from /work/yl1064/ece661-rotnet-sweep/results/rotnet_sweep_submissions/20261115T230242708810Z/source/checkpoints/figure_b7/rotnet_r20_b2048_lr0p03_seed0/encoder.pt.last to finish.
+{"run_id": "rotnet_r20_b2048_lr0p03_seed0", "epochs_checked": 5, "schedule_epochs": 1000, "seconds_per_epoch": 10.467541380319744, "estimated_1000_epoch_hours": 2.907650383422151, "peak_reserved_GiB": 8.326171875, "torch_version": "2.10.0+cu126", "device": "cuda"}
+pilot: rotnet_r20_b1024_lr0p3_seed0 | B=1024 (4096 rotated images) | lr=0.3
+RotNet pretraining | device=cuda | 48 steps/epoch
+epoch   1 | loss 2.2375 | rotation acc 0.2506 | seconds 12.18 | peak reserved GiB 4.07
+epoch   2 | loss 1.3853 | rotation acc 0.2518 | seconds 11.41 | peak reserved GiB 4.07
+epoch   3 | loss 1.3838 | rotation acc 0.2556 | seconds 11.35 | peak reserved GiB 4.07
+epoch   4 | loss 1.3808 | rotation acc 0.2601 | seconds 11.44 | peak reserved GiB 4.07
+epoch   5 | loss 1.3765 | rotation acc 0.2671 | seconds 11.32 | peak reserved GiB 4.07
+Stopped at epoch 5/1000; schedule is unchanged. Resume from /work/yl1064/ece661-rotnet-sweep/results/rotnet_sweep_submissions/20261115T230242708810Z/source/checkpoints/figure_b7/rotnet_r20_b1024_lr0p3_seed0/encoder.pt.last to finish.
+{"run_id": "rotnet_r20_b1024_lr0p3_seed0", "epochs_checked": 5, "schedule_epochs": 1000, "seconds_per_epoch": 11.38212243327871, "estimated_1000_epoch_hours": 3.161700675910753, "peak_reserved_GiB": 4.068359375, "torch_version": "2.10.0+cu126", "device": "cuda"}
+pilot: rotnet_r20_b1024_lr0p1_seed0 | B=1024 (4096 rotated images) | lr=0.1
+RotNet pretraining | device=cuda | 48 steps/epoch
+epoch   1 | loss 1.3139 | rotation acc 0.3904 | seconds 12.30 | peak reserved GiB 4.07
+epoch   2 | loss 1.0627 | rotation acc 0.5353 | seconds 11.73 | peak reserved GiB 4.07
+epoch   3 | loss 1.0052 | rotation acc 0.5690 | seconds 11.76 | peak reserved GiB 4.07
+epoch   4 | loss 0.9561 | rotation acc 0.5944 | seconds 11.69 | peak reserved GiB 4.07
+epoch   5 | loss 0.9168 | rotation acc 0.6159 | seconds 11.82 | peak reserved GiB 4.07
+Stopped at epoch 5/1000; schedule is unchanged. Resume from /work/yl1064/ece661-rotnet-sweep/results/rotnet_sweep_submissions/20261115T230242708810Z/source/checkpoints/figure_b7/rotnet_r20_b1024_lr0p1_seed0/encoder.pt.last to finish.
+{"run_id": "rotnet_r20_b1024_lr0p1_seed0", "epochs_checked": 5, "schedule_epochs": 1000, "seconds_per_epoch": 11.751657325774431, "estimated_1000_epoch_hours": 3.264349257159564, "peak_reserved_GiB": 4.068359375, "torch_version": "2.10.0+cu126", "device": "cuda"}
+pilot: rotnet_r20_b1024_lr0p03_seed0 | B=1024 (4096 rotated images) | lr=0.03
+RotNet pretraining | device=cuda | 48 steps/epoch
+epoch   1 | loss 1.3236 | rotation acc 0.3575 | seconds 12.29 | peak reserved GiB 4.07
+epoch   2 | loss 1.1148 | rotation acc 0.5083 | seconds 11.73 | peak reserved GiB 4.07
+epoch   3 | loss 1.0656 | rotation acc 0.5404 | seconds 11.88 | peak reserved GiB 4.07
+epoch   4 | loss 1.0254 | rotation acc 0.5628 | seconds 11.48 | peak reserved GiB 4.07
+epoch   5 | loss 0.9826 | rotation acc 0.5850 | seconds 11.87 | peak reserved GiB 4.07
+Stopped at epoch 5/1000; schedule is unchanged. Resume from /work/yl1064/ece661-rotnet-sweep/results/rotnet_sweep_submissions/20261115T230242708810Z/source/checkpoints/figure_b7/rotnet_r20_b1024_lr0p03_seed0/encoder.pt.last to finish.
+{"run_id": "rotnet_r20_b1024_lr0p03_seed0", "epochs_checked": 5, "schedule_epochs": 1000, "seconds_per_epoch": 11.740726676536724, "estimated_1000_epoch_hours": 3.2613129657046454, "peak_reserved_GiB": 4.068359375, "torch_version": "2.10.0+cu126", "device": "cuda"}
+pilot: rotnet_r20_b512_lr0p3_seed0 | B=512 (2048 rotated images) | lr=0.3
+RotNet pretraining | device=cuda | 97 steps/epoch
+epoch   1 | loss 1.8200 | rotation acc 0.2594 | seconds 14.09 | peak reserved GiB 2.07
+epoch   2 | loss 1.3261 | rotation acc 0.3283 | seconds 13.90 | peak reserved GiB 2.07
+epoch   3 | loss 1.2125 | rotation acc 0.4192 | seconds 14.16 | peak reserved GiB 2.07
+epoch   4 | loss 1.0847 | rotation acc 0.5212 | seconds 14.12 | peak reserved GiB 2.07
+epoch   5 | loss 1.0530 | rotation acc 0.5358 | seconds 14.06 | peak reserved GiB 2.07
+Stopped at epoch 5/1000; schedule is unchanged. Resume from /work/yl1064/ece661-rotnet-sweep/results/rotnet_sweep_submissions/20261115T230242708810Z/source/checkpoints/figure_b7/rotnet_r20_b512_lr0p3_seed0/encoder.pt.last to finish.
+{"run_id": "rotnet_r20_b512_lr0p3_seed0", "epochs_checked": 5, "schedule_epochs": 1000, "seconds_per_epoch": 14.059880122542381, "estimated_1000_epoch_hours": 3.9055222562617726, "peak_reserved_GiB": 2.07421875, "torch_version": "2.10.0+cu126", "device": "cuda"}
+pilot: rotnet_r20_b512_lr0p1_seed0 | B=512 (2048 rotated images) | lr=0.1
+RotNet pretraining | device=cuda | 97 steps/epoch
+epoch   1 | loss 1.1943 | rotation acc 0.4641 | seconds 14.52 | peak reserved GiB 2.07
+epoch   2 | loss 0.9971 | rotation acc 0.5728 | seconds 14.21 | peak reserved GiB 2.07
+epoch   3 | loss 0.9137 | rotation acc 0.6176 | seconds 14.20 | peak reserved GiB 2.07
+epoch   4 | loss 0.8467 | rotation acc 0.6487 | seconds 14.10 | peak reserved GiB 2.07
+epoch   5 | loss 0.7882 | rotation acc 0.6766 | seconds 14.05 | peak reserved GiB 2.07
+Stopped at epoch 5/1000; schedule is unchanged. Resume from /work/yl1064/ece661-rotnet-sweep/results/rotnet_sweep_submissions/20261115T230242708810Z/source/checkpoints/figure_b7/rotnet_r20_b512_lr0p1_seed0/encoder.pt.last to finish.
+{"run_id": "rotnet_r20_b512_lr0p1_seed0", "epochs_checked": 5, "schedule_epochs": 1000, "seconds_per_epoch": 14.1406435421668, "estimated_1000_epoch_hours": 3.9279565394907774, "peak_reserved_GiB": 2.07421875, "torch_version": "2.10.0+cu126", "device": "cuda"}
+pilot: rotnet_r20_b512_lr0p03_seed0 | B=512 (2048 rotated images) | lr=0.03
+RotNet pretraining | device=cuda | 97 steps/epoch
+epoch   1 | loss 1.2196 | rotation acc 0.4344 | seconds 14.51 | peak reserved GiB 2.07
+epoch   2 | loss 1.0490 | rotation acc 0.5490 | seconds 14.23 | peak reserved GiB 2.07
+epoch   3 | loss 0.9853 | rotation acc 0.5828 | seconds 14.20 | peak reserved GiB 2.07
+epoch   4 | loss 0.9289 | rotation acc 0.6105 | seconds 14.29 | peak reserved GiB 2.07
+epoch   5 | loss 0.8813 | rotation acc 0.6332 | seconds 14.16 | peak reserved GiB 2.07
+Stopped at epoch 5/1000; schedule is unchanged. Resume from /work/yl1064/ece661-rotnet-sweep/results/rotnet_sweep_submissions/20261115T230242708810Z/source/checkpoints/figure_b7/rotnet_r20_b512_lr0p03_seed0/encoder.pt.last to finish.
+{"run_id": "rotnet_r20_b512_lr0p03_seed0", "epochs_checked": 5, "schedule_epochs": 1000, "seconds_per_epoch": 14.219004594022408, "estimated_1000_epoch_hours": 3.9497234983395577, "peak_reserved_GiB": 2.07421875, "torch_version": "2.10.0+cu126", "device": "cuda"}
+pilot: rotnet_r20_b256_lr0p3_seed0 | B=256 (1024 rotated images) | lr=0.3
+RotNet pretraining | device=cuda | 195 steps/epoch
+epoch   1 | loss 1.5597 | rotation acc 0.2578 | seconds 14.02 | peak reserved GiB 1.07
+epoch   2 | loss 1.3554 | rotation acc 0.3027 | seconds 13.67 | peak reserved GiB 1.07
+epoch   3 | loss 1.1921 | rotation acc 0.4377 | seconds 13.71 | peak reserved GiB 1.07
+epoch   4 | loss 1.0512 | rotation acc 0.5346 | seconds 13.92 | peak reserved GiB 1.07
+epoch   5 | loss 1.0071 | rotation acc 0.5652 | seconds 13.79 | peak reserved GiB 1.07
+Stopped at epoch 5/1000; schedule is unchanged. Resume from /work/yl1064/ece661-rotnet-sweep/results/rotnet_sweep_submissions/20261115T230242708810Z/source/checkpoints/figure_b7/rotnet_r20_b256_lr0p3_seed0/encoder.pt.last to finish.
+{"run_id": "rotnet_r20_b256_lr0p3_seed0", "epochs_checked": 5, "schedule_epochs": 1000, "seconds_per_epoch": 13.7714841181878, "estimated_1000_epoch_hours": 3.8254122550521665, "peak_reserved_GiB": 1.0703125, "torch_version": "2.10.0+cu126", "device": "cuda"}
+pilot: rotnet_r20_b256_lr0p1_seed0 | B=256 (1024 rotated images) | lr=0.1
+RotNet pretraining | device=cuda | 195 steps/epoch
+epoch   1 | loss 1.1129 | rotation acc 0.5064 | seconds 14.78 | peak reserved GiB 1.07
+epoch   2 | loss 0.9457 | rotation acc 0.5997 | seconds 14.38 | peak reserved GiB 1.07
+epoch   3 | loss 0.8498 | rotation acc 0.6473 | seconds 14.30 | peak reserved GiB 1.07
+epoch   4 | loss 0.7495 | rotation acc 0.6964 | seconds 14.40 | peak reserved GiB 1.07
+epoch   5 | loss 0.6739 | rotation acc 0.7302 | seconds 14.36 | peak reserved GiB 1.07
+Stopped at epoch 5/1000; schedule is unchanged. Resume from /work/yl1064/ece661-rotnet-sweep/results/rotnet_sweep_submissions/20261115T230242708810Z/source/checkpoints/figure_b7/rotnet_r20_b256_lr0p1_seed0/encoder.pt.last to finish.
+{"run_id": "rotnet_r20_b256_lr0p1_seed0", "epochs_checked": 5, "schedule_epochs": 1000, "seconds_per_epoch": 14.359707986703143, "estimated_1000_epoch_hours": 3.988807774084206, "peak_reserved_GiB": 1.0703125, "torch_version": "2.10.0+cu126", "device": "cuda"}
+pilot: rotnet_r20_b256_lr0p03_seed0 | B=256 (1024 rotated images) | lr=0.03
+RotNet pretraining | device=cuda | 195 steps/epoch
+epoch   1 | loss 1.1458 | rotation acc 0.4852 | seconds 14.51 | peak reserved GiB 1.07
+epoch   2 | loss 0.9873 | rotation acc 0.5810 | seconds 14.12 | peak reserved GiB 1.07
+epoch   3 | loss 0.9017 | rotation acc 0.6234 | seconds 14.07 | peak reserved GiB 1.07
+epoch   4 | loss 0.8325 | rotation acc 0.6571 | seconds 14.06 | peak reserved GiB 1.07
+epoch   5 | loss 0.7752 | rotation acc 0.6842 | seconds 14.07 | peak reserved GiB 1.07
+Stopped at epoch 5/1000; schedule is unchanged. Resume from /work/yl1064/ece661-rotnet-sweep/results/rotnet_sweep_submissions/20261115T230242708810Z/source/checkpoints/figure_b7/rotnet_r20_b256_lr0p03_seed0/encoder.pt.last to finish.
+{"run_id": "rotnet_r20_b256_lr0p03_seed0", "epochs_checked": 5, "schedule_epochs": 1000, "seconds_per_epoch": 14.079448969801888, "estimated_1000_epoch_hours": 3.910958047167191, "peak_reserved_GiB": 1.0703125, "torch_version": "2.10.0+cu126", "device": "cuda"}

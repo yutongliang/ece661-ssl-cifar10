@@ -1,0 +1,29 @@
+{
+  "launch": "20261115T230242708810Z",
+  "source": "/work/yl1064/ece661-rotnet-sweep/results/rotnet_sweep_submissions/20261115T230242708810Z/source",
+  "source_sha256": {
+    "pretrain_rotnet.py": "987e76ff287ca5a625b01c5fc50dada92627f17b6f82d6ce218aff95a78c0935",
+    "models.py": "11a2c7fe49bca75570c619de1ad5d8717c214067cdb941e9d5a91247c9c405d7",
+    "data.py": "c15acc50538f36bf7798a1b544bb141967d9d7f8e6dc023563a164ead0c0c405",
+    "utils.py": "5b4d23723573d00763f34f5ee98db0b96b9cbc1d43b5ec0f99a513731b44ae02",
+    "linear_eval.py": "1ed4df3263788f4836a431824e48598d76c8e93c8b16b006fe55f84d6c918e1d",
+    "train_classifier.py": "f66581658d840cc59db171af8fddf82235da5015dfed05e55390fd63670169eb",
+    "requirements.txt": "ec02658b67c7ecedf22ae4e4d6b3c3fa462557627f3507f718d90a579619ba09",
+    "tests/test_training.py": "e51f0862c3fff70ffd15e9f97841ffcbf38315e3d46e2dfa1e4295bc304bd556",
+    "tests/test_sweep.py": "e8f2b89770438b0d36fd98bcd0293ccc6e6afdb1ae7c39ff444edfc48bba8e3b",
+    "scripts/rotnet_sweep.py": "01e222bebe3a5ba0796db4910d3f072644a04f17afe4fd3cfa803ec35579d9ab",
+    "scripts/rotnet_sweep.sbatch": "e75200af95ddfa1e0aa0bf1872dd1f8c92edb8a83c17f8c08dcf9ba67cb23273",
+    "scripts/submit_rotnet_sweep.py": "611f3f003939a8fb783928d25398bbc5ceced487aa38da77a411bac35ff7742c",
+    "scripts/prioritize_rotnet.py": "b4f2a7883a05998560621d249cfc1e8d021217cc40b8fc80030ab873795e85be",
+    "experiments/rotnet_figure_b7_sweep.csv": "b1abb88d1b7d89054f1c8c263ab9004776b03bf3619fb478745e649af4034d5d"
+  },
+  "partition": "scavenger-gpu",
+  "gpu_type": "5000_ada",
+  "excluded_nodes": "dcc-gehmlab-gpu-ferc-s-z25-18,dcc-carlsonlab-gpu-ferc-s-h36-24,dcc-core-gpu-ferc-s-h36-6,dcc-majoroslab-gpu-ferc-a-r32-34",
+  "jobs": {
+    "preflight": "61863269",
+    "pilots": "61863270",
+    "train": "61863271"
+  },
+  "dry_run": false
+}

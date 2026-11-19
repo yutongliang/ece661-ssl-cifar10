@@ -1,0 +1,117 @@
+Node: dcc-carlsonlab-gpu-ferc-s-h36-23
+test_atomic_save_preserves_previous_checkpoint_on_failure (test_training.TrainingTests.test_atomic_save_preserves_previous_checkpoint_on_failure) ... ok
+test_downstream_saves_and_logs_complete_settings (test_training.TrainingTests.test_downstream_saves_and_logs_complete_settings) ... ok
+test_frozen_features_and_balanced_subsets (test_training.TrainingTests.test_frozen_features_and_balanced_subsets) ... ok
+test_interrupted_resume_matches_uninterrupted_training (test_training.TrainingTests.test_interrupted_resume_matches_uninterrupted_training) ... ok
+test_non_cuda_autocast_does_not_call_torch_autocast (test_training.TrainingTests.test_non_cuda_autocast_does_not_call_torch_autocast) ... ok
+test_old_results_are_preserved_when_columns_are_added (test_training.TrainingTests.test_old_results_are_preserved_when_columns_are_added) ... ok
+test_resume_rejects_missing_legacy_and_changed_settings (test_training.TrainingTests.test_resume_rejects_missing_legacy_and_changed_settings) ... ok
+test_rng_round_trip_after_weights_only_loading (test_training.TrainingTests.test_rng_round_trip_after_weights_only_loading) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 2.971s
+
+OK
+GPU: NVIDIA GeForce RTX 2080 Ti
+RotNet pretraining | device=cuda | 390 steps/epoch
+epoch   1 | loss 1.0733 | rotation acc 0.5280 | test rotation acc 0.5688
+epoch   2 | loss 0.8957 | rotation acc 0.6250 | test rotation acc 0.6084
+epoch   3 | loss 0.7490 | rotation acc 0.6962 | test rotation acc 0.6744
+epoch   4 | loss 0.6493 | rotation acc 0.7428 | test rotation acc 0.6531
+epoch   5 | loss 0.5937 | rotation acc 0.7677 | test rotation acc 0.7520
+epoch   6 | loss 0.5529 | rotation acc 0.7845 | test rotation acc 0.7111
+epoch   7 | loss 0.5173 | rotation acc 0.8001 | test rotation acc 0.7291
+epoch   8 | loss 0.4917 | rotation acc 0.8119 | test rotation acc 0.7415
+epoch   9 | loss 0.4680 | rotation acc 0.8208 | test rotation acc 0.7356
+epoch  10 | loss 0.4528 | rotation acc 0.8280 | test rotation acc 0.7755
+epoch  11 | loss 0.4416 | rotation acc 0.8328 | test rotation acc 0.7430
+epoch  12 | loss 0.4292 | rotation acc 0.8375 | test rotation acc 0.8006
+epoch  13 | loss 0.4240 | rotation acc 0.8406 | test rotation acc 0.8103
+epoch  14 | loss 0.4164 | rotation acc 0.8428 | test rotation acc 0.7951
+epoch  15 | loss 0.4079 | rotation acc 0.8459 | test rotation acc 0.8365
+epoch  16 | loss 0.4026 | rotation acc 0.8486 | test rotation acc 0.7772
+epoch  17 | loss 0.3962 | rotation acc 0.8510 | test rotation acc 0.7309
+epoch  18 | loss 0.3935 | rotation acc 0.8523 | test rotation acc 0.7238
+epoch  19 | loss 0.3867 | rotation acc 0.8543 | test rotation acc 0.7702
+epoch  20 | loss 0.3838 | rotation acc 0.8554 | test rotation acc 0.8188
+epoch  21 | loss 0.3787 | rotation acc 0.8582 | test rotation acc 0.7746
+epoch  22 | loss 0.3754 | rotation acc 0.8586 | test rotation acc 0.8142
+epoch  23 | loss 0.3696 | rotation acc 0.8612 | test rotation acc 0.6665
+epoch  24 | loss 0.3717 | rotation acc 0.8611 | test rotation acc 0.7875
+epoch  25 | loss 0.3641 | rotation acc 0.8631 | test rotation acc 0.7895
+epoch  26 | loss 0.3616 | rotation acc 0.8646 | test rotation acc 0.7487
+epoch  27 | loss 0.3579 | rotation acc 0.8658 | test rotation acc 0.8136
+epoch  28 | loss 0.3556 | rotation acc 0.8674 | test rotation acc 0.7982
+epoch  29 | loss 0.3522 | rotation acc 0.8683 | test rotation acc 0.8363
+epoch  30 | loss 0.3526 | rotation acc 0.8687 | test rotation acc 0.8260
+epoch  31 | loss 0.3424 | rotation acc 0.8726 | test rotation acc 0.8556
+epoch  32 | loss 0.3443 | rotation acc 0.8718 | test rotation acc 0.8172
+epoch  33 | loss 0.3400 | rotation acc 0.8730 | test rotation acc 0.8253
+epoch  34 | loss 0.3364 | rotation acc 0.8738 | test rotation acc 0.7759
+epoch  35 | loss 0.3381 | rotation acc 0.8734 | test rotation acc 0.8401
+epoch  36 | loss 0.3330 | rotation acc 0.8751 | test rotation acc 0.8044
+epoch  37 | loss 0.3296 | rotation acc 0.8773 | test rotation acc 0.7218
+epoch  38 | loss 0.3260 | rotation acc 0.8787 | test rotation acc 0.7730
+epoch  39 | loss 0.3240 | rotation acc 0.8797 | test rotation acc 0.8488
+epoch  40 | loss 0.3198 | rotation acc 0.8811 | test rotation acc 0.8487
+epoch  41 | loss 0.3223 | rotation acc 0.8803 | test rotation acc 0.8444
+epoch  42 | loss 0.3175 | rotation acc 0.8822 | test rotation acc 0.8692
+epoch  43 | loss 0.3130 | rotation acc 0.8835 | test rotation acc 0.8596
+epoch  44 | loss 0.3124 | rotation acc 0.8829 | test rotation acc 0.8467
+epoch  45 | loss 0.3106 | rotation acc 0.8843 | test rotation acc 0.8493
+epoch  46 | loss 0.3062 | rotation acc 0.8865 | test rotation acc 0.8506
+epoch  47 | loss 0.3022 | rotation acc 0.8881 | test rotation acc 0.8586
+epoch  48 | loss 0.2990 | rotation acc 0.8887 | test rotation acc 0.8460
+epoch  49 | loss 0.2966 | rotation acc 0.8900 | test rotation acc 0.8623
+epoch  50 | loss 0.2937 | rotation acc 0.8915 | test rotation acc 0.8529
+epoch  51 | loss 0.2922 | rotation acc 0.8912 | test rotation acc 0.8197
+epoch  52 | loss 0.2878 | rotation acc 0.8935 | test rotation acc 0.8688
+epoch  53 | loss 0.2831 | rotation acc 0.8945 | test rotation acc 0.8269
+epoch  54 | loss 0.2781 | rotation acc 0.8971 | test rotation acc 0.8540
+epoch  55 | loss 0.2787 | rotation acc 0.8975 | test rotation acc 0.8660
+epoch  56 | loss 0.2770 | rotation acc 0.8975 | test rotation acc 0.8594
+epoch  57 | loss 0.2736 | rotation acc 0.8992 | test rotation acc 0.8799
+epoch  58 | loss 0.2656 | rotation acc 0.9027 | test rotation acc 0.8590
+epoch  59 | loss 0.2641 | rotation acc 0.9027 | test rotation acc 0.8751
+epoch  60 | loss 0.2595 | rotation acc 0.9040 | test rotation acc 0.8781
+epoch  61 | loss 0.2577 | rotation acc 0.9051 | test rotation acc 0.8679
+epoch  62 | loss 0.2515 | rotation acc 0.9073 | test rotation acc 0.8761
+epoch  63 | loss 0.2500 | rotation acc 0.9073 | test rotation acc 0.8478
+epoch  64 | loss 0.2466 | rotation acc 0.9097 | test rotation acc 0.8795
+epoch  65 | loss 0.2390 | rotation acc 0.9121 | test rotation acc 0.8853
+epoch  66 | loss 0.2408 | rotation acc 0.9110 | test rotation acc 0.8762
+epoch  67 | loss 0.2354 | rotation acc 0.9134 | test rotation acc 0.8853
+epoch  68 | loss 0.2304 | rotation acc 0.9154 | test rotation acc 0.8834
+epoch  69 | loss 0.2264 | rotation acc 0.9170 | test rotation acc 0.8894
+epoch  70 | loss 0.2222 | rotation acc 0.9180 | test rotation acc 0.8892
+epoch  71 | loss 0.2161 | rotation acc 0.9211 | test rotation acc 0.8867
+epoch  72 | loss 0.2114 | rotation acc 0.9223 | test rotation acc 0.8951
+epoch  73 | loss 0.2084 | rotation acc 0.9237 | test rotation acc 0.8975
+epoch  74 | loss 0.2049 | rotation acc 0.9250 | test rotation acc 0.8810
+epoch  75 | loss 0.1989 | rotation acc 0.9273 | test rotation acc 0.8781
+epoch  76 | loss 0.1936 | rotation acc 0.9297 | test rotation acc 0.8995
+epoch  77 | loss 0.1918 | rotation acc 0.9300 | test rotation acc 0.9040
+epoch  78 | loss 0.1865 | rotation acc 0.9319 | test rotation acc 0.9073
+epoch  79 | loss 0.1807 | rotation acc 0.9336 | test rotation acc 0.9060
+epoch  80 | loss 0.1750 | rotation acc 0.9366 | test rotation acc 0.9130
+epoch  81 | loss 0.1692 | rotation acc 0.9383 | test rotation acc 0.9048
+epoch  82 | loss 0.1663 | rotation acc 0.9390 | test rotation acc 0.9055
+epoch  83 | loss 0.1597 | rotation acc 0.9418 | test rotation acc 0.9053
+epoch  84 | loss 0.1541 | rotation acc 0.9437 | test rotation acc 0.9087
+epoch  85 | loss 0.1489 | rotation acc 0.9460 | test rotation acc 0.9144
+epoch  86 | loss 0.1444 | rotation acc 0.9479 | test rotation acc 0.9157
+epoch  87 | loss 0.1389 | rotation acc 0.9499 | test rotation acc 0.9158
+epoch  88 | loss 0.1339 | rotation acc 0.9522 | test rotation acc 0.9204
+epoch  89 | loss 0.1295 | rotation acc 0.9534 | test rotation acc 0.9215
+epoch  90 | loss 0.1242 | rotation acc 0.9558 | test rotation acc 0.9205
+epoch  91 | loss 0.1191 | rotation acc 0.9577 | test rotation acc 0.9206
+epoch  92 | loss 0.1161 | rotation acc 0.9588 | test rotation acc 0.9234
+epoch  93 | loss 0.1126 | rotation acc 0.9598 | test rotation acc 0.9228
+epoch  94 | loss 0.1096 | rotation acc 0.9614 | test rotation acc 0.9231
+epoch  95 | loss 0.1070 | rotation acc 0.9623 | test rotation acc 0.9235
+epoch  96 | loss 0.1052 | rotation acc 0.9630 | test rotation acc 0.9241
+epoch  97 | loss 0.1036 | rotation acc 0.9634 | test rotation acc 0.9243
+epoch  98 | loss 0.1026 | rotation acc 0.9638 | test rotation acc 0.9243
+epoch  99 | loss 0.1028 | rotation acc 0.9645 | test rotation acc 0.9241
+epoch 100 | loss 0.1020 | rotation acc 0.9644 | test rotation acc 0.9245
+Saved encoder to checkpoints/rotnet.pt

@@ -1,0 +1,10 @@
+{
+  "run_id": "rotnet_r20_b512_lr0p1_seed0",
+  "epochs_checked": 5,
+  "schedule_epochs": 1000,
+  "seconds_per_epoch": 14.1406435421668,
+  "estimated_1000_epoch_hours": 3.9279565394907774,
+  "peak_reserved_GiB": 2.07421875,
+  "torch_version": "2.10.0+cu126",
+  "device": "cuda"
+}

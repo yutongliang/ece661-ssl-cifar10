@@ -1,0 +1,22 @@
+{
+  "configuration": {
+    "run_id": "rotnet_r20_b4096_lr0p1_seed0",
+    "method": "rotnet",
+    "backbone": "ResNet20",
+    "global_batch_size": "4096",
+    "lr_slot": "2",
+    "lr": "0.1",
+    "lr_scaling": "constant",
+    "optimizer": "SGD",
+    "momentum": "0.9",
+    "weight_decay": "0.0005",
+    "pretrain_seed": "0",
+    "epochs": "1000",
+    "drop_last": "True",
+    "steps_per_epoch": "12",
+    "encoder_every_epochs": "100",
+    "checkpoint_dir": "checkpoints/figure_b7/rotnet_r20_b4096_lr0p1_seed0",
+    "status": "configured_pending_gpu_pilot"
+  },
+  "training_source_sha256": "94c3a44ba86bd855eb8a8b5d424cab30f8371ee358c7f4bdcec92d66cf793358"
+}

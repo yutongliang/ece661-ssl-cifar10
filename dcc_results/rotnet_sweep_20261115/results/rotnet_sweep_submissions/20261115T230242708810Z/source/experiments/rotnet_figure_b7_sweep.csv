@@ -1,0 +1,16 @@
+run_id,method,backbone,global_batch_size,lr_slot,lr,lr_scaling,optimizer,momentum,weight_decay,pretrain_seed,epochs,drop_last,steps_per_epoch,encoder_every_epochs,checkpoint_dir,status
+rotnet_r20_b256_lr0p03_seed0,rotnet,ResNet20,256,1,0.03,constant,SGD,0.9,0.0005,0,1000,True,195,100,checkpoints/figure_b7/rotnet_r20_b256_lr0p03_seed0,configured_pending_gpu_pilot
+rotnet_r20_b256_lr0p1_seed0,rotnet,ResNet20,256,2,0.1,constant,SGD,0.9,0.0005,0,1000,True,195,100,checkpoints/figure_b7/rotnet_r20_b256_lr0p1_seed0,configured_pending_gpu_pilot
+rotnet_r20_b256_lr0p3_seed0,rotnet,ResNet20,256,3,0.3,constant,SGD,0.9,0.0005,0,1000,True,195,100,checkpoints/figure_b7/rotnet_r20_b256_lr0p3_seed0,configured_pending_gpu_pilot
+rotnet_r20_b512_lr0p03_seed0,rotnet,ResNet20,512,1,0.03,constant,SGD,0.9,0.0005,0,1000,True,97,100,checkpoints/figure_b7/rotnet_r20_b512_lr0p03_seed0,configured_pending_gpu_pilot
+rotnet_r20_b512_lr0p1_seed0,rotnet,ResNet20,512,2,0.1,constant,SGD,0.9,0.0005,0,1000,True,97,100,checkpoints/figure_b7/rotnet_r20_b512_lr0p1_seed0,configured_pending_gpu_pilot
+rotnet_r20_b512_lr0p3_seed0,rotnet,ResNet20,512,3,0.3,constant,SGD,0.9,0.0005,0,1000,True,97,100,checkpoints/figure_b7/rotnet_r20_b512_lr0p3_seed0,configured_pending_gpu_pilot
+rotnet_r20_b1024_lr0p03_seed0,rotnet,ResNet20,1024,1,0.03,constant,SGD,0.9,0.0005,0,1000,True,48,100,checkpoints/figure_b7/rotnet_r20_b1024_lr0p03_seed0,configured_pending_gpu_pilot
+rotnet_r20_b1024_lr0p1_seed0,rotnet,ResNet20,1024,2,0.1,constant,SGD,0.9,0.0005,0,1000,True,48,100,checkpoints/figure_b7/rotnet_r20_b1024_lr0p1_seed0,configured_pending_gpu_pilot
+rotnet_r20_b1024_lr0p3_seed0,rotnet,ResNet20,1024,3,0.3,constant,SGD,0.9,0.0005,0,1000,True,48,100,checkpoints/figure_b7/rotnet_r20_b1024_lr0p3_seed0,configured_pending_gpu_pilot
+rotnet_r20_b2048_lr0p03_seed0,rotnet,ResNet20,2048,1,0.03,constant,SGD,0.9,0.0005,0,1000,True,24,100,checkpoints/figure_b7/rotnet_r20_b2048_lr0p03_seed0,configured_pending_gpu_pilot
+rotnet_r20_b2048_lr0p1_seed0,rotnet,ResNet20,2048,2,0.1,constant,SGD,0.9,0.0005,0,1000,True,24,100,checkpoints/figure_b7/rotnet_r20_b2048_lr0p1_seed0,configured_pending_gpu_pilot
+rotnet_r20_b2048_lr0p3_seed0,rotnet,ResNet20,2048,3,0.3,constant,SGD,0.9,0.0005,0,1000,True,24,100,checkpoints/figure_b7/rotnet_r20_b2048_lr0p3_seed0,configured_pending_gpu_pilot
+rotnet_r20_b4096_lr0p03_seed0,rotnet,ResNet20,4096,1,0.03,constant,SGD,0.9,0.0005,0,1000,True,12,100,checkpoints/figure_b7/rotnet_r20_b4096_lr0p03_seed0,configured_pending_gpu_pilot
+rotnet_r20_b4096_lr0p1_seed0,rotnet,ResNet20,4096,2,0.1,constant,SGD,0.9,0.0005,0,1000,True,12,100,checkpoints/figure_b7/rotnet_r20_b4096_lr0p1_seed0,configured_pending_gpu_pilot
+rotnet_r20_b4096_lr0p3_seed0,rotnet,ResNet20,4096,3,0.3,constant,SGD,0.9,0.0005,0,1000,True,12,100,checkpoints/figure_b7/rotnet_r20_b4096_lr0p3_seed0,configured_pending_gpu_pilot

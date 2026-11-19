@@ -1,0 +1,69 @@
+{
+  "launch": "20261115T230242708810Z",
+  "evidence": "User-provided successful terminal output",
+  "remote_root": "/work/yl1064/ece661-rotnet-sweep",
+  "jobs": {
+    "preflight": "61863269",
+    "pilots": "61863270",
+    "train_array": "61863271"
+  },
+  "submission_observed_states": {
+    "preflight": "RUNNING",
+    "pilots": "PENDING_DEPENDENCY",
+    "train_array": "PENDING_DEPENDENCY"
+  },
+  "confirmed_deprioritized_ece662_jobs": 290,
+  "submitted_bundle_sha256": "5672997d230a2575e51d741fe9641d7f733301bc69a8c4b1d77cf9e838a53e19",
+  "later_local_lock_changes_deployed": false,
+  "last_user_reported_states": {
+    "preflight": "Previously confirmed COMPLETED exit 0:0",
+    "pilots": "Not present in latest squeue; training afterok dependency has been satisfied",
+    "train_array": "Superseded: all 15 tasks COMPLETED (see completion)"
+  },
+  "proposed_partition_update": {
+    "partition": "gpu-common",
+    "jobs": [
+      "61863270",
+      "61863271"
+    ],
+    "confirmed": true,
+    "evidence": "User successfully ran both scontrol updates; squeue shows both jobs in gpu-common, state PD, reason None."
+  },
+  "latest_observation_date": "2026-11-18",
+  "other_project_live_status": "2026-11-18: ECE662 has 13 pending tasks (1 gpu-common, 12 scavenger-gpu)",
+  "priority_restoration": {
+    "needed": true,
+    "confirmed": false,
+    "evidence": "User query for ECE662 job 61849134: Priority=1 Nice=1000000, PENDING Priority",
+    "record": "/work/yl1064/ece661-rotnet-sweep/results/rotnet_sweep_submissions/20261115T230242708810Z/ece662_priority.json",
+    "timing": "Superseded by explicit Nice=100 policy; do not retain an until-all-15-finish deferral",
+    "immediate_restore_recommendation_withdrawn": true,
+    "restore_command_executed_by_user": true
+  },
+  "priority_policy": {
+    "order": "Mild preference for RotNet; allow Slurm to schedule both projects",
+    "rotnet_array": "61863271",
+    "rotnet_nice_target": 0,
+    "ece662_pending_nice_target": 100,
+    "strict_project_serialization": false,
+    "scope": "Only currently pending owned cifar10_lrms3 training jobs; no running tasks or supervisors",
+    "remote_target_change_confirmed": false,
+    "note": "Nice=100 is a scheduling bias, not a guarantee of global queue order"
+  },
+  "user_reported_restore_command_executed": true,
+  "completion": {
+    "observed": "2026-11-18, direct SSH sacct query from this session",
+    "train_array": "61863271 tasks 0-14 all COMPLETED, exit 0:0, elapsed 2:39-4:01 each",
+    "complete_json_records": 15,
+    "local_copy": "dcc_results/rotnet_sweep_20261115 (checkpoints are git-ignored; run_records/ holds the small JSON records)",
+    "metric_note": "Logged accuracies are 4-way rotation (pretext) top-1, not CIFAR-10 class accuracy"
+  },
+  "linear_probes": {
+    "job": "62101838",
+    "submitted": "2026-11-18",
+    "script": "scripts/rotnet_linear_probes.sbatch (array 0-15%4; tasks 0-14 = runs, 15 = random-init control)",
+    "outputs": "/work/yl1064/ece661-rotnet-sweep/results/rotnet_linear_probes/<run_id>/epochNNNN.json",
+    "merge": "python scripts/rotnet_linear_probes.py merge -> results/rotnet_linear_probes.csv",
+    "last_observed_state": "All 16 tasks PENDING (Priority) in gpu-common on 2026-11-18"
+  }
+}
