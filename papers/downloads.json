@@ -1,0 +1,50 @@
+{
+  "verification_date": "2026-11-15",
+  "papers": [
+    {
+      "id": "simclr",
+      "filename": "simclr-chen2020.pdf",
+      "url": "https://arxiv.org/pdf/2002.05709",
+      "bytes": 6564895,
+      "pages": 20,
+      "sha256": "e1b10db76adeb0d21a014b9abcf42f6a6af928540c223f010fa1d8c293d9d105",
+      "pdf_parse_verified": true
+    },
+    {
+      "id": "rotnet",
+      "filename": "rotnet-gidaris2018.pdf",
+      "url": "https://arxiv.org/pdf/1803.07728",
+      "bytes": 2524968,
+      "pages": 16,
+      "sha256": "1814c0454b6d1f5ef61ffb3badb51e2218fb633352c1c64969d558efb9fdf0e8",
+      "pdf_parse_verified": true
+    },
+    {
+      "id": "simsiam",
+      "filename": "simsiam-chenhe2021.pdf",
+      "url": "https://arxiv.org/pdf/2011.10566",
+      "bytes": 579388,
+      "pages": 10,
+      "sha256": "37d37c81d423d503f54d99bc5c9d9dc23d07c7bd1aad62f37b47ec7d2871e63e",
+      "pdf_parse_verified": true
+    },
+    {
+      "id": "resnet",
+      "filename": "resnet-he2016.pdf",
+      "url": "https://arxiv.org/pdf/1512.03385",
+      "bytes": 819383,
+      "pages": 12,
+      "sha256": "1e0651b6810ecba34a3dbc5b5b0209226f889004607c1f203540a48d64e5a93a",
+      "pdf_parse_verified": true
+    },
+    {
+      "id": "lars",
+      "filename": "lars-you2017.pdf",
+      "url": "https://arxiv.org/pdf/1708.03888",
+      "bytes": 796267,
+      "pages": 8,
+      "sha256": "8012e213ce51d5a1540bdb194353cc568eccec63bec875e5469c84f99a1377d7",
+      "pdf_parse_verified": true
+    }
+  ]
+}

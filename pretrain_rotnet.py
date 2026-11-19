@@ -8,7 +8,10 @@ is kept; the rotation head is thrown away.
     python pretrain_rotnet.py --epochs 100 --resume   # continue after a disconnect
 """
 import argparse
+import math
 import os
+import time
+from pathlib import Path
 
 import torch
 import torch.nn as nn
@@ -32,7 +35,9 @@ def load_resume_state(args, device):
                          "with a new --out path; existing final encoders remain usable.")
     differences = [f"{key}: saved={state['args'].get(key)!r}, requested={value!r}"
                    for key, value in vars(args).items()
-                   if key not in {"out", "resume"} and state["args"].get(key) != value]
+                   if key not in {"out", "resume", "stop_after_epoch", "checkpoint_every",
+                                  "require_cuda"}
+                   and state["args"].get(key) != value]
     if state["device"] != str(device):
         differences.append(f"device: saved={state['device']}, requested={device}")
     if state["torch_version"] != str(torch.__version__):
@@ -61,7 +66,21 @@ def parse_args():
     p.add_argument("--eval-every", type=int, default=5)
     p.add_argument("--out", default="checkpoints/rotnet.pt", help="final encoder checkpoint")
     p.add_argument("--resume", action="store_true", help="resume from <out>.last")
-    return p.parse_args()
+    p.add_argument("--checkpoint-every", type=int, default=0,
+                   help="export encoder_epochNNNN.pt beside --out every N epochs (0 disables)")
+    p.add_argument("--stop-after-epoch", type=int, default=None,
+                   help="stop after this absolute epoch without changing the total schedule")
+    p.add_argument("--require-cuda", action="store_true", help="fail rather than train on CPU/MPS")
+    args = p.parse_args()
+    if min(args.epochs, args.batch_size, args.eval_every) <= 0:
+        p.error("epochs, batch size, and evaluation interval must be positive")
+    if args.lr <= 0 or not math.isfinite(args.lr):
+        p.error("learning rate must be finite and positive")
+    if args.checkpoint_every < 0:
+        p.error("checkpoint interval cannot be negative")
+    if args.stop_after_epoch is not None and not 1 <= args.stop_after_epoch <= args.epochs:
+        p.error("stop-after-epoch must be between 1 and the total epochs")
+    return args
 
 
 @torch.no_grad()
@@ -81,6 +100,8 @@ def main():
     args = parse_args()
     set_seed(args.seed)
     device = get_device()
+    if args.require_cuda and device.type != "cuda":
+        raise RuntimeError("CUDA is required for this run; refusing CPU/MPS fallback")
     use_amp = device.type == "cuda"
     # Validate before downloading data or constructing a new training run.
     state = load_resume_state(args, device) if args.resume else None
@@ -89,6 +110,8 @@ def main():
     train_loader = torch.utils.data.DataLoader(
         cifar10(train=True, transform=train_transform), batch_size=args.batch_size,
         shuffle=True, num_workers=args.num_workers, drop_last=True)
+    if not len(train_loader):
+        raise ValueError("Batch size exceeds the training set; there are no complete batches")
     test_loader = torch.utils.data.DataLoader(
         cifar10(train=False, transform=test_transform), batch_size=256,
         shuffle=False, num_workers=args.num_workers)
@@ -104,6 +127,7 @@ def main():
     # Full training state, saved every epoch so a lost session can resume.
     last_path = args.out + ".last"
     start_epoch = 1
+    history = []
     if state is not None:
         encoder.load_state_dict(state["encoder"])
         head.load_state_dict(state["head"])
@@ -113,10 +137,17 @@ def main():
         # Restore after model initialization, before creating any loader iterator.
         restore_rng_state(state["rng_state"], device)
         start_epoch = state["epoch"] + 1
+        history = state.get("history", [])
         print(f"Resumed from {last_path} at epoch {start_epoch}")
 
     print(f"RotNet pretraining | device={device} | {len(train_loader)} steps/epoch")
-    for epoch in range(start_epoch, args.epochs + 1):
+    end_epoch = args.stop_after_epoch or args.epochs
+    completed_epoch = start_epoch - 1
+    for epoch in range(start_epoch, end_epoch + 1):
+        if use_amp:
+            torch.cuda.synchronize(device)
+            torch.cuda.reset_peak_memory_stats(device)
+        started = time.perf_counter()
         encoder.train()
         head.train()
         total_loss = correct = seen = 0
@@ -126,6 +157,8 @@ def main():
             with autocast_context(device):
                 logits = head(encoder(images))
                 loss = criterion(logits, labels)
+            if not torch.isfinite(loss).item():
+                raise FloatingPointError(f"Non-finite rotation loss at epoch {epoch}")
             optimizer.zero_grad(set_to_none=True)
             scaler.scale(loss).backward()
             scaler.step(optimizer)
@@ -139,16 +172,35 @@ def main():
         msg = f"epoch {epoch:3d} | loss {total_loss / seen:.4f} | rotation acc {correct / seen:.4f}"
         if epoch % args.eval_every == 0 or epoch == args.epochs:
             msg += f" | test rotation acc {rotation_accuracy(encoder, head, test_loader, device):.4f}"
+        if use_amp:
+            torch.cuda.synchronize(device)
+        seconds = time.perf_counter() - started
+        peak_bytes = torch.cuda.max_memory_reserved(device) if use_amp else 0
+        msg += f" | seconds {seconds:.2f} | peak reserved GiB {peak_bytes / 2**30:.2f}"
         print(msg)
 
+        history.append({"epoch": epoch, "loss": total_loss / seen,
+                        "rotation_acc": correct / seen, "seconds": seconds,
+                        "peak_reserved_bytes": peak_bytes})
+        # Publish milestones before the last-state commit, so resuming after an
+        # interrupted export repeats the epoch rather than silently losing a snapshot.
+        if args.checkpoint_every and (epoch % args.checkpoint_every == 0 or epoch == args.epochs):
+            milestone = Path(args.out).parent / f"encoder_epoch{epoch:04d}.pt"
+            save_encoder(milestone, encoder, method="rotnet", args=args, epochs=epoch)
         save_checkpoint(last_path, {
             "encoder": encoder.state_dict(), "head": head.state_dict(),
             "optimizer": optimizer.state_dict(), "scheduler": scheduler.state_dict(),
             "scaler": scaler.state_dict(), "epoch": epoch, "args": vars(args),
             "rng_state": capture_rng_state(device), "device": str(device),
             "torch_version": str(torch.__version__),
+            "history": history,
         })
+        completed_epoch = epoch
 
+    if completed_epoch < args.epochs:
+        print(f"Stopped at epoch {completed_epoch}/{args.epochs}; schedule is unchanged. "
+              f"Resume from {last_path} to finish.")
+        return
     save_encoder(args.out, encoder, method="rotnet", args=args, epochs=args.epochs)
     print(f"Saved encoder to {args.out}")
 

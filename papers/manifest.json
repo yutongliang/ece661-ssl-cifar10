@@ -1,0 +1,52 @@
+[
+  {
+    "id": "simclr",
+    "title": "A Simple Framework for Contrastive Learning of Visual Representations",
+    "authors": "Ting Chen, Simon Kornblith, Mohammad Norouzi, Geoffrey Hinton",
+    "year": 2020,
+    "filename": "simclr-chen2020.pdf",
+    "url": "https://arxiv.org/pdf/2002.05709",
+    "read": "Sections 2, 5.2, 6; Appendix B.6 and B.9; Figure B.7",
+    "role": "Required contrastive method and batch-size/epoch experiment"
+  },
+  {
+    "id": "rotnet",
+    "title": "Unsupervised Representation Learning by Predicting Image Rotations",
+    "authors": "Spyros Gidaris, Praveer Singh, Nikos Komodakis",
+    "year": 2018,
+    "filename": "rotnet-gidaris2018.pdf",
+    "url": "https://arxiv.org/pdf/1803.07728",
+    "read": "Section 3.1; Tables 1 and 3; Figure 5",
+    "role": "Required rotation method, feature hierarchy and limited-label comparison"
+  },
+  {
+    "id": "simsiam",
+    "title": "Exploring Simple Siamese Representation Learning",
+    "authors": "Xinlei Chen, Kaiming He",
+    "year": 2021,
+    "filename": "simsiam-chenhe2021.pdf",
+    "url": "https://arxiv.org/pdf/2011.10566",
+    "read": "Sections 3 and 4.1-4.4; Appendix A and D",
+    "role": "Proposal's additional method; stop-gradient, collapse checks and batch-size sensitivity"
+  },
+  {
+    "id": "resnet",
+    "title": "Deep Residual Learning for Image Recognition",
+    "authors": "Kaiming He, Xiangyu Zhang, Shaoqing Ren, Jian Sun",
+    "year": 2016,
+    "filename": "resnet-he2016.pdf",
+    "url": "https://arxiv.org/pdf/1512.03385",
+    "read": "Section 4.2 (CIFAR-10)",
+    "role": "Shared ResNet-20 architecture and supervised baseline"
+  },
+  {
+    "id": "lars",
+    "title": "Large Batch Training of Convolutional Networks",
+    "authors": "Yang You, Igor Gitman, Boris Ginsburg",
+    "year": 2017,
+    "filename": "lars-you2017.pdf",
+    "url": "https://arxiv.org/pdf/1708.03888",
+    "read": "Layer-wise adaptive rate scaling and large-batch optimization",
+    "role": "Supporting reference for the SimCLR optimizer audit"
+  }
+]

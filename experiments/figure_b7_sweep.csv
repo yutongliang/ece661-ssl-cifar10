@@ -1,0 +1,16 @@
+run_id,method,backbone,global_batch_size,base_lr,lr_scaling,peak_lr,temperature,weight_decay,pretrain_seed,epochs,warmup_epochs,drop_last,steps_per_epoch,encoder_every_epochs,checkpoint_dir,status
+simclr_r20_b256_lr0p5_seed0,simclr,ResNet20,256,0.5,linear,0.5,0.5,1e-06,0,1000,10,True,195,100,checkpoints/figure_b7/simclr_r20_b256_lr0p5_seed0,planned_pending_code_audit
+simclr_r20_b256_lr1p0_seed0,simclr,ResNet20,256,1.0,linear,1.0,0.5,1e-06,0,1000,10,True,195,100,checkpoints/figure_b7/simclr_r20_b256_lr1p0_seed0,planned_pending_code_audit
+simclr_r20_b256_lr1p5_seed0,simclr,ResNet20,256,1.5,linear,1.5,0.5,1e-06,0,1000,10,True,195,100,checkpoints/figure_b7/simclr_r20_b256_lr1p5_seed0,planned_pending_code_audit
+simclr_r20_b512_lr0p5_seed0,simclr,ResNet20,512,0.5,linear,1.0,0.5,1e-06,0,1000,10,True,97,100,checkpoints/figure_b7/simclr_r20_b512_lr0p5_seed0,planned_pending_code_audit
+simclr_r20_b512_lr1p0_seed0,simclr,ResNet20,512,1.0,linear,2.0,0.5,1e-06,0,1000,10,True,97,100,checkpoints/figure_b7/simclr_r20_b512_lr1p0_seed0,planned_pending_code_audit
+simclr_r20_b512_lr1p5_seed0,simclr,ResNet20,512,1.5,linear,3.0,0.5,1e-06,0,1000,10,True,97,100,checkpoints/figure_b7/simclr_r20_b512_lr1p5_seed0,planned_pending_code_audit
+simclr_r20_b1024_lr0p5_seed0,simclr,ResNet20,1024,0.5,linear,2.0,0.5,1e-06,0,1000,10,True,48,100,checkpoints/figure_b7/simclr_r20_b1024_lr0p5_seed0,planned_pending_code_audit
+simclr_r20_b1024_lr1p0_seed0,simclr,ResNet20,1024,1.0,linear,4.0,0.5,1e-06,0,1000,10,True,48,100,checkpoints/figure_b7/simclr_r20_b1024_lr1p0_seed0,planned_pending_code_audit
+simclr_r20_b1024_lr1p5_seed0,simclr,ResNet20,1024,1.5,linear,6.0,0.5,1e-06,0,1000,10,True,48,100,checkpoints/figure_b7/simclr_r20_b1024_lr1p5_seed0,planned_pending_code_audit
+simclr_r20_b2048_lr0p5_seed0,simclr,ResNet20,2048,0.5,linear,4.0,0.5,1e-06,0,1000,10,True,24,100,checkpoints/figure_b7/simclr_r20_b2048_lr0p5_seed0,planned_pending_code_audit
+simclr_r20_b2048_lr1p0_seed0,simclr,ResNet20,2048,1.0,linear,8.0,0.5,1e-06,0,1000,10,True,24,100,checkpoints/figure_b7/simclr_r20_b2048_lr1p0_seed0,planned_pending_code_audit
+simclr_r20_b2048_lr1p5_seed0,simclr,ResNet20,2048,1.5,linear,12.0,0.5,1e-06,0,1000,10,True,24,100,checkpoints/figure_b7/simclr_r20_b2048_lr1p5_seed0,planned_pending_code_audit
+simclr_r20_b4096_lr0p5_seed0,simclr,ResNet20,4096,0.5,linear,8.0,0.5,1e-06,0,1000,10,True,12,100,checkpoints/figure_b7/simclr_r20_b4096_lr0p5_seed0,planned_pending_code_audit
+simclr_r20_b4096_lr1p0_seed0,simclr,ResNet20,4096,1.0,linear,16.0,0.5,1e-06,0,1000,10,True,12,100,checkpoints/figure_b7/simclr_r20_b4096_lr1p0_seed0,planned_pending_code_audit
+simclr_r20_b4096_lr1p5_seed0,simclr,ResNet20,4096,1.5,linear,24.0,0.5,1e-06,0,1000,10,True,12,100,checkpoints/figure_b7/simclr_r20_b4096_lr1p5_seed0,planned_pending_code_audit

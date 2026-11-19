@@ -7,3 +7,9 @@ __pycache__/
 .env
 .venv/
 .DS_Store
+
+# Symlinks to DCC paths inside downloaded submission snapshots
+dcc_results/*/results/rotnet_sweep_submissions/*/source/checkpoints
+dcc_results/*/results/rotnet_sweep_submissions/*/source/data
+# Upload bundles; the frozen source is kept under dcc_results/.../source/
+artifacts/

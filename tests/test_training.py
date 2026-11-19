@@ -116,6 +116,42 @@ class TrainingTests(unittest.TestCase):
             with self.subTest(flag=flag), self.assertRaisesRegex(ValueError, "settings differ"):
                 self.run_script(rotnet, args + [flag, value])
 
+    def test_planned_stop_and_milestones_preserve_full_schedule_on_resume(self):
+        full = self.root / "full" / "encoder.pt"
+        pilot = self.root / "pilot" / "encoder.pt"
+        settings = ["--epochs", "3", "--batch-size", "10", "--num-workers", "0",
+                    "--eval-every", "1", "--checkpoint-every", "1"]
+        self.run_script(rotnet, settings + ["--out", str(full)])
+        self.run_script(rotnet, settings + ["--out", str(pilot), "--stop-after-epoch", "1"])
+        self.assertFalse(pilot.exists(), "A partial pilot must not publish a final encoder")
+        state = torch.load(str(pilot) + ".last", weights_only=True)
+        self.assertEqual(state["epoch"], 1)
+        self.assertEqual(state["scheduler"]["T_max"], 3)
+        first = torch.load(pilot.parent / "encoder_epoch0001.pt", weights_only=True)
+        self.assertEqual(first["epochs"], 1)
+        self.assertEqual(first["args"]["epochs"], 3)
+        self.assert_state_equal(first["encoder"], state["encoder"])
+        self.run_script(rotnet, settings + ["--out", str(pilot), "--resume"])
+        a = torch.load(str(full) + ".last", weights_only=True)
+        b = torch.load(str(pilot) + ".last", weights_only=True)
+        for key in ("encoder", "head", "optimizer", "scheduler", "scaler", "rng_state", "epoch"):
+            self.assert_state_equal(a[key], b[key])
+        for epoch in (1, 2, 3):
+            saved = torch.load(pilot.parent / f"encoder_epoch{epoch:04d}.pt", weights_only=True)
+            expected = torch.load(full.parent / f"encoder_epoch{epoch:04d}.pt", weights_only=True)
+            self.assertEqual(saved["epochs"], epoch)
+            self.assert_state_equal(saved["encoder"], expected["encoder"])
+
+    def test_cuda_requirement_and_nonfinite_loss_stop_before_checkpoint_commit(self):
+        path = self.root / "invalid.pt"
+        with self.assertRaisesRegex(RuntimeError, "CUDA is required"):
+            self.run_script(rotnet, self.pretrain_args(path) + ["--require-cuda"])
+        with patch.object(torch.nn.CrossEntropyLoss, "forward",
+                          lambda self, *args: torch.tensor(float("nan"))):
+            with self.assertRaisesRegex(FloatingPointError, "Non-finite"):
+                self.run_script(rotnet, self.pretrain_args(path))
+        self.assertFalse(Path(str(path) + ".last").exists())
+
     def test_rng_round_trip_after_weights_only_loading(self):
         utils.set_seed(42)
         path = self.root / "rng.pt"
