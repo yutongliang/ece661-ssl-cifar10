@@ -1,0 +1,12 @@
+Job: 62101838_9 | node: dcc-core-gpu-ferc-s-aa32-5 | restart: 0
+Task 9: 10 probes | device cuda (NVIDIA RTX 5000 Ada Generation)
+rotnet_r20_b2048_lr0p03_seed0 epoch  100 | class top-1 test 0.5655 | train 0.5677 | 10s
+rotnet_r20_b2048_lr0p03_seed0 epoch  200 | class top-1 test 0.6174 | train 0.6213 | 9s
+rotnet_r20_b2048_lr0p03_seed0 epoch  300 | class top-1 test 0.6154 | train 0.6212 | 8s
+rotnet_r20_b2048_lr0p03_seed0 epoch  400 | class top-1 test 0.6127 | train 0.6168 | 9s
+rotnet_r20_b2048_lr0p03_seed0 epoch  500 | class top-1 test 0.6026 | train 0.6060 | 9s
+rotnet_r20_b2048_lr0p03_seed0 epoch  600 | class top-1 test 0.6097 | train 0.6138 | 9s
+rotnet_r20_b2048_lr0p03_seed0 epoch  700 | class top-1 test 0.5965 | train 0.6031 | 8s
+rotnet_r20_b2048_lr0p03_seed0 epoch  800 | class top-1 test 0.6009 | train 0.6035 | 8s
+rotnet_r20_b2048_lr0p03_seed0 epoch  900 | class top-1 test 0.6023 | train 0.6022 | 9s
+rotnet_r20_b2048_lr0p03_seed0 epoch 1000 | class top-1 test 0.5993 | train 0.6014 | 9s

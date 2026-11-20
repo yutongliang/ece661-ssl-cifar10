@@ -22,9 +22,15 @@ All 15 tasks of `61863271` finished COMPLETED, exit 0:0, each with a verified
 Logged accuracies are rotation (pretext) top-1 only; final test rotation accuracy
 ranges 0.881 (B=4096, lr 0.03) to 0.932 (B=256, lr 0.1). These do not select the
 main-table encoder, which remains the prespecified B=1024, lr=0.1 anchor.
-The 150 frozen linear probes plus a random-init control were submitted as
-`62101838` (`scripts/rotnet_linear_probes.sbatch`); on 2026-11-18 all 16 tasks were
-PENDING (Priority) in gpu-common. See [ROTNET_SWEEP.md](scripts/ROTNET_SWEEP.md).
+The 150 frozen linear probes plus a random-init control (`62101838`) completed on
+2026-11-20, all exit 0:0 on an RTX 5000 Ada (~10 s per probe). CIFAR-10 linear top-1:
+random-init 34.25%; RotNet runs 56–69%; the B=1024/lr=0.1 anchor at epoch 1000 is
+**65.97%** (main-table RotNet entry). Smaller batches do better on average; at
+B>=2048 only lr=0.3 reaches ~69%; for lr 0.03/0.1, class accuracy peaks around
+epochs 300–700 while rotation accuracy keeps rising. Results:
+`dcc_results/rotnet_sweep_20261115/results/rotnet_linear_probes.csv`; figure and
+summary table: `figures/rotnet_figure_b7.{png,pdf}`, `figures/rotnet_figure_b7_summary.csv`
+(`scripts/plot_rotnet_b7.py`).
 SimCLR and SimSiam trainers still do not exist in this checkout.
 
 ## 1. What we have committed to
@@ -477,8 +483,8 @@ specify the presentation time but do not establish a final-report upload deadlin
 - PDF retrieval is complete. Keep the verified catalog in `papers/`; use
   `python3 scripts/download_papers.py --check-only` to recheck local availability.
 - Confirm the team's available GPU/account and measured pilot times.
-- RotNet GPU pilot/array pipeline: done (2026-11-18). Remaining for RotNet: let
-  linear-probe job `62101838` finish, merge, and build the Figure B.7 table/plot.
+- RotNet GPU pilot/array pipeline and its 150 linear probes: done (2026-11-20);
+  Figure B.7 plot built. Remaining for RotNet: Part 2 fine-tunes from the anchor.
   SimCLR scaling still needs trainer validation.
 - Add the missing trainer/orchestration capabilities only where the fetched code
   does not already provide them. Keep those implementation changes separate from

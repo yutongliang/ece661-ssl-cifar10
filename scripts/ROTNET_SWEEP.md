@@ -31,7 +31,12 @@ squeue -u yl1064 -n p4-rotnet-probe --array
 ```
 
 `merge` writes `results/rotnet_linear_probes.csv` and exits non-zero listing any
-missing probes. The designated main-table RotNet encoder is the prespecified
+missing probes.
+
+**Status 2026-11-20: complete.** All 16 tasks exit 0:0; 151/151 probes merged and
+copied to `dcc_results/rotnet_sweep_20261115/results/`. Anchor (B=1024, lr=0.1,
+epoch 1000): 65.97%; random-init floor: 34.25%. Plot with
+`python scripts/plot_rotnet_b7.py` -> `figures/rotnet_figure_b7.{png,pdf}`. The designated main-table RotNet encoder is the prespecified
 anchor `rotnet_r20_b1024_lr0p1_seed0` at epoch 1000, not the best test score.
 
 ## Original launch instructions

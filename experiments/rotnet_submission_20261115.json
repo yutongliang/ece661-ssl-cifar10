@@ -29,7 +29,7 @@
     "confirmed": true,
     "evidence": "User successfully ran both scontrol updates; squeue shows both jobs in gpu-common, state PD, reason None."
   },
-  "latest_observation_date": "2026-11-18",
+  "latest_observation_date": "2026-11-20",
   "other_project_live_status": "2026-11-18: ECE662 has 13 pending tasks (1 gpu-common, 12 scavenger-gpu)",
   "priority_restoration": {
     "needed": true,
@@ -64,6 +64,9 @@
     "script": "scripts/rotnet_linear_probes.sbatch (array 0-15%4; tasks 0-14 = runs, 15 = random-init control)",
     "outputs": "/work/yl1064/ece661-rotnet-sweep/results/rotnet_linear_probes/<run_id>/epochNNNN.json",
     "merge": "python scripts/rotnet_linear_probes.py merge -> results/rotnet_linear_probes.csv",
-    "last_observed_state": "All 16 tasks PENDING (Priority) in gpu-common on 2026-11-18"
+    "last_observed_state": "All 16 tasks COMPLETED exit 0:0 (2026-11-20); 151/151 probes merged",
+    "local_copy": "dcc_results/rotnet_sweep_20261115/results/rotnet_linear_probes.csv",
+    "anchor_top1_percent": 65.97,
+    "random_init_top1_percent": 34.25
   }
 }
