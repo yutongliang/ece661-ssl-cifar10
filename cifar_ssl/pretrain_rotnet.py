@@ -4,8 +4,8 @@ Every image is shown at 0/90/180/270 degrees and the network predicts which
 rotation was applied (4-way classification). After training, only the encoder
 is kept; the rotation head is thrown away.
 
-    python pretrain_rotnet.py --epochs 100
-    python pretrain_rotnet.py --epochs 100 --resume   # continue after a disconnect
+    python -m cifar_ssl.pretrain_rotnet --epochs 100
+    python -m cifar_ssl.pretrain_rotnet --epochs 100 --resume   # continue after a disconnect
 """
 import argparse
 import math
@@ -16,10 +16,10 @@ from pathlib import Path
 import torch
 import torch.nn as nn
 
-from data import cifar10, test_transform, train_transform
-from models import ResNet20
-from utils import (autocast_context, capture_rng_state, get_device, restore_rng_state,
-                   save_checkpoint, save_encoder, set_seed)
+from .data import cifar10, test_transform, train_transform
+from .models import ResNet20
+from .utils import (autocast_context, capture_rng_state, get_device, restore_rng_state,
+                    save_checkpoint, save_encoder, set_seed)
 
 NUM_ROTATIONS = 4
 

@@ -2,7 +2,7 @@
 """Read-only summary of all projects in the current DCC user's Slurm account.
 
 From the Mac, without uploading this script:
-  ssh yl1064@dcc-login.oit.duke.edu 'python3 -' < scripts/dcc_job_status.py
+  ssh yl1064@dcc-login.oit.duke.edu 'python3 -' < scripts/slurm/dcc_job_status.py
 """
 from collections import Counter, defaultdict
 import getpass

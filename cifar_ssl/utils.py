@@ -11,10 +11,10 @@ from importlib.metadata import version
 import numpy as np
 import torch
 
-PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RESULTS_CSV = os.path.join(PROJECT_DIR, "results", "results.csv")
 RESULT_FIELDS = ["timestamp", "method", "experiment", "label_fraction", "stage",
-                 "test_acc", "epochs", "batch_size", "lr", "seed", "checkpoint",
+                 "test_acc", "test_top3", "epochs", "batch_size", "lr", "seed", "checkpoint",
                  "subset_seed", "weight_decay", "pool", "optimizer", "steps_per_epoch",
                  "min_epoch_size", "device", "torch_version", "torchvision_version",
                  "config", "pretrain_config"]
@@ -86,13 +86,27 @@ def save_checkpoint(path, state):
 @torch.no_grad()
 def evaluate(model, loader, device):
     """Top-1 accuracy of a classifier on a loader."""
+    return evaluate_topk(model, loader, device, ks=(1,))[1]
+
+
+def topk_correct(logits, targets, ks=(1, 3)):
+    """Number of samples whose label is among the k highest logits, for each k."""
+    top = logits.topk(max(ks), dim=1).indices
+    hits = top == targets.unsqueeze(1)
+    return {k: hits[:, :k].any(1).sum().item() for k in ks}
+
+
+@torch.no_grad()
+def evaluate_topk(model, loader, device, ks=(1, 3)):
+    """Top-k accuracies {k: acc} of a classifier on a loader."""
     model.eval()
-    correct = total = 0
+    correct, total = dict.fromkeys(ks, 0), 0
     for inputs, targets in loader:
         inputs, targets = inputs.to(device), targets.to(device)
-        correct += (model(inputs).argmax(1) == targets).sum().item()
+        for k, c in topk_correct(model(inputs), targets, ks).items():
+            correct[k] += c
         total += targets.size(0)
-    return correct / total
+    return {k: c / total for k, c in correct.items()}
 
 
 def save_encoder(path, encoder, method, args, **extra):

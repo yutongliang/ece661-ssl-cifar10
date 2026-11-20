@@ -1,11 +1,5 @@
 #!/bin/bash
-# Frozen linear probes for the 15 RotNet Figure B.7 trajectories (150 probes)
-# plus one random-init control. Task i (0-14) probes run i's 10 milestones;
-# task 15 is the random-init floor. Each probe writes its own JSON under
-# results/rotnet_linear_probes/, so tasks may run concurrently.
-# Run from /work/yl1064/ece661-rotnet-sweep:
-#   sbatch scripts/rotnet_linear_probes.sbatch
-# then merge:  python scripts/rotnet_linear_probes.py merge
+# Part 1 probes. Tasks 0–14 cover ten snapshots each; task 15 is the random control.
 #SBATCH --job-name=p4-rotnet-probe
 #SBATCH --partition=gpu-common
 #SBATCH --gres=gpu:1
@@ -24,4 +18,4 @@ export PYTHONNOUSERSITE=1
 python_path="${ECE661_PYTHON:-$HOME/miniforge3/envs/ece661-project4/bin/python}"
 test -x "$python_path"
 echo "Job: ${SLURM_ARRAY_JOB_ID}_${SLURM_ARRAY_TASK_ID} | node: $(hostname) | restart: ${SLURM_RESTART_COUNT:-0}"
-"$python_path" -u scripts/rotnet_linear_probes.py run --task "$SLURM_ARRAY_TASK_ID"
+"$python_path" -u scripts/slurm/rotnet_linear_probes.py run --task "$SLURM_ARRAY_TASK_ID"

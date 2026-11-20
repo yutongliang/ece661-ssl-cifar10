@@ -55,7 +55,7 @@
     "observed": "2026-11-18, direct SSH sacct query from this session",
     "train_array": "61863271 tasks 0-14 all COMPLETED, exit 0:0, elapsed 2:39-4:01 each",
     "complete_json_records": 15,
-    "local_copy": "dcc_results/rotnet_sweep_20261115 (checkpoints are git-ignored; run_records/ holds the small JSON records)",
+    "local_copy": "results/rotnet/dcc (checkpoints are git-ignored; run_records/ holds the small JSON records)",
     "metric_note": "Logged accuracies are 4-way rotation (pretext) top-1, not CIFAR-10 class accuracy"
   },
   "linear_probes": {
@@ -65,7 +65,7 @@
     "outputs": "/work/yl1064/ece661-rotnet-sweep/results/rotnet_linear_probes/<run_id>/epochNNNN.json",
     "merge": "python scripts/rotnet_linear_probes.py merge -> results/rotnet_linear_probes.csv",
     "last_observed_state": "All 16 tasks COMPLETED exit 0:0 (2026-11-20); 151/151 probes merged",
-    "local_copy": "dcc_results/rotnet_sweep_20261115/results/rotnet_linear_probes.csv",
+    "local_copy": "results/rotnet/dcc/results/rotnet_linear_probes.csv",
     "anchor_top1_percent": 65.97,
     "random_init_top1_percent": 34.25
   }

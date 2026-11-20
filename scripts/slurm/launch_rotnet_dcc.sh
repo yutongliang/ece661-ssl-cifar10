@@ -1,9 +1,11 @@
 #!/bin/bash
 # Run on the Mac. Upload the prepared bundle and submit pretraining only.
 set -euo pipefail
-project_root="$(cd "$(dirname "$0")/.." && pwd)"
-bundle="$project_root/artifacts/rotnet_sweep_dcc.tar.gz"
-test -s "$bundle"
+project_root="$(cd "$(dirname "$0")/../.." && pwd)"
+bundle="$(mktemp)"
+trap 'rm -f "$bundle"' EXIT
+COPYFILE_DISABLE=1 tar --exclude=__pycache__ --exclude=.DS_Store -czf "$bundle" -C "$project_root" \
+  cifar_ssl experiments/rotnet scripts/slurm subsets tests requirements.txt
 scp "$bundle" yl1064@dcc-login.oit.duke.edu:ece661-rotnet-sweep.tar.gz
 ssh yl1064@dcc-login.oit.duke.edu 'bash -s' <<'REMOTE'
 set -euo pipefail
@@ -30,6 +32,6 @@ if [ -z "${ECE661_PYTHON:-}" ]; then
 fi
 echo "DCC project: $run_root"
 echo "Training Python: $ECE661_PYTHON"
-"$ECE661_PYTHON" scripts/submit_rotnet_sweep.py
+"$ECE661_PYTHON" scripts/slurm/submit_rotnet_sweep.py
 squeue -u yl1064 -o '%.24i %.18P %.30j %.2t %.12l %.35R'
 REMOTE

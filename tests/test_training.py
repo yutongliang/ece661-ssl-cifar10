@@ -16,12 +16,8 @@ import torch
 from PIL import Image
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-import data
-import linear_eval
-import models
-import pretrain_rotnet as rotnet
-import train_classifier
-import utils
+from cifar_ssl import data, linear_eval, models, train_classifier, utils
+from cifar_ssl import pretrain_rotnet as rotnet
 
 
 class TinyCIFAR(torch.utils.data.Dataset):
@@ -196,6 +192,13 @@ class TrainingTests(unittest.TestCase):
         self.assertEqual(json.loads(rows[1]["pretrain_config"]), pretrain_config)
         self.assertEqual(json.loads(rows[1]["config"])["subset_seed"], 7)
         self.assertTrue(all(r["torch_version"] and r["torchvision_version"] for r in rows))
+        self.assertTrue(all(float(r["test_top3"]) >= float(r["test_acc"]) for r in rows))
+
+    def test_topk_correct(self):
+        logits = torch.tensor([[0.9, 0.5, 0.1, 0.0],   # label 0: top-1 hit
+                               [0.1, 0.9, 0.5, 0.3],   # label 2: 2nd -> top-3 hit only
+                               [0.9, 0.5, 0.3, 0.1]])  # label 3: 4th -> miss
+        self.assertEqual(utils.topk_correct(logits, torch.tensor([0, 2, 3]), (1, 3)), {1: 1, 3: 2})
 
     def test_old_results_are_preserved_when_columns_are_added(self):
         with open(utils.RESULTS_CSV, "w", newline="") as f:

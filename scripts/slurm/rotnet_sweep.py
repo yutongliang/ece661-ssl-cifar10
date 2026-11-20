@@ -13,8 +13,14 @@ import tempfile
 
 from shared_lock import directory_lock
 
-ROOT = Path(__file__).resolve().parents[1]
-MANIFEST = ROOT / "experiments/rotnet_figure_b7_sweep.csv"
+ROOT = Path(__file__).resolve().parents[2]
+MANIFEST = ROOT / "experiments/rotnet/sweep.csv"
+
+
+TRAINING_SOURCE = (
+    "cifar_ssl/__init__.py", "cifar_ssl/pretrain_rotnet.py",
+    "cifar_ssl/models.py", "cifar_ssl/data.py", "cifar_ssl/utils.py",
+)
 
 
 def atomic_json(path, value):
@@ -70,7 +76,7 @@ def training_arguments(row, output):
 
 def source_hash():
     digest = hashlib.sha256()
-    for name in ("pretrain_rotnet.py", "models.py", "data.py", "utils.py"):
+    for name in TRAINING_SOURCE:
         digest.update(name.encode())
         digest.update((ROOT / name).read_bytes())
     return digest.hexdigest()
@@ -99,7 +105,7 @@ def run_one(row, phase, pilot_epochs):
         current = state["epoch"] if state is not None else 0
         target = pilot_epochs if phase == "pilot" else int(row["epochs"])
         if current < target:
-            command = [sys.executable, "-u", str(ROOT / "pretrain_rotnet.py"),
+            command = [sys.executable, "-u", "-m", "cifar_ssl.pretrain_rotnet",
                        *training_arguments(row, output)]
             if last.exists():
                 command.append("--resume")
@@ -167,7 +173,7 @@ def main():
             raise RuntimeError("Use the pinned torch 2.10.0 / torchvision 0.25.0 environment")
         subprocess.run([sys.executable, "-m", "unittest", "discover", "-s", "tests", "-v"],
                        cwd=ROOT, check=True)
-        from data import cifar10, test_transform
+        from cifar_ssl.data import cifar10, test_transform
         for train in (True, False):
             dataset = cifar10(train=train, transform=test_transform)
             print("Prepared CIFAR-10:", "train" if train else "test", len(dataset))

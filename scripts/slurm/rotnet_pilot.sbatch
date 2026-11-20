@@ -1,10 +1,5 @@
 #!/bin/bash
-# RotNet 2-epoch GPU pilot on DCC.
-# Usage, from /work/$USER/ece661-project4:
-#   mkdir -p slurm-logs        # Slurm does not create the log folder
-#   sbatch scripts/rotnet_pilot.sbatch
-# Assumes Miniforge at $HOME/miniforge3 and a conda env named ece661-project4;
-# edit the "source"/"conda activate" lines if yours differ.
+# Quick two-epoch smoke test on DCC. See docs/slurm.md.
 #SBATCH --job-name=p4-rotnet-pilot
 #SBATCH --partition=gpu-common
 #SBATCH --gres=gpu:2080:1
@@ -16,16 +11,16 @@
 #SBATCH --exclude=dcc-gehmlab-gpu-ferc-s-z25-18,dcc-carlsonlab-gpu-ferc-s-h36-24,dcc-core-gpu-ferc-s-h36-6,dcc-majoroslab-gpu-ferc-a-r32-34
 
 set -euo pipefail
-source "$HOME/miniforge3/etc/profile.d/conda.sh"
-conda activate ece661-project4
+cd "$SLURM_SUBMIT_DIR"
 export PYTHONNOUSERSITE=1
-cd "/work/$USER/ece661-project4"
+python_path="${ECE661_PYTHON:-$HOME/miniforge3/envs/ece661-project4/bin/python}"
+test -x "$python_path"
 
 echo "Node: $(hostname)"
-python -m unittest discover -s tests -v
-python -c "import torch; assert torch.cuda.is_available(), \"CUDA unavailable\"; print(\"GPU:\", torch.cuda.get_device_name(0))"
+"$python_path" -m unittest discover -s tests -v
+"$python_path" -c "import torch; assert torch.cuda.is_available(), \"CUDA unavailable\"; print(\"GPU:\", torch.cuda.get_device_name(0))"
 
-python -u pretrain_rotnet.py \
+"$python_path" -u -m cifar_ssl.pretrain_rotnet \
   --epochs 2 \
   --batch-size 128 \
   --num-workers 4 \

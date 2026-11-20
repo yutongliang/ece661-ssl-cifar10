@@ -14,7 +14,7 @@ from torchvision import datasets, transforms
 CIFAR10_MEAN = (0.4914, 0.4822, 0.4465)
 CIFAR10_STD = (0.2023, 0.1994, 0.2010)
 
-PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DEFAULT_DATA_ROOT = os.path.join(PROJECT_DIR, "data")
 SUBSET_DIR = os.path.join(PROJECT_DIR, "subsets")
 

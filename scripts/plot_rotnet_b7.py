@@ -4,7 +4,7 @@
 Each bar is the mean over the three pretraining learning rates (0.03, 0.1, 0.3)
 at one batch size and milestone; the error bar is their sample SD (rates, not seeds).
 
-    python scripts/plot_rotnet_b7.py [--probes PATH] [--out-dir figures]
+    python scripts/plot_rotnet_b7.py [--probes PATH] [--out-dir results/rotnet]
 """
 import argparse
 import csv
@@ -12,8 +12,8 @@ import os
 import statistics
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DEFAULT_PROBES = os.path.join(ROOT, "dcc_results", "rotnet_sweep_20261115", "results",
-                              "rotnet_linear_probes.csv")
+DEFAULT_OUTPUT = os.path.join(ROOT, "results", "rotnet")
+DEFAULT_PROBES = os.path.join(DEFAULT_OUTPUT, "dcc", "results", "rotnet_linear_probes.csv")
 BATCHES = [256, 512, 1024, 2048, 4096]
 LRS = [0.03, 0.1, 0.3]
 EPOCHS = list(range(100, 1001, 100))
@@ -100,7 +100,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__,
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--probes", default=DEFAULT_PROBES)
-    parser.add_argument("--out-dir", default=os.path.join(ROOT, "figures"))
+    parser.add_argument("--out-dir", default=DEFAULT_OUTPUT)
     args = parser.parse_args()
     acc, random_init = load(args.probes)
     rows = summarize(acc)

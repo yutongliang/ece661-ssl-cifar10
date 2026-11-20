@@ -13,7 +13,7 @@ import tempfile
 from urllib.request import Request, urlopen
 
 
-PAPER_DIR = Path(__file__).resolve().parents[1] / "papers"
+PAPER_DIR = Path(__file__).resolve().parents[1] / "docs" / "references" / "papers"
 
 
 def is_pdf(path):

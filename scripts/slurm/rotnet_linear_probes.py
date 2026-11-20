@@ -1,14 +1,12 @@
 #!/usr/bin/env python3
 """Frozen linear probes (CIFAR-10 class top-1) for the RotNet Figure B.7 milestones.
 
-Each probe reproduces `linear_eval.py` exactly (same seed order, feature
-extraction, standardization and Adam/cosine linear classifier), but writes its
-own JSON file instead of appending to the shared results/results.csv, so array
-tasks can run concurrently.
+Probes share the classifier fit with linear_eval.py. Each task writes one JSON
+per checkpoint so array tasks can run concurrently.
 
-    python scripts/rotnet_linear_probes.py run --task 0      # run_id #0: its 10 milestones
-    python scripts/rotnet_linear_probes.py run --task 15     # random-init control
-    python scripts/rotnet_linear_probes.py merge             # validate and build the CSV
+    python scripts/slurm/rotnet_linear_probes.py run --task 0      # run_id #0: its 10 milestones
+    python scripts/slurm/rotnet_linear_probes.py run --task 15     # random-init control
+    python scripts/slurm/rotnet_linear_probes.py merge             # validate and build the CSV
 
 Task indices 0-14 follow the order of runs in the milestone manifest; 15 is the
 random-initialization floor. Completed probes whose checkpoint checksum and
@@ -23,11 +21,12 @@ import sys
 import tempfile
 import time
 from datetime import datetime, timezone
+from pathlib import Path
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ROOT = str(Path(__file__).resolve().parents[2])
 sys.path.insert(0, ROOT)
 
-MANIFEST = os.path.join(ROOT, "experiments", "rotnet_figure_b7_milestones.json")
+MANIFEST = os.path.join(ROOT, "experiments", "rotnet", "milestones.json")
 OUT_DIR = os.path.join(ROOT, "results", "rotnet_linear_probes")
 MERGED_CSV = os.path.join(ROOT, "results", "rotnet_linear_probes.csv")
 CONTROL_TASK = 15
@@ -72,63 +71,16 @@ def is_done(path, checkpoint_sha, probe):
             and all(previous.get(k) == probe[k] for k in PROTOCOL_KEYS))
 
 
-def fit_probe(make_encoder, train_set, test_set, probe, device, num_workers):
-    """Same computation and RNG order as linear_eval.main().
-
-    linear_eval seeds before building the encoder (ResNet20 init consumes RNG
-    even when weights are then loaded), so `make_encoder` is called after seeding.
-    """
-    import torch
-    import torch.nn as nn
-    from linear_eval import extract_features
-    from utils import set_seed
-
-    set_seed(probe["probe_seed"])
-    encoder, extra = make_encoder()
-    encoder = encoder.to(device)
-    stage, pool = probe["stage"], probe["pool"]
-    x_train, y_train = extract_features(encoder, train_set, stage, pool, device, num_workers)
-    x_test, y_test = extract_features(encoder, test_set, stage, pool, device, num_workers)
-    mean, std = x_train.mean(0), x_train.std(0) + 1e-6
-    x_train, x_test = (x_train - mean) / std, (x_test - mean) / std
-    x_train, y_train = x_train.to(device), y_train.to(device)
-    x_test, y_test = x_test.to(device), y_test.to(device)
-
-    classifier = nn.Linear(x_train.size(1), 10).to(device)
-    optimizer = torch.optim.Adam(classifier.parameters(), lr=probe["probe_lr"],
-                                 weight_decay=probe["probe_weight_decay"])
-    scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=probe["probe_epochs"])
-    criterion = nn.CrossEntropyLoss()
-    batch_size = 256
-    for _ in range(probe["probe_epochs"]):
-        classifier.train()
-        perm = torch.randperm(x_train.size(0), device=device)
-        for i in range(0, x_train.size(0), batch_size):
-            idx = perm[i:i + batch_size]
-            loss = criterion(classifier(x_train[idx]), y_train[idx])
-            optimizer.zero_grad(set_to_none=True)
-            loss.backward()
-            optimizer.step()
-        scheduler.step()
-    classifier.eval()
-    with torch.no_grad():
-        train_acc = (classifier(x_train).argmax(1) == y_train).float().mean().item()
-        test_acc = (classifier(x_test).argmax(1) == y_test).float().mean().item()
-    return extra, {"train_acc": train_acc, "test_acc": test_acc, "feature_dim": x_train.size(1),
-            "num_train": x_train.size(0), "num_test": x_test.size(0),
-            "probe_batch_size": batch_size, "probe_optimizer": "Adam",
-            "probe_steps_per_epoch": (x_train.size(0) + batch_size - 1) // batch_size}
-
-
 def run(task, num_workers):
     from importlib.metadata import version
 
     import torch
     from torch.utils.data import Subset
 
-    from data import cifar10, label_subset_indices, test_transform
-    from models import ResNet20, load_encoder
-    from utils import get_device
+    from cifar_ssl.data import cifar10, label_subset_indices, test_transform
+    from cifar_ssl.linear_eval import fit_probe
+    from cifar_ssl.models import ResNet20, load_encoder
+    from cifar_ssl.utils import get_device, set_seed
 
     probes, run_ids = load_manifest()
     if task == CONTROL_TASK:
@@ -168,18 +120,19 @@ def run(task, num_workers):
             print(f"skip {run_id} epoch {epoch}: already complete", flush=True)
             continue
         start = time.time()
+        set_seed(probe["probe_seed"])
         if ckpt_path:
-            def make_encoder(path=ckpt_path, expected_lr=probe["lr"]):
-                encoder, ckpt = load_encoder(path)
-                args = ckpt.get("args", {})
-                if args.get("lr") is not None and float(args["lr"]) != float(expected_lr):
-                    raise SystemExit(f"{path}: checkpoint lr {args['lr']} != manifest {expected_lr}")
-                return encoder, args
+            encoder, ckpt = load_encoder(ckpt_path)
+            pretrain_args = ckpt.get("args", {})
+            stored_lr, expected_lr = pretrain_args.get("lr"), probe["lr"]
+            if stored_lr is not None and float(stored_lr) != float(expected_lr):
+                raise SystemExit(f"{ckpt_path}: checkpoint lr {stored_lr} != manifest {expected_lr}")
         else:
-            def make_encoder():
-                return ResNet20(), {}
-        pretrain_args, metrics = fit_probe(make_encoder, train_set, test_set, probe, device,
-                                           num_workers)
+            encoder, pretrain_args = ResNet20(), {}
+        metrics = fit_probe(encoder, train_set, test_set, stage=probe["stage"],
+                            pool=probe["pool"], device=device, num_workers=num_workers,
+                            epochs=probe["probe_epochs"], lr=probe["probe_lr"],
+                            weight_decay=probe["probe_weight_decay"])
         record = {**probe, **metrics, "checkpoint_sha256": checkpoint_sha,
                   "pretrain_args": pretrain_args, "seconds": round(time.time() - start, 2),
                   "device": str(device),

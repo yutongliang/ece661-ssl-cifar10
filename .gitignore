@@ -8,8 +8,17 @@ __pycache__/
 .venv/
 .DS_Store
 
-# Symlinks to DCC paths inside downloaded submission snapshots
-dcc_results/*/results/rotnet_sweep_submissions/*/source/checkpoints
-dcc_results/*/results/rotnet_sweep_submissions/*/source/data
-# Upload bundles; the frozen source is kept under dcc_results/.../source/
+# Local training and Slurm outputs. Published results live in results/rotnet/.
+/results/results.csv
+/results/rotnet_linear_probes/
+/results/rotnet_linear_probes.csv
+/results/rotnet_sweep_submissions/
+/slurm-logs/
+
+# Symlinks inside the archived DCC submission.
+/results/rotnet/dcc/results/rotnet_sweep_submissions/*/source/checkpoints
+/results/rotnet/dcc/results/rotnet_sweep_submissions/*/source/data
+# Previously built upload bundles.
 artifacts/
+# Course documents stay local because this repository is public.
+/docs/references/*.pdf

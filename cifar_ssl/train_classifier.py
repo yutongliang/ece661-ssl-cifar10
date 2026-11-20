@@ -1,17 +1,17 @@
 """Train ResNet-20 + linear layer on a fraction of CIFAR-10 labels.
 
 Two uses, same code so the comparison is fair:
-  supervised baseline:  python train_classifier.py --fraction 0.01
-  fine-tune pretrained: python train_classifier.py --fraction 0.01 --init checkpoints/rotnet.pt
+  supervised baseline:  python -m cifar_ssl.train_classifier --fraction 0.01
+  fine-tune pretrained: python -m cifar_ssl.train_classifier --fraction 0.01 --init checkpoints/rotnet.pt
 """
 import argparse
 
 import torch
 import torch.nn as nn
 
-from data import labeled_train_loader, test_loader
-from models import Classifier, ResNet20, load_encoder
-from utils import autocast_context, evaluate, get_device, log_result, save_checkpoint, set_seed
+from .data import labeled_train_loader, test_loader
+from .models import Classifier, ResNet20, load_encoder
+from .utils import autocast_context, evaluate, evaluate_topk, get_device, log_result, save_checkpoint, set_seed
 
 
 def parse_args():
@@ -85,12 +85,15 @@ def main():
             msg += f" | test acc {evaluate(model, eval_loader, device):.4f}"
         print(msg)
 
-    test_acc = evaluate(model, eval_loader, device)
+    test = evaluate_topk(model, eval_loader, device, ks=(1, 3))
+    test_acc = test[1]
+    print(f"final | test top-1 {test[1]:.4f} | test top-3 {test[3]:.4f}")
     if args.save:
         save_checkpoint(args.save, {"model": model.state_dict(), "args": vars(args),
                                     "pretrain_args": ckpt.get("args", {})})
     log_result(method=method, experiment=experiment, label_fraction=args.fraction,
-               test_acc=round(test_acc, 4), epochs=args.epochs, batch_size=args.batch_size,
+               test_acc=round(test_acc, 4), test_top3=round(test[3], 4),
+               epochs=args.epochs, batch_size=args.batch_size,
                lr=args.lr, seed=args.seed, checkpoint=args.init or "",
                subset_seed=args.subset_seed, weight_decay=args.weight_decay,
                optimizer="SGD", steps_per_epoch=len(train_loader),
