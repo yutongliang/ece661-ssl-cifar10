@@ -1,13 +1,16 @@
 # Self-supervised learning on CIFAR-10
 
 ECE 661, Team 38. We compare how well RotNet, SimCLR, and SimSiam learn image
-features with a shared ResNet-20, then measure how much those features help when
-few class labels are available.
+features with a shared encoder, then measure how much those features help when
+few class labels are available. The main comparison uses ResNet-50 at batch 256
+and 1024 ([plan and results table](docs/experiments.md)); the completed RotNet
+study below used ResNet-20.
 
 | Work | Status |
 |---|---|
-| Part 1 · Batch size and pretraining duration | RotNet complete with 15 pretraining runs and 150 frozen probes. The designated RotNet checkpoint scored **65.97%** CIFAR-10 top-1. SimCLR is planned. |
-| Part 2 · Learning with 1%–100% of the labels | RotNet and supervised baseline complete at 1, 5, 8, 10, 20, and 100%. RotNet fine-tuning beats training from scratch by **10.9 points at 1%** and is within 2 points from 5% on. SimCLR and SimSiam trainers are still needed in this checkout. |
+| ResNet-50 · Main comparison at batch 256 and 1024 | Planned; RotNet code changes and GPU pilot next |
+| ResNet-20 · Batch size and pretraining duration | RotNet complete with 15 pretraining runs and 150 frozen probes. The designated RotNet checkpoint scored **65.97%** CIFAR-10 top-1. SimCLR is planned. |
+| ResNet-20 · Learning with 1%–100% of the labels | RotNet and supervised baseline complete at 1, 5, 8, 10, 20, and 100%. RotNet fine-tuning beats training from scratch by **10.9 points at 1%** and is within 2 points from 5% on. SimCLR and SimSiam trainers are still needed in this checkout. |
 
 ## Start here
 
