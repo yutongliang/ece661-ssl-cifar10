@@ -1,10 +1,36 @@
 # Running jobs on DCC
 
-The [RotNet sweep and its frozen probes are complete](../results/rotnet/README.md).
-Use the Part 2 job for the limited-label comparison. Use the sweep commands
-below for a new campaign.
+The ResNet-50 comparison ([plan](experiments.md)) runs from its own DCC folder,
+`/work/yl1064/ece661-r50`, which holds this checkout, the shared
+[subsets](../subsets/), and a `data` link to the existing CIFAR-10 download. The
+[ResNet-20 RotNet study](../results/rotnet/README.md) is complete; its commands
+follow in the later sections.
 
-## Run Part 2
+## ResNet-50 RotNet
+
+Run every command from the ResNet-50 folder. The scripts use `ECE661_PYTHON`
+when set, otherwise the Miniforge `ece661-project4` environment.
+
+| Step | Command | What it does |
+|---|---|---|
+| 1. Pilot | `sbatch scripts/slurm/r50_pilot.sbatch` | One RotNet epoch at batch 256 and 1024, trying gradient-accumulation splits 1, 2, 4, 8, 16 until one fits; then one fine-tune and one linear-eval epoch. Writes only `pilot/` |
+| 2. Pretrain | `sbatch --export=ALL,ACCUM_256=N,ACCUM_1024=M scripts/slurm/r50_rotnet_pretrain.sbatch` | Tasks 0 and 1: batch 256 (LR 0.1) and 1024 (LR 0.4), 1,000 epochs, encoders every 100 epochs in `checkpoints/r50/<run>/`. Use the splits the pilot reports |
+| 3. Linear eval | `sbatch --export=ALL,MODE=linear --array=0-20%4 scripts/slurm/r50_downstream.sbatch` | 20 checkpoints plus the random-init control; frozen encoder, 100% labels |
+| 4. Fine-tune | `sbatch --export=ALL,MODE=finetune --array=0-7%4 scripts/slurm/r50_downstream.sbatch` | Both epoch-1,000 encoders at 1, 3, 5, and 10% labels |
+| 5. Collect | `python scripts/collect_r50.py` | Merges `results/r50/*/**/result.json` into `results/r50/linear.csv` and `finetune.csv`; lists missing runs |
+
+- **Resuming:** pretraining and downstream runs save their full state every epoch.
+  Ten (pretraining) or five (downstream) minutes before the time limit, a task
+  requeues itself and resumes from its last completed epoch. Scavenger
+  preemption resumes the same way.
+- **Skipping:** a downstream task whose `result.json` exists with the same settings
+  is skipped, so resubmitting an array only runs what is missing.
+- **Batch norm with accumulation:** gradient accumulation matches the full-batch
+  gradient, but batch norm normalizes each sub-batch.
+- **Order:** submit linear eval and fine-tuning after pretraining has written the
+  encoders they need, or add `--dependency=afterok:<pretrain job>`.
+
+## Run Part 2 (ResNet-20)
 
 On DCC, use a checkout containing the current Python package, Slurm scripts,
 and [saved label subsets](../subsets/). Run from its root. The batch scripts

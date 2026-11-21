@@ -40,6 +40,7 @@ python -m pip install -r requirements.txt
 | Measure the random-feature control | `python -m cifar_ssl.linear_eval --random-init` |
 | Fine-tune RotNet using 1% of the labels | `python -m cifar_ssl.train_classifier --fraction 0.01 --init checkpoints/rotnet.pt` |
 | Train from scratch using the same 1% | `python -m cifar_ssl.train_classifier --fraction 0.01` |
+| Fine-tune with the ResNet-50 downstream recipe | `python -m cifar_ssl.downstream --init ENCODER.pt --fraction 0.01 --batch-size 256 --lr 0.05 --out-dir results/r50/example` |
 | Run CPU tests on synthetic data | `python -m unittest discover -s tests -v` |
 
 Use `--fraction` with 0.01, 0.05, 0.08, 0.1, 0.2, or 1.0. Each value except
@@ -53,6 +54,6 @@ an intermediate layer, pass `--stage 2 --pool 2` to `cifar_ssl.linear_eval`.
 |---|---|
 | [cifar_ssl/](cifar_ssl/) | Training, frozen evaluation, CIFAR-10 loading, and ResNet-20 |
 | [experiments/](experiments/) | RotNet and SimCLR run grids and lists of checkpoints to probe |
-| [subsets/](subsets/) | Shared class-balanced index files for the 1%, 5%, 8%, 10%, and 20% splits |
+| [subsets/](subsets/) | Shared class-balanced index files for the 1%, 3%, 5%, 8%, 10%, and 20% splits |
 | [scripts/](scripts/) | Plotting and paper downloads. Cluster scripts live in [scripts/slurm/](scripts/slurm/). |
 | [tests/](tests/) | Synthetic training, checkpoint, and Slurm submission checks |
