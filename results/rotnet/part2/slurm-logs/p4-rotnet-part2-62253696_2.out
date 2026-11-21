@@ -1,0 +1,106 @@
+Node: dcc-majoroslab-gpu-ferc-g-r32-29 | array task: 2
+GPU: NVIDIA RTX 6000 Ada Generation
+fractions: 0.05 0.08 0.2 | group 0 | fraction 0.2
+finetune | method=rotnet | fraction=0.2 | device=cuda | 78 steps/epoch
+epoch   1 | loss 1.8382 | train acc 0.3111
+epoch   2 | loss 1.4970 | train acc 0.4428
+epoch   3 | loss 1.2965 | train acc 0.5242
+epoch   4 | loss 1.1857 | train acc 0.5669
+epoch   5 | loss 1.1281 | train acc 0.5919
+epoch   6 | loss 1.0667 | train acc 0.6198
+epoch   7 | loss 0.9926 | train acc 0.6407
+epoch   8 | loss 0.9732 | train acc 0.6532
+epoch   9 | loss 0.9452 | train acc 0.6593
+epoch  10 | loss 0.9168 | train acc 0.6703 | test acc 0.4651
+epoch  11 | loss 0.8669 | train acc 0.6969
+epoch  12 | loss 0.8196 | train acc 0.7099
+epoch  13 | loss 0.7923 | train acc 0.7226
+epoch  14 | loss 0.7562 | train acc 0.7327
+epoch  15 | loss 0.7318 | train acc 0.7453
+epoch  16 | loss 0.7230 | train acc 0.7501
+epoch  17 | loss 0.6906 | train acc 0.7582
+epoch  18 | loss 0.6661 | train acc 0.7726
+epoch  19 | loss 0.6445 | train acc 0.7781
+epoch  20 | loss 0.6364 | train acc 0.7800 | test acc 0.6779
+epoch  21 | loss 0.6063 | train acc 0.7899
+epoch  22 | loss 0.5887 | train acc 0.7967
+epoch  23 | loss 0.5859 | train acc 0.7937
+epoch  24 | loss 0.5687 | train acc 0.8022
+epoch  25 | loss 0.5559 | train acc 0.8082
+epoch  26 | loss 0.5591 | train acc 0.8049
+epoch  27 | loss 0.5324 | train acc 0.8209
+epoch  28 | loss 0.5177 | train acc 0.8201
+epoch  29 | loss 0.5075 | train acc 0.8241
+epoch  30 | loss 0.4893 | train acc 0.8299 | test acc 0.6918
+epoch  31 | loss 0.4738 | train acc 0.8386
+epoch  32 | loss 0.4692 | train acc 0.8346
+epoch  33 | loss 0.4731 | train acc 0.8347
+epoch  34 | loss 0.4504 | train acc 0.8419
+epoch  35 | loss 0.4466 | train acc 0.8461
+epoch  36 | loss 0.4331 | train acc 0.8484
+epoch  37 | loss 0.4052 | train acc 0.8620
+epoch  38 | loss 0.4170 | train acc 0.8536
+epoch  39 | loss 0.3966 | train acc 0.8616
+epoch  40 | loss 0.3959 | train acc 0.8619 | test acc 0.7234
+epoch  41 | loss 0.3898 | train acc 0.8627
+epoch  42 | loss 0.3715 | train acc 0.8714
+epoch  43 | loss 0.3695 | train acc 0.8735
+epoch  44 | loss 0.3513 | train acc 0.8767
+epoch  45 | loss 0.3329 | train acc 0.8885
+epoch  46 | loss 0.3267 | train acc 0.8854
+epoch  47 | loss 0.3202 | train acc 0.8903
+epoch  48 | loss 0.2998 | train acc 0.8983
+epoch  49 | loss 0.3051 | train acc 0.8918
+epoch  50 | loss 0.3021 | train acc 0.8940 | test acc 0.7536
+epoch  51 | loss 0.2904 | train acc 0.8987
+epoch  52 | loss 0.2741 | train acc 0.9052
+epoch  53 | loss 0.2674 | train acc 0.9046
+epoch  54 | loss 0.2547 | train acc 0.9101
+epoch  55 | loss 0.2416 | train acc 0.9188
+epoch  56 | loss 0.2275 | train acc 0.9218
+epoch  57 | loss 0.2466 | train acc 0.9136
+epoch  58 | loss 0.2181 | train acc 0.9244
+epoch  59 | loss 0.2032 | train acc 0.9320
+epoch  60 | loss 0.1968 | train acc 0.9337 | test acc 0.7721
+epoch  61 | loss 0.1957 | train acc 0.9338
+epoch  62 | loss 0.1959 | train acc 0.9334
+epoch  63 | loss 0.1800 | train acc 0.9379
+epoch  64 | loss 0.1627 | train acc 0.9450
+epoch  65 | loss 0.1555 | train acc 0.9470
+epoch  66 | loss 0.1357 | train acc 0.9541
+epoch  67 | loss 0.1291 | train acc 0.9577
+epoch  68 | loss 0.1164 | train acc 0.9604
+epoch  69 | loss 0.1121 | train acc 0.9644
+epoch  70 | loss 0.0966 | train acc 0.9694 | test acc 0.8159
+epoch  71 | loss 0.0979 | train acc 0.9680
+epoch  72 | loss 0.0920 | train acc 0.9716
+epoch  73 | loss 0.0720 | train acc 0.9768
+epoch  74 | loss 0.0743 | train acc 0.9765
+epoch  75 | loss 0.0648 | train acc 0.9815
+epoch  76 | loss 0.0565 | train acc 0.9830
+epoch  77 | loss 0.0505 | train acc 0.9873
+epoch  78 | loss 0.0474 | train acc 0.9884
+epoch  79 | loss 0.0440 | train acc 0.9881
+epoch  80 | loss 0.0459 | train acc 0.9863 | test acc 0.8261
+epoch  81 | loss 0.0386 | train acc 0.9896
+epoch  82 | loss 0.0351 | train acc 0.9921
+epoch  83 | loss 0.0331 | train acc 0.9921
+epoch  84 | loss 0.0265 | train acc 0.9950
+epoch  85 | loss 0.0293 | train acc 0.9927
+epoch  86 | loss 0.0281 | train acc 0.9942
+epoch  87 | loss 0.0262 | train acc 0.9954
+epoch  88 | loss 0.0226 | train acc 0.9964
+epoch  89 | loss 0.0233 | train acc 0.9955
+epoch  90 | loss 0.0230 | train acc 0.9962 | test acc 0.8362
+epoch  91 | loss 0.0207 | train acc 0.9975
+epoch  92 | loss 0.0192 | train acc 0.9972
+epoch  93 | loss 0.0218 | train acc 0.9959
+epoch  94 | loss 0.0190 | train acc 0.9969
+epoch  95 | loss 0.0201 | train acc 0.9969
+epoch  96 | loss 0.0182 | train acc 0.9979
+epoch  97 | loss 0.0182 | train acc 0.9972
+epoch  98 | loss 0.0192 | train acc 0.9967
+epoch  99 | loss 0.0183 | train acc 0.9977
+epoch 100 | loss 0.0200 | train acc 0.9974 | test acc 0.8374
+final | test top-1 0.8374 | test top-3 0.9643
+Logged: {'timestamp': '2026-11-20T16:58:24', 'method': 'rotnet', 'experiment': 'finetune', 'label_fraction': 0.2, 'test_acc': 0.8374, 'test_top3': 0.9643, 'epochs': 100, 'batch_size': 128, 'lr': 0.1, 'seed': 0, 'checkpoint': 'checkpoints/figure_b7/rotnet_r20_b1024_lr0p1_seed0/encoder_epoch1000.pt', 'subset_seed': 0, 'weight_decay': 0.0005, 'optimizer': 'SGD', 'steps_per_epoch': 78, 'min_epoch_size': 5000, 'device': 'cuda', 'torch_version': '2.10.0+cu126', 'torchvision_version': '0.25.0+cu126', 'config': '{"batch_size": 128, "epochs": 100, "eval_every": 10, "fraction": 0.2, "init": "checkpoints/figure_b7/rotnet_r20_b1024_lr0p1_seed0/encoder_epoch1000.pt", "lr": 0.1, "min_epoch_size": 5000, "num_workers": 4, "save": "checkpoints/part2/rotnet_finetune_fraction0.2_seed0.pt", "seed": 0, "subset_seed": 0, "weight_decay": 0.0005}', 'pretrain_config': '{"batch_size": 1024, "checkpoint_every": 100, "epochs": 1000, "eval_every": 100, "lr": 0.1, "num_workers": 4, "out": "/work/yl1064/ece661-rotnet-sweep/results/rotnet_sweep_submissions/20261115T230242708810Z/source/checkpoints/figure_b7/rotnet_r20_b1024_lr0p1_seed0/encoder.pt", "require_cuda": true, "resume": true, "seed": 0, "stop_after_epoch": null, "weight_decay": 0.0005}'}

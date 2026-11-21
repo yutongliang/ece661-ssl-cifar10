@@ -7,13 +7,13 @@ few class labels are available.
 | Work | Status |
 |---|---|
 | Part 1 · Batch size and pretraining duration | RotNet complete with 15 pretraining runs and 150 frozen probes. The designated RotNet checkpoint scored **65.97%** CIFAR-10 top-1. SimCLR is planned. |
-| Part 2 · Learning with 1%–100% of the labels | RotNet fine-tunes, supervised baselines, and frozen probes at 1, 5, 8, 10, 20, and 100% are running on DCC. SimCLR and SimSiam trainers are still needed in this checkout. |
+| Part 2 · Learning with 1%–100% of the labels | RotNet and supervised baseline complete at 1, 5, 8, 10, 20, and 100%. RotNet fine-tuning beats training from scratch by **10.9 points at 1%** and is within 2 points from 5% on. SimCLR and SimSiam trainers are still needed in this checkout. |
 
 ## Start here
 
 | I want to… | Go to |
 |---|---|
-| See the RotNet plot, scores, or original logs | [Results](results/rotnet/README.md) |
+| See the RotNet plots, scores, or original logs | [Results](results/rotnet/README.md) |
 | Understand what we compare and why | [Experiment plan](docs/experiments.md) |
 | Submit or monitor a GPU job | [DCC guide](docs/slurm.md) |
 | Find the papers or course documents | [References](docs/references/README.md) |
