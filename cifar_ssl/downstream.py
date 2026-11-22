@@ -36,11 +36,11 @@ import torch.nn as nn
 from . import data
 from .data import labeled_train_loader, test_loader
 from .models import ARCHITECTURES, Classifier, build_encoder, checkpoint_arch, load_encoder
-from .utils import (autocast_context, capture_rng_state, evaluate_topk, get_device,
+from .utils import (autocast_context, cap_gpu_memory, capture_rng_state, evaluate_topk, get_device,
                     restore_rng_state, save_checkpoint, set_seed)
 
 # Settings that may change between attempts of the same run without changing results.
-NON_IDENTITY_ARGS = {"num_workers", "out_dir", "eval_every", "keep_last"}
+NON_IDENTITY_ARGS = {"num_workers", "out_dir", "eval_every", "keep_last", "max_gpu_memory_gb"}
 
 
 def parse_args(argv=None):
@@ -55,6 +55,9 @@ def parse_args(argv=None):
     p.add_argument("--subset-seed", type=int, default=0)
     p.add_argument("--seed", type=int, default=0)
     p.add_argument("--batch-size", type=int, required=True)
+    p.add_argument("--accum-steps", type=int, default=1,
+                   help="split each batch into this many sub-batches and accumulate gradients "
+                        "(batch norm normalizes each sub-batch)")
     p.add_argument("--lr", type=float, required=True, help="starting learning rate")
     p.add_argument("--momentum", type=float, default=0.9)
     p.add_argument("--weight-decay", type=float, default=0.0)
@@ -72,11 +75,15 @@ def parse_args(argv=None):
     p.add_argument("--num-workers", type=int, default=4)
     p.add_argument("--out-dir", required=True)
     p.add_argument("--keep-last", action="store_true", help="keep last.pt after finishing")
+    p.add_argument("--max-gpu-memory-gb", type=float, default=0,
+                   help="cap this process's GPU memory (pilot: emulate the smallest allowed GPU)")
     args = p.parse_args(argv)
     if not 0 < args.fraction <= 1:
         p.error("fraction must be in (0, 1]")
     if min(args.batch_size, args.max_epochs, args.plateau_patience) <= 0:
         p.error("batch size, max epochs, and patience must be positive")
+    if args.accum_steps < 1 or args.batch_size % args.accum_steps:
+        p.error("accum-steps must be positive and divide the batch size")
     if not (args.lr > 0 and math.isfinite(args.lr)):
         p.error("learning rate must be finite and positive")
     if not 0 < args.lr_factor < 1 or args.lr_drops < 0 or args.plateau_threshold < 0:
@@ -156,30 +163,32 @@ def build_model(args):
     return model, method, arch, ckpt
 
 
-def train_epoch(model, loader, criterion, optimizer, scaler, device, frozen):
+def train_epoch(model, loader, criterion, optimizer, scaler, device, frozen, accum_steps=1):
     model.train()
     if frozen:
         model.encoder.eval()  # frozen encoder: fixed batch-norm statistics
     total_loss = correct = seen = 0
     for inputs, targets in loader:
-        inputs, targets = inputs.to(device), targets.to(device)
-        with autocast_context(device):
-            if frozen:
-                with torch.no_grad():
-                    features = model.encoder(inputs)
-                outputs = model.fc(features.float())
-            else:
-                outputs = model(inputs)
-            loss = criterion(outputs, targets)
-        if not torch.isfinite(loss).item():
-            raise FloatingPointError("Non-finite training loss")
         optimizer.zero_grad(set_to_none=True)
-        scaler.scale(loss).backward()
+        # Equal sub-batches whose gradients add up to the full batch's mean gradient.
+        for x, y in zip(inputs.chunk(accum_steps), targets.chunk(accum_steps)):
+            x, y = x.to(device), y.to(device)
+            with autocast_context(device):
+                if frozen:
+                    with torch.no_grad():
+                        features = model.encoder(x)
+                    outputs = model.fc(features.float())
+                else:
+                    outputs = model(x)
+                loss = criterion(outputs, y)
+            if not torch.isfinite(loss).item():
+                raise FloatingPointError("Non-finite training loss")
+            scaler.scale(loss / accum_steps).backward()
+            total_loss += loss.item() * y.size(0)
+            correct += (outputs.argmax(1) == y).sum().item()
+            seen += y.size(0)
         scaler.step(optimizer)
         scaler.update()
-        total_loss += loss.item() * targets.size(0)
-        correct += (outputs.argmax(1) == targets).sum().item()
-        seen += targets.size(0)
     return total_loss / seen, correct / seen
 
 
@@ -200,6 +209,8 @@ def main(argv=None):
     use_amp = device.type == "cuda"
     if use_amp:
         torch.backends.cudnn.benchmark = True
+        if args.max_gpu_memory_gb:
+            cap_gpu_memory(args.max_gpu_memory_gb, device)
     model, method, arch, ckpt = build_model(args)
     model = model.to(device)
     trainable = [p for p in model.parameters() if p.requires_grad]
@@ -232,7 +243,7 @@ def main(argv=None):
     experiment = ("linear_eval" if args.freeze_encoder else
                   "finetune" if args.init else "supervised")
     print(f"{experiment} | method={method} | arch={arch} | fraction={args.fraction} | "
-          f"batch={args.batch_size} | lr={args.lr} | device={device} | "
+          f"batch={args.batch_size} (x{args.accum_steps} sub-batches) | lr={args.lr} | device={device} | "
           f"{len(train_loader)} steps/epoch")
 
     stop_reason = "max_epochs"
@@ -241,7 +252,7 @@ def main(argv=None):
     for epoch in range(start_epoch, 0 if already_stopped else args.max_epochs + 1):
         started = time.perf_counter()
         loss, train_acc = train_epoch(model, train_loader, criterion, optimizer, scaler, device,
-                                      args.freeze_encoder)
+                                      args.freeze_encoder, args.accum_steps)
         lr = optimizer.param_groups[0]["lr"]
         decision = rule.step(loss)
         if decision == "drop":
@@ -272,7 +283,8 @@ def main(argv=None):
           f"test top-1 {test[1]:.4f} | test top-3 {test[3]:.4f}")
     atomic_json(result_path, {
         "method": method, "experiment": experiment, "arch": arch,
-        "label_fraction": args.fraction, "batch_size": args.batch_size, "lr": args.lr,
+        "label_fraction": args.fraction, "batch_size": args.batch_size,
+        "accum_steps": args.accum_steps, "lr": args.lr,
         "test_top1": test[1], "test_top3": test[3],
         "stop_epoch": epoch, "stop_reason": stop_reason, "lr_drops": rule.drops,
         "final_train_loss": history[-1]["loss"], "final_train_acc": history[-1]["train_acc"],

@@ -18,12 +18,12 @@ import torch.nn as nn
 
 from .data import cifar10, test_transform, train_transform
 from .models import ARCHITECTURES, build_encoder
-from .utils import (autocast_context, capture_rng_state, get_device, restore_rng_state,
+from .utils import (autocast_context, cap_gpu_memory, capture_rng_state, get_device, restore_rng_state,
                     save_checkpoint, save_encoder, set_seed)
 
 NUM_ROTATIONS = 4
 # Settings added after the ResNet-20 sweep; older resume states used these values.
-LEGACY_DEFAULTS = {"arch": "resnet20", "accum_steps": 1}
+LEGACY_DEFAULTS = {"arch": "resnet20", "accum_steps": 1, "warmup_epochs": 0}
 
 
 def load_resume_state(args, device):
@@ -39,7 +39,7 @@ def load_resume_state(args, device):
     differences = [f"{key}: saved={saved.get(key)!r}, requested={value!r}"
                    for key, value in vars(args).items()
                    if key not in {"out", "resume", "stop_after_epoch", "checkpoint_every",
-                                  "require_cuda"}
+                                  "require_cuda", "max_gpu_memory_gb"}
                    and saved.get(key) != value]
     if state["device"] != str(device):
         differences.append(f"device: saved={state['device']}, requested={device}")
@@ -86,6 +86,16 @@ def rotation_step(encoder, head, criterion, images, optimizer, scaler, device, a
     return loss_sum, correct, count
 
 
+def warmup_cosine(total_steps, warmup_steps):
+    """Per-step LR factor: linear warmup to 1 over warmup_steps, then cosine to 0 (SimCLR 2.3)."""
+    def factor(step):
+        if step < warmup_steps:
+            return (step + 1) / warmup_steps
+        progress = (step - warmup_steps) / max(1, total_steps - warmup_steps)
+        return 0.5 * (1 + math.cos(math.pi * min(1.0, progress)))
+    return factor
+
+
 def parse_args():
     p = argparse.ArgumentParser()
     p.add_argument("--arch", choices=ARCHITECTURES, default="resnet20")
@@ -95,6 +105,8 @@ def parse_args():
                    help="split each batch into this many sub-batches and accumulate gradients")
     p.add_argument("--lr", type=float, default=0.1)
     p.add_argument("--weight-decay", type=float, default=5e-4)
+    p.add_argument("--warmup-epochs", type=int, default=0,
+                   help="linear LR warmup epochs, then per-step cosine (0: per-epoch cosine)")
     p.add_argument("--seed", type=int, default=0)
     p.add_argument("--num-workers", type=int, default=4)
     p.add_argument("--eval-every", type=int, default=5)
@@ -105,6 +117,8 @@ def parse_args():
     p.add_argument("--stop-after-epoch", type=int, default=None,
                    help="stop after this absolute epoch without changing the total schedule")
     p.add_argument("--require-cuda", action="store_true", help="fail rather than train on CPU/MPS")
+    p.add_argument("--max-gpu-memory-gb", type=float, default=0,
+                   help="cap this process's GPU memory (pilot: emulate the smallest allowed GPU)")
     args = p.parse_args()
     if min(args.epochs, args.batch_size, args.eval_every) <= 0:
         p.error("epochs, batch size, and evaluation interval must be positive")
@@ -112,6 +126,8 @@ def parse_args():
         p.error("learning rate must be finite and positive")
     if args.accum_steps < 1 or args.batch_size % args.accum_steps:
         p.error("accum-steps must be positive and divide the batch size")
+    if not 0 <= args.warmup_epochs < args.epochs:
+        p.error("warmup epochs must be between 0 and the total epochs")
     if args.checkpoint_every < 0:
         p.error("checkpoint interval cannot be negative")
     if args.stop_after_epoch is not None and not 1 <= args.stop_after_epoch <= args.epochs:
@@ -141,6 +157,8 @@ def main():
     use_amp = device.type == "cuda"
     if use_amp and args.arch == "resnet50":
         torch.backends.cudnn.benchmark = True  # fixed input shapes; faster ResNet-50 kernels
+    if use_amp and args.max_gpu_memory_gb:
+        cap_gpu_memory(args.max_gpu_memory_gb, device)
     # Validate before downloading data or constructing a new training run.
     state = load_resume_state(args, device) if args.resume else None
 
@@ -158,7 +176,12 @@ def main():
     head = nn.Linear(encoder.feature_dim, NUM_ROTATIONS).to(device)
     params = list(encoder.parameters()) + list(head.parameters())
     optimizer = torch.optim.SGD(params, lr=args.lr, momentum=0.9, weight_decay=args.weight_decay)
-    scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=args.epochs)
+    if args.warmup_epochs:
+        steps = len(train_loader)
+        scheduler = torch.optim.lr_scheduler.LambdaLR(
+            optimizer, warmup_cosine(args.epochs * steps, args.warmup_epochs * steps))
+    else:  # original ResNet-20 schedule, stepped once per epoch
+        scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=args.epochs)
     scaler = torch.amp.GradScaler("cuda", enabled=use_amp)
     criterion = nn.CrossEntropyLoss()
 
@@ -199,9 +222,13 @@ def main():
             total_loss += step_loss
             correct += step_correct
             seen += step_seen
-        scheduler.step()
+            if args.warmup_epochs:
+                scheduler.step()
+        if not args.warmup_epochs:
+            scheduler.step()
 
-        msg = f"epoch {epoch:3d} | loss {total_loss / seen:.4f} | rotation acc {correct / seen:.4f}"
+        msg = (f"epoch {epoch:3d} | lr {optimizer.param_groups[0]['lr']:.4g} | "
+               f"loss {total_loss / seen:.4f} | rotation acc {correct / seen:.4f}")
         if epoch % args.eval_every == 0 or epoch == args.epochs:
             msg += f" | test rotation acc {rotation_accuracy(encoder, head, test_loader, device):.4f}"
         if use_amp:

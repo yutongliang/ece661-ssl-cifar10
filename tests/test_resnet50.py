@@ -89,6 +89,77 @@ class ResNet50PlanTests(unittest.TestCase):
             rotnet.rotation_step(encoder, head, nn.CrossEntropyLoss(), images[:6], optimizer,
                                  scaler, torch.device("cpu"), 4)
 
+    def test_downstream_accumulation_matches_the_full_batch(self):
+        inputs, targets = torch.randn(8, 3, 32, 32), torch.arange(8) % 10
+        grads = []
+        for accum in (1, 4):
+            torch.manual_seed(0)
+            model = models.Classifier(FlatEncoder())
+            optimizer = torch.optim.SGD(model.parameters(), lr=0.0)
+            scaler = torch.amp.GradScaler("cuda", enabled=False)
+            downstream.train_epoch(model, [(inputs, targets)], nn.CrossEntropyLoss(), optimizer,
+                                   scaler, torch.device("cpu"), frozen=False, accum_steps=accum)
+            grads.append([p.grad.clone() for p in model.parameters()])
+        for full, accumulated in zip(*grads):
+            self.assertTrue(torch.allclose(full, accumulated, atol=1e-6))
+
+    def test_gpu_memory_cap_passes_a_device_index(self):
+        props = type("Props", (), {"total_memory": 48 * 2**30})()
+        with patch.object(torch.cuda, "current_device", return_value=0), \
+             patch.object(torch.cuda, "get_device_properties", return_value=props) as get, \
+             patch.object(torch.cuda, "set_per_process_memory_fraction") as cap:
+            utils.cap_gpu_memory(22, torch.device("cuda"))
+        get.assert_called_once_with(0)
+        cap.assert_called_once_with(22 / 48, 0)
+
+    def test_warmup_rises_linearly_then_follows_cosine(self):
+        factor = rotnet.warmup_cosine(total_steps=100, warmup_steps=10)
+        self.assertAlmostEqual(factor(0), 0.1)
+        self.assertAlmostEqual(factor(9), 1.0)
+        self.assertAlmostEqual(factor(10), 1.0)
+        self.assertAlmostEqual(factor(55), 0.5)
+        self.assertAlmostEqual(factor(100), 0.0)
+        values = [factor(step) for step in range(100)]
+        self.assertEqual(values[:10], sorted(values[:10]))
+        self.assertEqual(values[10:], sorted(values[10:], reverse=True))
+
+    def test_warmup_run_resumes_to_the_same_state(self):
+        with patch.object(rotnet, "cifar10", TinyCIFAR), \
+             patch.object(rotnet, "get_device", lambda: torch.device("cpu")):
+            def args(path):
+                return ["--epochs", "3", "--warmup-epochs", "1", "--batch-size", "10",
+                        "--accum-steps", "2", "--num-workers", "0", "--eval-every", "1",
+                        "--out", str(path)]
+            full, resumed = self.root / "full.pt", self.root / "resumed.pt"
+            with patch.object(sys, "argv", ["x", *args(full)]):
+                rotnet.main()
+            real_save = rotnet.save_checkpoint
+
+            def crash_after_epoch_one(path, state):
+                real_save(path, state)
+                if state["epoch"] == 1:
+                    raise Interrupted()
+
+            with patch.object(rotnet, "save_checkpoint", crash_after_epoch_one), \
+                 patch.object(sys, "argv", ["x", *args(resumed)]), self.assertRaises(Interrupted):
+                rotnet.main()
+            with patch.object(sys, "argv", ["x", *args(resumed), "--resume"]):
+                rotnet.main()
+        a = torch.load(str(full) + ".last", weights_only=True)
+        b = torch.load(str(resumed) + ".last", weights_only=True)
+        self.assertEqual(a["scheduler"]["last_epoch"], 6)  # stepped once per batch
+        def same(x, y):
+            if isinstance(x, torch.Tensor):
+                return torch.equal(x, y)
+            if isinstance(x, dict):
+                return x.keys() == y.keys() and all(same(x[k], y[k]) for k in x)
+            if isinstance(x, (list, tuple)):
+                return len(x) == len(y) and all(same(i, j) for i, j in zip(x, y))
+            return x == y
+
+        for key in ("encoder", "head", "optimizer", "scheduler"):
+            self.assertTrue(same(a[key], b[key]), key)
+
     def test_plateau_rule_drops_once_then_stops(self):
         rule = downstream.PlateauRule(patience=2, threshold=0.01, max_drops=1)
         decisions = [rule.step(x) for x in [1.0, 0.5, 0.499, 0.498, 0.2, 0.199, 0.1985]]

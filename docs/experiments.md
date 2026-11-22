@@ -16,7 +16,7 @@ CIFAR-10, so every method shares that encoder. The completed
 | Backbone | ResNet-50 with the B.9 CIFAR stem: 3×3 stride-1 first conv, no max-pool, FC removed; 2048-d feature. Shared by RotNet, SimCLR, SimSiam, and the supervised baseline |
 | Pretraining grid | Batch 256 and 1024 original images; 1,000 epochs; encoder saved every 100 epochs (10 per batch size) |
 | Seed | 0 for pretraining, subsets, and every downstream run |
-| RotNet pretraining | Four rotations per image, linear 4-way head. SGD with plain momentum 0.9 (RotNet paper), weight decay 5e-4, cosine, no warmup; LR 0.1 × batch / 256 (0.1 and 0.4); random crop and flip. Batch 1024 uses gradient accumulation, so batch norm sees sub-batches |
+| RotNet pretraining | Four rotations per image, linear 4-way head. SGD with plain momentum 0.9 (RotNet paper), weight decay 5e-4; LR 0.1 × batch / 256 (0.1 and 0.4) with a 10-epoch linear warmup (as in SimCLR §2.3), then cosine, both stepped per batch; random crop and flip. Batch 1024 uses 4 accumulated sub-batches of 256 images, so batch norm sees 256 images (×4 rotations) at both batch sizes |
 | SimCLR pretraining | B.9 recipe: LARS, base LR 1.5 × batch / 256, temperature 0.5, 10-epoch warmup, cosine, weight decay 1e-6 |
 | Supervised baseline | Same ResNet-50 from random weights, trained with the fine-tune recipe below at batch 256 and 1024 on 1%, 3%, 5%, and 10% of the labels. Also trained end to end on 100% of the labels, as B.9 reports a supervised baseline "using the same architecture and batch size" |
 

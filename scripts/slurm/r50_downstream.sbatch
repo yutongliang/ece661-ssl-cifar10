@@ -1,14 +1,15 @@
 #!/bin/bash
 # RotNet ResNet-50 downstream runs with the shared recipe (docs/experiments.md).
 #   MODE=linear   tasks 0-20: 2 runs x 10 checkpoints, then the random-init control
-#   MODE=finetune tasks 0-7:  2 epoch-1000 encoders x 1, 3, 5, 10% labels
-#   sbatch --export=ALL,MODE=linear --array=0-20%4 scripts/slurm/r50_downstream.sbatch
-#   sbatch --export=ALL,MODE=finetune --array=0-7%4 scripts/slurm/r50_downstream.sbatch
+#   MODE=finetune tasks 0-7:  2 epoch-1000 encoders x 1, 3, 5, 10% labels; FT_MICRO is
+#                             the pilot's fine-tune sub-batch (images), fixed for every run
+#   bash scripts/slurm/r50_sbatch.sh --export=ALL,MODE=linear --array=0-20%4 scripts/slurm/r50_downstream.sbatch
+#   bash scripts/slurm/r50_sbatch.sh --export=ALL,MODE=finetune,FT_MICRO=256 --array=0-7%4 scripts/slurm/r50_downstream.sbatch
 # Each task owns its output folder, so tasks may run in parallel. A requeued task
 # resumes from its last epoch; a finished task is skipped.
 #SBATCH --job-name=p4-r50-down
 #SBATCH --partition=gpu-common,scavenger-gpu
-#SBATCH --gres=gpu:5000_ada:1
+#SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=32G
 #SBATCH --time=12:00:00
@@ -18,7 +19,6 @@
 #SBATCH --mail-user=yl1064@duke.edu
 #SBATCH --output=slurm-logs/%x-%A_%a.out
 #SBATCH --open-mode=append
-#SBATCH --exclude=dcc-gehmlab-gpu-ferc-s-z25-18,dcc-carlsonlab-gpu-ferc-s-h36-24,dcc-core-gpu-ferc-s-h36-6,dcc-majoroslab-gpu-ferc-a-r32-34
 
 set -euo pipefail
 cd "$SLURM_SUBMIT_DIR"
@@ -50,12 +50,15 @@ case "$MODE" in
     r=$(( task / 4 )); fraction=${fractions[$(( task % 4 ))]}; batch=${batches[$r]}
     encoder="checkpoints/r50/${runs[$r]}/encoder_epoch1000.pt"
     lr=$("$python_path" -c "print(0.05 * $batch / 256)")  # SimCLR B.5
-    args=(--init "$encoder" --fraction "$fraction")
+    : "${FT_MICRO:?set FT_MICRO (fine-tune sub-batch in images) from the pilot}"
+    micro=$(( FT_MICRO < 256 ? FT_MICRO : 256 ))  # never above the smallest batch, so B256 and B1024 match
+    args=(--init "$encoder" --fraction "$fraction" --accum-steps $(( batch / micro )))
     out="results/r50/finetune/${runs[$r]}/fraction${fraction}"
     ;;
   *) echo "Unknown MODE=$MODE" >&2; exit 1 ;;
 esac
 echo "Node: $(hostname) | $MODE task $task | batch $batch | lr $lr | out $out | restart ${SLURM_RESTART_COUNT:-0}"
+source scripts/slurm/r50_gpu_check.sh
 
 requeue() { echo "Time limit near: requeueing $SLURM_JOB_ID"; scontrol requeue "$SLURM_JOB_ID"; }
 trap requeue USR1

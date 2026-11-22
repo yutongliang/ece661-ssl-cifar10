@@ -42,6 +42,14 @@ def autocast_context(device):
     return nullcontext()
 
 
+def cap_gpu_memory(gigabytes, device):
+    """Limit this process to `gigabytes` of GPU memory, to emulate a smaller GPU."""
+    index = device.index if device.index is not None else torch.cuda.current_device()
+    total = torch.cuda.get_device_properties(index).total_memory
+    torch.cuda.set_per_process_memory_fraction(min(1.0, gigabytes * 2**30 / total), index)
+    print(f"GPU memory capped at {gigabytes:g} GiB of {total / 2**30:.1f} GiB")
+
+
 def capture_rng_state(device):
     """Store RNG state using tensors and primitives accepted by weights_only loading."""
     numpy_state = np.random.get_state()
