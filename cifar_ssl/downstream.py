@@ -7,6 +7,14 @@ One script for every downstream run, so all methods are trained the same way:
   linear eval (100%, linear only): --init ENCODER.pt --freeze-encoder --fraction 1.0
   random-init linear control:      --arch resnet50 --freeze-encoder --fraction 1.0
 
+The random-init control first recalibrates the encoder's batch-norm running
+statistics with one no-gradient pass over the training images. Left at their
+defaults (mean 0, variance 1), they do not normalize, and the frozen ResNet-50's
+features grow so large (mean squared norm about 3.5e5 versus 22 for a trained
+RotNet encoder) that the linear probe diverges. Even calibrated, its features
+are about 100x larger than a trained encoder's, so the control uses a smaller
+learning rate (see scripts/slurm/r50_downstream.sbatch).
+
 Recipe: softmax cross-entropy, SGD with Nesterov momentum, no weight decay,
 random crop and flip. The LR stays constant until training loss stops improving
 by more than --plateau-threshold (relative) for --plateau-patience epochs; then
@@ -140,6 +148,8 @@ def run_identity(args):
     identity = {k: v for k, v in vars(args).items() if k not in NON_IDENTITY_ARGS}
     if args.init:
         identity["init_sha256"] = sha256(args.init)
+    elif args.freeze_encoder:
+        identity["bn_calibration"] = "one_train_epoch"
     if args.fraction < 1:
         subset = os.path.join(data.SUBSET_DIR,
                               f"cifar10_{args.fraction * 100:g}pct_seed{args.subset_seed}.json")
@@ -161,6 +171,29 @@ def build_model(args):
         for parameter in model.encoder.parameters():
             parameter.requires_grad_(False)
     return model, method, arch, ckpt
+
+
+def calibrate_batchnorm(encoder, loader, device, accum_steps=1):
+    """Replace batch-norm running statistics with their average over one pass of
+    `loader`, in sub-batches as training uses them. No weights change. Returns the
+    number of images seen."""
+    layers = [m for m in encoder.modules() if isinstance(m, nn.modules.batchnorm._BatchNorm)]
+    momenta = [m.momentum for m in layers]
+    for m in layers:
+        m.reset_running_stats()
+        m.momentum = None  # cumulative average over every sub-batch
+    encoder.train()
+    seen = 0
+    with torch.no_grad():
+        for inputs, _ in loader:
+            for x in inputs.chunk(accum_steps):
+                with autocast_context(device):
+                    encoder(x.to(device))
+                seen += x.size(0)
+    for m, momentum in zip(layers, momenta):
+        m.momentum = momentum
+    encoder.eval()
+    return seen
 
 
 def train_epoch(model, loader, criterion, optimizer, scaler, device, frozen, accum_steps=1):
@@ -220,7 +253,7 @@ def main(argv=None):
     criterion = nn.CrossEntropyLoss()  # standard softmax cross-entropy
     rule = PlateauRule(args.plateau_patience, args.plateau_threshold, args.lr_drops)
 
-    start_epoch, history, elapsed = 1, [], 0.0
+    start_epoch, history, elapsed, calibrated = 1, [], 0.0, 0
     if os.path.isfile(last_path):
         state = torch.load(last_path, map_location="cpu", weights_only=True)
         if state["identity"] != identity or state["device"] != str(device):
@@ -231,6 +264,7 @@ def main(argv=None):
         rule.load_state_dict(state["rule"])
         restore_rng_state(state["rng_state"], device)
         start_epoch, history, elapsed = state["epoch"] + 1, state["history"], state["seconds"]
+        calibrated = state.get("bn_calibration_images", 0)
         print(f"Resumed {last_path} at epoch {start_epoch}")
 
     # Loaders are built after any RNG restore so a resumed run draws the same batches.
@@ -245,6 +279,9 @@ def main(argv=None):
     print(f"{experiment} | method={method} | arch={arch} | fraction={args.fraction} | "
           f"batch={args.batch_size} (x{args.accum_steps} sub-batches) | lr={args.lr} | device={device} | "
           f"{len(train_loader)} steps/epoch")
+    if method == "random_init" and start_epoch == 1:  # a resumed run restores the calibrated stats
+        calibrated = calibrate_batchnorm(model.encoder, train_loader, device, args.accum_steps)
+        print(f"Recalibrated batch-norm statistics on {calibrated} training images")
 
     stop_reason = "max_epochs"
     epoch = start_epoch - 1
@@ -272,6 +309,7 @@ def main(argv=None):
             "scaler": scaler.state_dict(), "rule": rule.state_dict(), "epoch": epoch,
             "history": history, "seconds": elapsed, "identity": identity,
             "rng_state": capture_rng_state(device), "device": str(device),
+            "bn_calibration_images": calibrated,
         })
         if decision == "stop":
             break
@@ -289,7 +327,7 @@ def main(argv=None):
         "stop_epoch": epoch, "stop_reason": stop_reason, "lr_drops": rule.drops,
         "final_train_loss": history[-1]["loss"], "final_train_acc": history[-1]["train_acc"],
         "steps_per_epoch": len(train_loader), "train_seconds": elapsed,
-        "init": args.init or "", "pretrain_args": ckpt.get("args", {}),
+        "init": args.init or "", "bn_calibration_images": calibrated, "pretrain_args": ckpt.get("args", {}),
         "device": str(device), "gpu": torch.cuda.get_device_name(0) if use_amp else "",
         "host": socket.gethostname(), "torch_version": str(torch.__version__),
         "identity": identity, "history": history,

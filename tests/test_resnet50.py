@@ -103,6 +103,22 @@ class ResNet50PlanTests(unittest.TestCase):
         for full, accumulated in zip(*grads):
             self.assertTrue(torch.allclose(full, accumulated, atol=1e-6))
 
+    def test_batchnorm_calibration_uses_the_data_and_changes_no_weights(self):
+        torch.manual_seed(0)
+        encoder = nn.Sequential(nn.Conv2d(3, 4, 3), nn.BatchNorm2d(4, momentum=0.1))
+        weights = [p.clone() for p in encoder.parameters()]
+        batches = [(torch.randn(8, 3, 6, 6) * 5 + 2, torch.zeros(8)) for _ in range(3)]
+        seen = downstream.calibrate_batchnorm(encoder, batches, torch.device("cpu"), accum_steps=2)
+        self.assertEqual(seen, 24)
+        bn = encoder[1]
+        self.assertFalse(bn.training)
+        self.assertEqual(bn.momentum, 0.1)
+        with torch.no_grad():
+            means = [encoder[0](x).mean((0, 2, 3)) for b, _ in batches for x in b.chunk(2)]
+        self.assertTrue(torch.allclose(bn.running_mean, torch.stack(means).mean(0), atol=1e-5))
+        for before, after in zip(weights, encoder.parameters()):
+            self.assertTrue(torch.equal(before, after))
+
     def test_gpu_memory_cap_passes_a_device_index(self):
         props = type("Props", (), {"total_memory": 48 * 2**30})()
         with patch.object(torch.cuda, "current_device", return_value=0), \

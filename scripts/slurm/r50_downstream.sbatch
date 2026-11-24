@@ -33,15 +33,20 @@ common=(--seed 0 --subset-seed 0 --num-workers 8 --max-epochs 100 --plateau-pati
         --plateau-threshold 0.01 --lr-drops 1 --weight-decay 0 --eval-every 10)
 case "$MODE" in
   linear)
+    lr=""
     if (( task == 20 )); then
-      source_args=(--arch resnet50); batch=256; out=results/r50/linear/random_init
+      # Random-init control. downstream.py recalibrates its batch-norm statistics, but
+      # its features stay ~120x larger than a trained encoder's (mean squared norm
+      # ~2,600 vs ~22), so LR 0.1 diverges (job 62490826_20). LR 0.001 gives about the
+      # same LR x squared feature norm as the trained probes (~2.6 vs ~2.2).
+      source_args=(--arch resnet50); batch=256; out=results/r50/linear/random_init; lr=0.001
     else
       (( task >= 0 && task < 20 )) || { echo "Unexpected task $task" >&2; exit 1; }
       r=$(( task / 10 )); epoch=$(( (task % 10 + 1) * 100 )); batch=${batches[$r]}
       encoder=$(printf "checkpoints/r50/%s/encoder_epoch%04d.pt" "${runs[$r]}" "$epoch")
       source_args=(--init "$encoder"); out=$(printf "results/r50/linear/%s/epoch%04d" "${runs[$r]}" "$epoch")
     fi
-    lr=$("$python_path" -c "print(0.1 * $batch / 256)")   # SimCLR B.6
+    : "${lr:=$("$python_path" -c "print(0.1 * $batch / 256)")}"   # SimCLR B.6
     args=("${source_args[@]}" --freeze-encoder --fraction 1.0)
     ;;
   finetune)
