@@ -11,6 +11,61 @@ The team moved from ResNet-20 to the ResNet-50 that SimCLR Appendix B.9 uses for
 CIFAR-10, so every method shares that encoder. The completed
 [ResNet-20 study](#resnet-20-study--complete-for-rotnet) remains as a small-model comparison.
 
+### Run checklist
+
+Every run the plan needs, 101 in total. Each cell is one run: ✅ done, ⬜ to do.
+Tick a cell when its run finishes. Seed 0 throughout.
+
+**1 · Pretraining** (6 runs, 1,000 epochs, encoder saved every 100 epochs)
+
+| Method | Owner | Batch 256 | Batch 1024 |
+|---|---|:---:|:---:|
+| RotNet | Teresa | ✅ | ✅ |
+| SimCLR | Pengyu | ⬜ | ⬜ |
+| SimSiam | Both | ✅¹ | ⬜ |
+
+**2 · Linear evaluation** (61 runs: frozen encoder at each saved epoch, 100% labels)
+
+| Encoder | Batch | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900 | 1000 |
+|---|---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| RotNet | 256 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| RotNet | 1024 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| SimCLR | 256 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| SimCLR | 1024 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| SimSiam | 256 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| SimSiam | 1024 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| Random init (control) | 256 | ✅ | | | | | | | | | |
+
+**3 · Fine-tuning** (24 runs: whole network from the epoch-1,000 encoder)
+
+| Encoder | Batch | 1% | 3% | 5% | 10% |
+|---|---:|:---:|:---:|:---:|:---:|
+| RotNet | 256 | ✅ | ✅ | ✅ | ✅ |
+| RotNet | 1024 | ✅ | ✅ | ✅ | ✅ |
+| SimCLR | 256 | ⬜ | ⬜ | ⬜ | ⬜ |
+| SimCLR | 1024 | ⬜ | ⬜ | ⬜ | ⬜ |
+| SimSiam | 256 | ⬜ | ⬜ | ⬜ | ⬜ |
+| SimSiam | 1024 | ⬜ | ⬜ | ⬜ | ⬜ |
+
+**4 · Supervised baseline** (10 runs: same ResNet-50 from random weights, Pengyu)
+
+| Batch | 1% | 3% | 5% | 10% | 100% |
+|---:|:---:|:---:|:---:|:---:|:---:|
+| 256 | ✅ | ✅ | ✅ | ✅ | ⬜ |
+| 1024 | ⬜ | ✅ | ✅ | ✅ | ⬜ |
+
+| Group | Done |
+|---|---:|
+| Pretraining | 3 / 6 |
+| Linear evaluation | 21 / 61 |
+| Fine-tuning | 8 / 24 |
+| Supervised | 7 / 10 |
+| **Total** | **39 / 101** |
+
+¹ The Slurm job finished in 7.8 h; confirm it reached epoch 1,000. The SimSiam and
+supervised ticks come from Slurm job states (2026-11-25); RotNet ticks have result
+files in [results/r50/](../results/r50/).
+
 | Item | Setting |
 |---|---|
 | Backbone | ResNet-50 with the B.9 CIFAR stem: 3×3 stride-1 first conv, no max-pool, FC removed; 2048-d feature. Shared by RotNet, SimCLR, SimSiam, and the supervised baseline |
@@ -57,8 +112,8 @@ version of Table 7.
 |---|---|---:|---:|---:|---:|---:|---:|
 | Supervised baseline | ResNet-50 | 256 | | | | | — |
 | Supervised baseline | ResNet-50 | 1024 | | | | | — |
-| RotNet | ResNet-50 | 256 | | | | | |
-| RotNet | ResNet-50 | 1024 | | | | | |
+| RotNet ✅ | ResNet-50 | 256 | 41.8 | 56.1 | 68.3 | 81.1 | 54.2 |
+| RotNet ✅ | ResNet-50 | 1024 | 36.0 | 50.8 | 59.5 | 65.9 | 53.8 |
 | SimCLR | ResNet-50 | 256 | | | | | |
 | SimCLR | ResNet-50 | 1024 | | | | | |
 | SimSiam | ResNet-50 | 256 | | | | | |
@@ -66,11 +121,12 @@ version of Table 7.
 
 - **1%–10%:** the whole network is fine-tuned. For the supervised rows, the same network is trained from random weights.
 - **100% (linear only):** frozen encoder plus a linear classifier trained on all labels, the epoch-1,000 point of Figure B.7.
+- **RotNet (complete, 2026-11-25):** [linear.csv](../results/r50/linear.csv) and [finetune.csv](../results/r50/finetune.csv). Linear accuracy peaks mid-training (72.1% at epoch 300 for batch 256; 72.3% at epoch 500 for batch 1024) and falls to the epoch-1,000 values above. The random-init control reaches 24.8% (batch-norm recalibrated, LR 0.001).
 - **Supervised rows at 100%:** there is no pretrained encoder to freeze, so the cell is empty. The supervised network trained end to end on all labels (B.9's reference, 95.1% in the paper) is reported beside the table.
 
 | Owner | Runs |
 |---|---|
-| Teresa | 2 RotNet pretrains; 21 linear evaluations (20 checkpoints + random init); 8 RotNet fine-tunes |
+| Teresa ✅ | 2 RotNet pretrains; 21 linear evaluations (20 checkpoints + random init); 8 RotNet fine-tunes. All done |
 | Pengyu | 2 SimCLR pretrains with probes and fine-tunes; 10 supervised runs (2 batches × 5 label settings) |
 | Both | SimSiam at batch 256 and 1024, so its batch sensitivity can be compared with SimCLR's. Pengyu sets the SimSiam pretraining recipe; its downstream runs use the shared recipe above |
 

@@ -1,0 +1,1004 @@
+Node: dcc-vossenlab-gpu-ferc-s-g36-19 | task 1 | restart 0 | resume no
+GPU: NVIDIA RTX A5000 | 23.5 GiB
+RotNet pretraining | arch=resnet50 | device=cuda | 48 steps/epoch | 4 sub-batches per step
+epoch   1 | lr 0.04083 | loss 2.8198 | rotation acc 0.2560 | seconds 88.21 | peak reserved GiB 16.50
+epoch   2 | lr 0.08083 | loss 1.3420 | rotation acc 0.3545 | seconds 72.24 | peak reserved GiB 14.63
+epoch   3 | lr 0.1208 | loss 1.1505 | rotation acc 0.4903 | seconds 72.26 | peak reserved GiB 14.63
+epoch   4 | lr 0.1608 | loss 1.0580 | rotation acc 0.5489 | seconds 72.41 | peak reserved GiB 14.63
+epoch   5 | lr 0.2008 | loss 1.0030 | rotation acc 0.5788 | seconds 72.29 | peak reserved GiB 14.63
+epoch   6 | lr 0.2408 | loss 0.9451 | rotation acc 0.6058 | seconds 72.21 | peak reserved GiB 14.63
+epoch   7 | lr 0.2808 | loss 0.8752 | rotation acc 0.6395 | seconds 72.30 | peak reserved GiB 14.63
+epoch   8 | lr 0.3208 | loss 0.7979 | rotation acc 0.6742 | seconds 72.31 | peak reserved GiB 14.63
+epoch   9 | lr 0.3608 | loss 0.7230 | rotation acc 0.7109 | seconds 72.34 | peak reserved GiB 14.63
+epoch  10 | lr 0.4 | loss 0.6408 | rotation acc 0.7463 | test rotation acc 0.7621 | seconds 85.70 | peak reserved GiB 16.69
+epoch  11 | lr 0.4 | loss 0.5720 | rotation acc 0.7771 | seconds 72.36 | peak reserved GiB 14.67
+epoch  12 | lr 0.4 | loss 0.5045 | rotation acc 0.8061 | seconds 72.38 | peak reserved GiB 14.67
+epoch  13 | lr 0.4 | loss 0.4505 | rotation acc 0.8271 | seconds 72.36 | peak reserved GiB 14.67
+epoch  14 | lr 0.4 | loss 0.4183 | rotation acc 0.8417 | seconds 72.39 | peak reserved GiB 14.67
+epoch  15 | lr 0.4 | loss 0.3895 | rotation acc 0.8529 | seconds 72.39 | peak reserved GiB 14.67
+epoch  16 | lr 0.4 | loss 0.3593 | rotation acc 0.8656 | seconds 72.38 | peak reserved GiB 14.67
+epoch  17 | lr 0.4 | loss 0.3360 | rotation acc 0.8750 | seconds 72.36 | peak reserved GiB 14.67
+epoch  18 | lr 0.3999 | loss 0.3298 | rotation acc 0.8770 | seconds 72.41 | peak reserved GiB 14.67
+epoch  19 | lr 0.3999 | loss 0.3091 | rotation acc 0.8861 | seconds 72.33 | peak reserved GiB 14.67
+epoch  20 | lr 0.3999 | loss 0.2987 | rotation acc 0.8886 | test rotation acc 0.8616 | seconds 81.88 | peak reserved GiB 18.67
+epoch  21 | lr 0.3999 | loss 0.2873 | rotation acc 0.8930 | seconds 76.05 | peak reserved GiB 18.67
+epoch  22 | lr 0.3999 | loss 0.2765 | rotation acc 0.8980 | seconds 72.40 | peak reserved GiB 18.67
+epoch  23 | lr 0.3998 | loss 0.2697 | rotation acc 0.9003 | seconds 72.28 | peak reserved GiB 18.67
+epoch  24 | lr 0.3998 | loss 0.2673 | rotation acc 0.9012 | seconds 72.28 | peak reserved GiB 18.67
+epoch  25 | lr 0.3998 | loss 0.2631 | rotation acc 0.9024 | seconds 72.26 | peak reserved GiB 18.67
+epoch  26 | lr 0.3997 | loss 0.2571 | rotation acc 0.9048 | seconds 72.31 | peak reserved GiB 18.67
+epoch  27 | lr 0.3997 | loss 0.2477 | rotation acc 0.9088 | seconds 72.37 | peak reserved GiB 18.67
+epoch  28 | lr 0.3997 | loss 0.2478 | rotation acc 0.9097 | seconds 72.33 | peak reserved GiB 18.67
+epoch  29 | lr 0.3996 | loss 0.2402 | rotation acc 0.9118 | seconds 72.34 | peak reserved GiB 18.67
+epoch  30 | lr 0.3996 | loss 0.2402 | rotation acc 0.9117 | test rotation acc 0.8736 | seconds 81.89 | peak reserved GiB 18.67
+epoch  31 | lr 0.3996 | loss 0.2362 | rotation acc 0.9133 | seconds 72.26 | peak reserved GiB 18.67
+epoch  32 | lr 0.3995 | loss 0.2336 | rotation acc 0.9140 | seconds 72.31 | peak reserved GiB 18.67
+epoch  33 | lr 0.3995 | loss 0.2299 | rotation acc 0.9150 | seconds 72.17 | peak reserved GiB 18.67
+epoch  34 | lr 0.3994 | loss 0.2273 | rotation acc 0.9164 | seconds 72.11 | peak reserved GiB 18.67
+epoch  35 | lr 0.3994 | loss 0.2215 | rotation acc 0.9191 | seconds 72.27 | peak reserved GiB 18.67
+epoch  36 | lr 0.3993 | loss 0.2180 | rotation acc 0.9197 | seconds 72.34 | peak reserved GiB 18.67
+epoch  37 | lr 0.3993 | loss 0.2221 | rotation acc 0.9188 | seconds 72.32 | peak reserved GiB 18.67
+epoch  38 | lr 0.3992 | loss 0.2171 | rotation acc 0.9205 | seconds 72.22 | peak reserved GiB 18.67
+epoch  39 | lr 0.3992 | loss 0.2111 | rotation acc 0.9225 | seconds 72.27 | peak reserved GiB 18.67
+epoch  40 | lr 0.3991 | loss 0.2149 | rotation acc 0.9211 | test rotation acc 0.8961 | seconds 81.81 | peak reserved GiB 18.67
+epoch  41 | lr 0.399 | loss 0.2086 | rotation acc 0.9239 | seconds 72.26 | peak reserved GiB 18.67
+epoch  42 | lr 0.399 | loss 0.2043 | rotation acc 0.9256 | seconds 72.23 | peak reserved GiB 18.67
+epoch  43 | lr 0.3989 | loss 0.2059 | rotation acc 0.9245 | seconds 72.33 | peak reserved GiB 18.67
+epoch  44 | lr 0.3988 | loss 0.2058 | rotation acc 0.9249 | seconds 72.27 | peak reserved GiB 18.67
+epoch  45 | lr 0.3988 | loss 0.2023 | rotation acc 0.9260 | seconds 72.56 | peak reserved GiB 18.67
+epoch  46 | lr 0.3987 | loss 0.1950 | rotation acc 0.9281 | seconds 72.28 | peak reserved GiB 18.67
+epoch  47 | lr 0.3986 | loss 0.2046 | rotation acc 0.9247 | seconds 72.23 | peak reserved GiB 18.67
+epoch  48 | lr 0.3985 | loss 0.1962 | rotation acc 0.9282 | seconds 72.35 | peak reserved GiB 18.67
+epoch  49 | lr 0.3985 | loss 0.1924 | rotation acc 0.9298 | seconds 72.21 | peak reserved GiB 18.67
+epoch  50 | lr 0.3984 | loss 0.1970 | rotation acc 0.9283 | test rotation acc 0.8784 | seconds 81.82 | peak reserved GiB 18.67
+epoch  51 | lr 0.3983 | loss 0.1958 | rotation acc 0.9292 | seconds 72.28 | peak reserved GiB 18.67
+epoch  52 | lr 0.3982 | loss 0.1895 | rotation acc 0.9312 | seconds 72.10 | peak reserved GiB 18.67
+epoch  53 | lr 0.3981 | loss 0.1898 | rotation acc 0.9308 | seconds 72.24 | peak reserved GiB 18.67
+epoch  54 | lr 0.3981 | loss 0.1863 | rotation acc 0.9326 | seconds 72.39 | peak reserved GiB 18.67
+epoch  55 | lr 0.398 | loss 0.1894 | rotation acc 0.9306 | seconds 72.27 | peak reserved GiB 18.67
+epoch  56 | lr 0.3979 | loss 0.1860 | rotation acc 0.9326 | seconds 72.29 | peak reserved GiB 18.67
+epoch  57 | lr 0.3978 | loss 0.1831 | rotation acc 0.9337 | seconds 72.25 | peak reserved GiB 18.67
+epoch  58 | lr 0.3977 | loss 0.1832 | rotation acc 0.9338 | seconds 72.07 | peak reserved GiB 18.67
+epoch  59 | lr 0.3976 | loss 0.1829 | rotation acc 0.9339 | seconds 72.34 | peak reserved GiB 18.67
+epoch  60 | lr 0.3975 | loss 0.1840 | rotation acc 0.9332 | test rotation acc 0.9044 | seconds 81.82 | peak reserved GiB 18.67
+epoch  61 | lr 0.3974 | loss 0.1796 | rotation acc 0.9349 | seconds 72.26 | peak reserved GiB 18.67
+epoch  62 | lr 0.3973 | loss 0.1804 | rotation acc 0.9348 | seconds 72.33 | peak reserved GiB 18.67
+epoch  63 | lr 0.3972 | loss 0.1799 | rotation acc 0.9341 | seconds 72.30 | peak reserved GiB 18.67
+epoch  64 | lr 0.3971 | loss 0.1760 | rotation acc 0.9358 | seconds 72.30 | peak reserved GiB 18.67
+epoch  65 | lr 0.397 | loss 0.1777 | rotation acc 0.9361 | seconds 72.26 | peak reserved GiB 18.67
+epoch  66 | lr 0.3969 | loss 0.1749 | rotation acc 0.9366 | seconds 72.20 | peak reserved GiB 18.67
+epoch  67 | lr 0.3967 | loss 0.1749 | rotation acc 0.9363 | seconds 72.26 | peak reserved GiB 18.67
+epoch  68 | lr 0.3966 | loss 0.1747 | rotation acc 0.9368 | seconds 72.27 | peak reserved GiB 18.67
+epoch  69 | lr 0.3965 | loss 0.1740 | rotation acc 0.9372 | seconds 72.30 | peak reserved GiB 18.67
+epoch  70 | lr 0.3964 | loss 0.1727 | rotation acc 0.9372 | test rotation acc 0.8794 | seconds 81.83 | peak reserved GiB 18.67
+epoch  71 | lr 0.3963 | loss 0.1741 | rotation acc 0.9366 | seconds 72.25 | peak reserved GiB 18.67
+epoch  72 | lr 0.3961 | loss 0.1735 | rotation acc 0.9370 | seconds 72.23 | peak reserved GiB 18.67
+epoch  73 | lr 0.396 | loss 0.1711 | rotation acc 0.9379 | seconds 72.24 | peak reserved GiB 18.67
+epoch  74 | lr 0.3959 | loss 0.1736 | rotation acc 0.9369 | seconds 72.28 | peak reserved GiB 18.67
+epoch  75 | lr 0.3958 | loss 0.1721 | rotation acc 0.9376 | seconds 72.21 | peak reserved GiB 18.67
+epoch  76 | lr 0.3956 | loss 0.1651 | rotation acc 0.9407 | seconds 72.29 | peak reserved GiB 18.67
+epoch  77 | lr 0.3955 | loss 0.1705 | rotation acc 0.9377 | seconds 72.31 | peak reserved GiB 18.67
+epoch  78 | lr 0.3954 | loss 0.1750 | rotation acc 0.9361 | seconds 72.26 | peak reserved GiB 18.67
+epoch  79 | lr 0.3952 | loss 0.1671 | rotation acc 0.9390 | seconds 72.22 | peak reserved GiB 18.67
+epoch  80 | lr 0.3951 | loss 0.1668 | rotation acc 0.9393 | test rotation acc 0.8822 | seconds 81.82 | peak reserved GiB 18.67
+epoch  81 | lr 0.3949 | loss 0.1708 | rotation acc 0.9386 | seconds 72.18 | peak reserved GiB 18.67
+epoch  82 | lr 0.3948 | loss 0.1664 | rotation acc 0.9401 | seconds 72.29 | peak reserved GiB 18.67
+epoch  83 | lr 0.3947 | loss 0.1618 | rotation acc 0.9411 | seconds 72.29 | peak reserved GiB 18.67
+epoch  84 | lr 0.3945 | loss 0.1654 | rotation acc 0.9405 | seconds 72.22 | peak reserved GiB 18.67
+epoch  85 | lr 0.3944 | loss 0.1632 | rotation acc 0.9405 | seconds 72.23 | peak reserved GiB 18.67
+epoch  86 | lr 0.3942 | loss 0.1632 | rotation acc 0.9404 | seconds 72.29 | peak reserved GiB 18.67
+epoch  87 | lr 0.3941 | loss 0.1617 | rotation acc 0.9415 | seconds 72.26 | peak reserved GiB 18.67
+epoch  88 | lr 0.3939 | loss 0.1641 | rotation acc 0.9406 | seconds 72.28 | peak reserved GiB 18.67
+epoch  89 | lr 0.3937 | loss 0.1602 | rotation acc 0.9423 | seconds 72.27 | peak reserved GiB 18.67
+epoch  90 | lr 0.3936 | loss 0.1591 | rotation acc 0.9422 | test rotation acc 0.9141 | seconds 81.83 | peak reserved GiB 18.67
+epoch  91 | lr 0.3934 | loss 0.1637 | rotation acc 0.9406 | seconds 72.27 | peak reserved GiB 18.67
+epoch  92 | lr 0.3933 | loss 0.1623 | rotation acc 0.9410 | seconds 72.26 | peak reserved GiB 18.67
+epoch  93 | lr 0.3931 | loss 0.1644 | rotation acc 0.9406 | seconds 72.13 | peak reserved GiB 18.67
+epoch  94 | lr 0.3929 | loss 0.1618 | rotation acc 0.9410 | seconds 72.30 | peak reserved GiB 18.67
+epoch  95 | lr 0.3928 | loss 0.1591 | rotation acc 0.9427 | seconds 72.27 | peak reserved GiB 18.67
+epoch  96 | lr 0.3926 | loss 0.1618 | rotation acc 0.9413 | seconds 72.25 | peak reserved GiB 18.67
+epoch  97 | lr 0.3924 | loss 0.1573 | rotation acc 0.9428 | seconds 72.20 | peak reserved GiB 18.67
+epoch  98 | lr 0.3923 | loss 0.1581 | rotation acc 0.9425 | seconds 72.20 | peak reserved GiB 18.67
+epoch  99 | lr 0.3921 | loss 0.1612 | rotation acc 0.9414 | seconds 72.33 | peak reserved GiB 18.67
+epoch 100 | lr 0.3919 | loss 0.1571 | rotation acc 0.9438 | test rotation acc 0.9000 | seconds 82.14 | peak reserved GiB 18.67
+epoch 101 | lr 0.3917 | loss 0.1570 | rotation acc 0.9427 | seconds 72.16 | peak reserved GiB 18.67
+epoch 102 | lr 0.3915 | loss 0.1566 | rotation acc 0.9433 | seconds 72.28 | peak reserved GiB 18.67
+epoch 103 | lr 0.3914 | loss 0.1587 | rotation acc 0.9423 | seconds 72.28 | peak reserved GiB 18.67
+epoch 104 | lr 0.3912 | loss 0.1578 | rotation acc 0.9435 | seconds 72.21 | peak reserved GiB 18.67
+epoch 105 | lr 0.391 | loss 0.1564 | rotation acc 0.9432 | seconds 72.25 | peak reserved GiB 18.67
+epoch 106 | lr 0.3908 | loss 0.1539 | rotation acc 0.9443 | seconds 72.29 | peak reserved GiB 18.67
+epoch 107 | lr 0.3906 | loss 0.1563 | rotation acc 0.9434 | seconds 72.23 | peak reserved GiB 18.67
+epoch 108 | lr 0.3904 | loss 0.1576 | rotation acc 0.9428 | seconds 72.29 | peak reserved GiB 18.67
+epoch 109 | lr 0.3902 | loss 0.1560 | rotation acc 0.9434 | seconds 72.26 | peak reserved GiB 18.67
+epoch 110 | lr 0.39 | loss 0.1522 | rotation acc 0.9445 | test rotation acc 0.9069 | seconds 81.85 | peak reserved GiB 18.67
+epoch 111 | lr 0.3898 | loss 0.1574 | rotation acc 0.9427 | seconds 72.26 | peak reserved GiB 18.67
+epoch 112 | lr 0.3896 | loss 0.1592 | rotation acc 0.9426 | seconds 72.18 | peak reserved GiB 18.67
+epoch 113 | lr 0.3894 | loss 0.1531 | rotation acc 0.9448 | seconds 72.31 | peak reserved GiB 18.67
+epoch 114 | lr 0.3892 | loss 0.1539 | rotation acc 0.9446 | seconds 72.30 | peak reserved GiB 18.67
+epoch 115 | lr 0.389 | loss 0.1492 | rotation acc 0.9460 | seconds 72.25 | peak reserved GiB 18.67
+epoch 116 | lr 0.3888 | loss 0.1516 | rotation acc 0.9452 | seconds 72.23 | peak reserved GiB 18.67
+epoch 117 | lr 0.3886 | loss 0.1544 | rotation acc 0.9442 | seconds 72.17 | peak reserved GiB 18.67
+epoch 118 | lr 0.3884 | loss 0.1564 | rotation acc 0.9433 | seconds 72.25 | peak reserved GiB 18.67
+epoch 119 | lr 0.3882 | loss 0.1559 | rotation acc 0.9434 | seconds 72.23 | peak reserved GiB 18.67
+epoch 120 | lr 0.3879 | loss 0.1523 | rotation acc 0.9447 | test rotation acc 0.9105 | seconds 81.79 | peak reserved GiB 18.67
+epoch 121 | lr 0.3877 | loss 0.1522 | rotation acc 0.9451 | seconds 72.22 | peak reserved GiB 18.67
+epoch 122 | lr 0.3875 | loss 0.1529 | rotation acc 0.9445 | seconds 72.24 | peak reserved GiB 18.67
+epoch 123 | lr 0.3873 | loss 0.1518 | rotation acc 0.9452 | seconds 72.19 | peak reserved GiB 18.67
+epoch 124 | lr 0.3871 | loss 0.1489 | rotation acc 0.9461 | seconds 72.25 | peak reserved GiB 18.67
+epoch 125 | lr 0.3868 | loss 0.1527 | rotation acc 0.9446 | seconds 72.25 | peak reserved GiB 18.67
+epoch 126 | lr 0.3866 | loss 0.1484 | rotation acc 0.9460 | seconds 72.26 | peak reserved GiB 18.67
+epoch 127 | lr 0.3864 | loss 0.1525 | rotation acc 0.9449 | seconds 72.27 | peak reserved GiB 18.67
+epoch 128 | lr 0.3861 | loss 0.1503 | rotation acc 0.9456 | seconds 72.31 | peak reserved GiB 18.67
+epoch 129 | lr 0.3859 | loss 0.1445 | rotation acc 0.9478 | seconds 72.22 | peak reserved GiB 18.67
+epoch 130 | lr 0.3857 | loss 0.1513 | rotation acc 0.9450 | test rotation acc 0.9140 | seconds 81.80 | peak reserved GiB 18.67
+epoch 131 | lr 0.3854 | loss 0.1505 | rotation acc 0.9453 | seconds 72.46 | peak reserved GiB 18.67
+epoch 132 | lr 0.3852 | loss 0.1543 | rotation acc 0.9437 | seconds 72.24 | peak reserved GiB 18.67
+epoch 133 | lr 0.385 | loss 0.1482 | rotation acc 0.9464 | seconds 72.24 | peak reserved GiB 18.67
+epoch 134 | lr 0.3847 | loss 0.1453 | rotation acc 0.9473 | seconds 72.25 | peak reserved GiB 18.67
+epoch 135 | lr 0.3845 | loss 0.1483 | rotation acc 0.9462 | seconds 72.30 | peak reserved GiB 18.67
+epoch 136 | lr 0.3842 | loss 0.1476 | rotation acc 0.9471 | seconds 72.24 | peak reserved GiB 18.67
+epoch 137 | lr 0.384 | loss 0.1483 | rotation acc 0.9468 | seconds 72.25 | peak reserved GiB 18.67
+epoch 138 | lr 0.3837 | loss 0.1445 | rotation acc 0.9479 | seconds 72.28 | peak reserved GiB 18.67
+epoch 139 | lr 0.3835 | loss 0.1490 | rotation acc 0.9464 | seconds 72.18 | peak reserved GiB 18.67
+epoch 140 | lr 0.3832 | loss 0.1503 | rotation acc 0.9455 | test rotation acc 0.8942 | seconds 81.86 | peak reserved GiB 18.67
+epoch 141 | lr 0.383 | loss 0.1468 | rotation acc 0.9469 | seconds 72.23 | peak reserved GiB 18.67
+epoch 142 | lr 0.3827 | loss 0.1454 | rotation acc 0.9470 | seconds 72.28 | peak reserved GiB 18.67
+epoch 143 | lr 0.3825 | loss 0.1459 | rotation acc 0.9468 | seconds 72.24 | peak reserved GiB 18.67
+epoch 144 | lr 0.3822 | loss 0.1498 | rotation acc 0.9458 | seconds 72.40 | peak reserved GiB 18.67
+epoch 145 | lr 0.3819 | loss 0.1441 | rotation acc 0.9477 | seconds 72.41 | peak reserved GiB 18.67
+epoch 146 | lr 0.3817 | loss 0.1458 | rotation acc 0.9471 | seconds 72.36 | peak reserved GiB 18.67
+epoch 147 | lr 0.3814 | loss 0.1461 | rotation acc 0.9473 | seconds 72.40 | peak reserved GiB 18.67
+epoch 148 | lr 0.3811 | loss 0.1491 | rotation acc 0.9462 | seconds 72.31 | peak reserved GiB 18.67
+epoch 149 | lr 0.3809 | loss 0.1453 | rotation acc 0.9475 | seconds 72.40 | peak reserved GiB 18.67
+epoch 150 | lr 0.3806 | loss 0.1418 | rotation acc 0.9489 | test rotation acc 0.8939 | seconds 81.93 | peak reserved GiB 18.67
+epoch 151 | lr 0.3803 | loss 0.1422 | rotation acc 0.9486 | seconds 72.36 | peak reserved GiB 18.67
+epoch 152 | lr 0.38 | loss 0.1446 | rotation acc 0.9477 | seconds 72.45 | peak reserved GiB 18.67
+epoch 153 | lr 0.3798 | loss 0.1439 | rotation acc 0.9476 | seconds 72.47 | peak reserved GiB 18.67
+epoch 154 | lr 0.3795 | loss 0.1420 | rotation acc 0.9489 | seconds 72.23 | peak reserved GiB 18.67
+epoch 155 | lr 0.3792 | loss 0.1469 | rotation acc 0.9473 | seconds 72.38 | peak reserved GiB 18.67
+epoch 156 | lr 0.3789 | loss 0.1392 | rotation acc 0.9499 | seconds 72.42 | peak reserved GiB 18.67
+epoch 157 | lr 0.3786 | loss 0.1461 | rotation acc 0.9471 | seconds 72.44 | peak reserved GiB 18.67
+epoch 158 | lr 0.3783 | loss 0.1439 | rotation acc 0.9479 | seconds 72.41 | peak reserved GiB 18.67
+epoch 159 | lr 0.3781 | loss 0.1475 | rotation acc 0.9459 | seconds 72.38 | peak reserved GiB 18.67
+epoch 160 | lr 0.3778 | loss 0.1402 | rotation acc 0.9499 | test rotation acc 0.9176 | seconds 82.24 | peak reserved GiB 18.67
+epoch 161 | lr 0.3775 | loss 0.1410 | rotation acc 0.9490 | seconds 72.68 | peak reserved GiB 18.67
+epoch 162 | lr 0.3772 | loss 0.1415 | rotation acc 0.9491 | seconds 72.40 | peak reserved GiB 18.67
+epoch 163 | lr 0.3769 | loss 0.1436 | rotation acc 0.9486 | seconds 72.30 | peak reserved GiB 18.67
+epoch 164 | lr 0.3766 | loss 0.1422 | rotation acc 0.9486 | seconds 72.42 | peak reserved GiB 18.67
+epoch 165 | lr 0.3763 | loss 0.1456 | rotation acc 0.9467 | seconds 72.35 | peak reserved GiB 18.67
+epoch 166 | lr 0.376 | loss 0.1391 | rotation acc 0.9497 | seconds 72.44 | peak reserved GiB 18.67
+epoch 167 | lr 0.3757 | loss 0.1408 | rotation acc 0.9491 | seconds 72.45 | peak reserved GiB 18.67
+epoch 168 | lr 0.3754 | loss 0.1399 | rotation acc 0.9489 | seconds 72.43 | peak reserved GiB 18.67
+epoch 169 | lr 0.3751 | loss 0.1404 | rotation acc 0.9497 | seconds 72.38 | peak reserved GiB 18.67
+epoch 170 | lr 0.3748 | loss 0.1445 | rotation acc 0.9475 | test rotation acc 0.9045 | seconds 82.04 | peak reserved GiB 18.67
+epoch 171 | lr 0.3745 | loss 0.1429 | rotation acc 0.9484 | seconds 72.32 | peak reserved GiB 18.67
+epoch 172 | lr 0.3741 | loss 0.1456 | rotation acc 0.9474 | seconds 72.30 | peak reserved GiB 18.67
+epoch 173 | lr 0.3738 | loss 0.1398 | rotation acc 0.9496 | seconds 72.48 | peak reserved GiB 18.67
+epoch 174 | lr 0.3735 | loss 0.1411 | rotation acc 0.9494 | seconds 72.45 | peak reserved GiB 18.67
+epoch 175 | lr 0.3732 | loss 0.1380 | rotation acc 0.9496 | seconds 72.38 | peak reserved GiB 18.67
+epoch 176 | lr 0.3729 | loss 0.1392 | rotation acc 0.9499 | seconds 72.39 | peak reserved GiB 18.67
+epoch 177 | lr 0.3726 | loss 0.1412 | rotation acc 0.9491 | seconds 72.39 | peak reserved GiB 18.67
+epoch 178 | lr 0.3722 | loss 0.1400 | rotation acc 0.9494 | seconds 72.62 | peak reserved GiB 18.67
+epoch 179 | lr 0.3719 | loss 0.1385 | rotation acc 0.9496 | seconds 72.39 | peak reserved GiB 18.67
+epoch 180 | lr 0.3716 | loss 0.1373 | rotation acc 0.9493 | test rotation acc 0.9070 | seconds 81.99 | peak reserved GiB 18.67
+epoch 181 | lr 0.3713 | loss 0.1396 | rotation acc 0.9493 | seconds 72.25 | peak reserved GiB 18.67
+epoch 182 | lr 0.3709 | loss 0.1431 | rotation acc 0.9479 | seconds 72.34 | peak reserved GiB 18.67
+epoch 183 | lr 0.3706 | loss 0.1363 | rotation acc 0.9506 | seconds 72.37 | peak reserved GiB 18.67
+epoch 184 | lr 0.3703 | loss 0.1365 | rotation acc 0.9504 | seconds 72.57 | peak reserved GiB 18.67
+epoch 185 | lr 0.3699 | loss 0.1390 | rotation acc 0.9493 | seconds 72.35 | peak reserved GiB 18.67
+epoch 186 | lr 0.3696 | loss 0.1406 | rotation acc 0.9492 | seconds 72.44 | peak reserved GiB 18.67
+epoch 187 | lr 0.3693 | loss 0.1397 | rotation acc 0.9496 | seconds 72.30 | peak reserved GiB 18.67
+epoch 188 | lr 0.3689 | loss 0.1352 | rotation acc 0.9511 | seconds 72.41 | peak reserved GiB 18.67
+epoch 189 | lr 0.3686 | loss 0.1361 | rotation acc 0.9506 | seconds 72.41 | peak reserved GiB 18.67
+epoch 190 | lr 0.3683 | loss 0.1362 | rotation acc 0.9511 | test rotation acc 0.9012 | seconds 82.08 | peak reserved GiB 18.67
+epoch 191 | lr 0.3679 | loss 0.1404 | rotation acc 0.9496 | seconds 72.39 | peak reserved GiB 18.67
+epoch 192 | lr 0.3676 | loss 0.1381 | rotation acc 0.9505 | seconds 72.36 | peak reserved GiB 18.67
+epoch 193 | lr 0.3672 | loss 0.1378 | rotation acc 0.9503 | seconds 72.33 | peak reserved GiB 18.67
+epoch 194 | lr 0.3669 | loss 0.1358 | rotation acc 0.9510 | seconds 72.31 | peak reserved GiB 18.67
+epoch 195 | lr 0.3665 | loss 0.1374 | rotation acc 0.9503 | seconds 72.44 | peak reserved GiB 18.67
+epoch 196 | lr 0.3662 | loss 0.1322 | rotation acc 0.9527 | seconds 72.29 | peak reserved GiB 18.67
+epoch 197 | lr 0.3658 | loss 0.1372 | rotation acc 0.9504 | seconds 72.42 | peak reserved GiB 18.67
+epoch 198 | lr 0.3655 | loss 0.1352 | rotation acc 0.9514 | seconds 72.39 | peak reserved GiB 18.67
+epoch 199 | lr 0.3651 | loss 0.1365 | rotation acc 0.9505 | seconds 72.41 | peak reserved GiB 18.67
+epoch 200 | lr 0.3647 | loss 0.1342 | rotation acc 0.9515 | test rotation acc 0.9220 | seconds 82.01 | peak reserved GiB 18.67
+epoch 201 | lr 0.3644 | loss 0.1359 | rotation acc 0.9511 | seconds 72.36 | peak reserved GiB 18.67
+epoch 202 | lr 0.364 | loss 0.1346 | rotation acc 0.9512 | seconds 72.37 | peak reserved GiB 18.67
+epoch 203 | lr 0.3636 | loss 0.1310 | rotation acc 0.9526 | seconds 72.39 | peak reserved GiB 18.67
+epoch 204 | lr 0.3633 | loss 0.1347 | rotation acc 0.9510 | seconds 72.40 | peak reserved GiB 18.67
+epoch 205 | lr 0.3629 | loss 0.1358 | rotation acc 0.9507 | seconds 72.35 | peak reserved GiB 18.67
+epoch 206 | lr 0.3625 | loss 0.1357 | rotation acc 0.9513 | seconds 72.41 | peak reserved GiB 18.67
+epoch 207 | lr 0.3622 | loss 0.1327 | rotation acc 0.9522 | seconds 72.40 | peak reserved GiB 18.67
+epoch 208 | lr 0.3618 | loss 0.1329 | rotation acc 0.9515 | seconds 72.35 | peak reserved GiB 18.67
+epoch 209 | lr 0.3614 | loss 0.1340 | rotation acc 0.9520 | seconds 72.41 | peak reserved GiB 18.67
+epoch 210 | lr 0.3611 | loss 0.1328 | rotation acc 0.9520 | test rotation acc 0.9075 | seconds 82.02 | peak reserved GiB 18.67
+epoch 211 | lr 0.3607 | loss 0.1339 | rotation acc 0.9516 | seconds 72.50 | peak reserved GiB 18.67
+epoch 212 | lr 0.3603 | loss 0.1305 | rotation acc 0.9534 | seconds 72.37 | peak reserved GiB 18.67
+epoch 213 | lr 0.3599 | loss 0.1319 | rotation acc 0.9524 | seconds 72.37 | peak reserved GiB 18.67
+epoch 214 | lr 0.3595 | loss 0.1323 | rotation acc 0.9523 | seconds 73.66 | peak reserved GiB 18.67
+epoch 215 | lr 0.3592 | loss 0.1333 | rotation acc 0.9518 | seconds 72.43 | peak reserved GiB 18.67
+epoch 216 | lr 0.3588 | loss 0.1358 | rotation acc 0.9512 | seconds 72.34 | peak reserved GiB 18.67
+epoch 217 | lr 0.3584 | loss 0.1297 | rotation acc 0.9537 | seconds 72.26 | peak reserved GiB 18.67
+epoch 218 | lr 0.358 | loss 0.1302 | rotation acc 0.9534 | seconds 72.30 | peak reserved GiB 18.67
+epoch 219 | lr 0.3576 | loss 0.1306 | rotation acc 0.9528 | seconds 72.34 | peak reserved GiB 18.67
+epoch 220 | lr 0.3572 | loss 0.1329 | rotation acc 0.9519 | test rotation acc 0.8938 | seconds 82.02 | peak reserved GiB 18.67
+epoch 221 | lr 0.3568 | loss 0.1331 | rotation acc 0.9524 | seconds 72.29 | peak reserved GiB 18.67
+epoch 222 | lr 0.3564 | loss 0.1310 | rotation acc 0.9526 | seconds 72.34 | peak reserved GiB 18.67
+epoch 223 | lr 0.356 | loss 0.1334 | rotation acc 0.9519 | seconds 72.35 | peak reserved GiB 18.67
+epoch 224 | lr 0.3556 | loss 0.1317 | rotation acc 0.9528 | seconds 72.42 | peak reserved GiB 18.67
+epoch 225 | lr 0.3552 | loss 0.1275 | rotation acc 0.9543 | seconds 72.39 | peak reserved GiB 18.67
+epoch 226 | lr 0.3548 | loss 0.1282 | rotation acc 0.9540 | seconds 72.38 | peak reserved GiB 18.67
+epoch 227 | lr 0.3544 | loss 0.1311 | rotation acc 0.9526 | seconds 72.41 | peak reserved GiB 18.67
+epoch 228 | lr 0.354 | loss 0.1330 | rotation acc 0.9519 | seconds 72.33 | peak reserved GiB 18.67
+epoch 229 | lr 0.3536 | loss 0.1279 | rotation acc 0.9541 | seconds 72.39 | peak reserved GiB 18.67
+epoch 230 | lr 0.3532 | loss 0.1281 | rotation acc 0.9545 | test rotation acc 0.9199 | seconds 81.99 | peak reserved GiB 18.67
+epoch 231 | lr 0.3528 | loss 0.1276 | rotation acc 0.9537 | seconds 72.44 | peak reserved GiB 18.67
+epoch 232 | lr 0.3524 | loss 0.1300 | rotation acc 0.9530 | seconds 74.23 | peak reserved GiB 18.67
+epoch 233 | lr 0.352 | loss 0.1308 | rotation acc 0.9530 | seconds 72.42 | peak reserved GiB 18.67
+epoch 234 | lr 0.3516 | loss 0.1285 | rotation acc 0.9535 | seconds 72.31 | peak reserved GiB 18.67
+epoch 235 | lr 0.3511 | loss 0.1291 | rotation acc 0.9537 | seconds 72.54 | peak reserved GiB 18.67
+epoch 236 | lr 0.3507 | loss 0.1290 | rotation acc 0.9532 | seconds 72.36 | peak reserved GiB 18.67
+epoch 237 | lr 0.3503 | loss 0.1273 | rotation acc 0.9540 | seconds 72.29 | peak reserved GiB 18.67
+epoch 238 | lr 0.3499 | loss 0.1268 | rotation acc 0.9546 | seconds 72.45 | peak reserved GiB 18.67
+epoch 239 | lr 0.3495 | loss 0.1278 | rotation acc 0.9538 | seconds 72.40 | peak reserved GiB 18.67
+epoch 240 | lr 0.3491 | loss 0.1316 | rotation acc 0.9522 | test rotation acc 0.8893 | seconds 82.06 | peak reserved GiB 18.67
+epoch 241 | lr 0.3486 | loss 0.1305 | rotation acc 0.9525 | seconds 72.25 | peak reserved GiB 18.67
+epoch 242 | lr 0.3482 | loss 0.1267 | rotation acc 0.9538 | seconds 72.29 | peak reserved GiB 18.67
+epoch 243 | lr 0.3478 | loss 0.1241 | rotation acc 0.9559 | seconds 72.36 | peak reserved GiB 18.67
+epoch 244 | lr 0.3473 | loss 0.1247 | rotation acc 0.9549 | seconds 72.43 | peak reserved GiB 18.67
+epoch 245 | lr 0.3469 | loss 0.1241 | rotation acc 0.9551 | seconds 72.63 | peak reserved GiB 18.67
+epoch 246 | lr 0.3465 | loss 0.1268 | rotation acc 0.9538 | seconds 73.64 | peak reserved GiB 18.67
+epoch 247 | lr 0.3461 | loss 0.1243 | rotation acc 0.9550 | seconds 72.35 | peak reserved GiB 18.67
+epoch 248 | lr 0.3456 | loss 0.1294 | rotation acc 0.9530 | seconds 72.33 | peak reserved GiB 18.67
+epoch 249 | lr 0.3452 | loss 0.1249 | rotation acc 0.9546 | seconds 72.65 | peak reserved GiB 18.67
+epoch 250 | lr 0.3447 | loss 0.1233 | rotation acc 0.9554 | test rotation acc 0.8971 | seconds 82.10 | peak reserved GiB 18.67
+epoch 251 | lr 0.3443 | loss 0.1242 | rotation acc 0.9555 | seconds 72.43 | peak reserved GiB 18.67
+epoch 252 | lr 0.3439 | loss 0.1272 | rotation acc 0.9543 | seconds 72.38 | peak reserved GiB 18.67
+epoch 253 | lr 0.3434 | loss 0.1261 | rotation acc 0.9542 | seconds 72.34 | peak reserved GiB 18.67
+epoch 254 | lr 0.343 | loss 0.1230 | rotation acc 0.9558 | seconds 72.34 | peak reserved GiB 18.67
+epoch 255 | lr 0.3425 | loss 0.1269 | rotation acc 0.9546 | seconds 72.26 | peak reserved GiB 18.67
+epoch 256 | lr 0.3421 | loss 0.1239 | rotation acc 0.9555 | seconds 72.28 | peak reserved GiB 18.67
+epoch 257 | lr 0.3416 | loss 0.1251 | rotation acc 0.9552 | seconds 72.27 | peak reserved GiB 18.67
+epoch 258 | lr 0.3412 | loss 0.1244 | rotation acc 0.9555 | seconds 72.37 | peak reserved GiB 18.67
+epoch 259 | lr 0.3407 | loss 0.1234 | rotation acc 0.9557 | seconds 72.37 | peak reserved GiB 18.67
+epoch 260 | lr 0.3403 | loss 0.1239 | rotation acc 0.9551 | test rotation acc 0.9237 | seconds 81.93 | peak reserved GiB 18.67
+epoch 261 | lr 0.3398 | loss 0.1243 | rotation acc 0.9553 | seconds 72.35 | peak reserved GiB 18.67
+epoch 262 | lr 0.3394 | loss 0.1241 | rotation acc 0.9554 | seconds 72.21 | peak reserved GiB 18.67
+epoch 263 | lr 0.3389 | loss 0.1229 | rotation acc 0.9559 | seconds 72.39 | peak reserved GiB 18.67
+epoch 264 | lr 0.3385 | loss 0.1256 | rotation acc 0.9544 | seconds 77.28 | peak reserved GiB 18.67
+epoch 265 | lr 0.338 | loss 0.1196 | rotation acc 0.9565 | seconds 72.45 | peak reserved GiB 18.67
+epoch 266 | lr 0.3376 | loss 0.1224 | rotation acc 0.9560 | seconds 72.32 | peak reserved GiB 18.67
+epoch 267 | lr 0.3371 | loss 0.1263 | rotation acc 0.9544 | seconds 72.39 | peak reserved GiB 18.67
+epoch 268 | lr 0.3366 | loss 0.1242 | rotation acc 0.9548 | seconds 75.77 | peak reserved GiB 18.67
+epoch 269 | lr 0.3362 | loss 0.1188 | rotation acc 0.9570 | seconds 72.38 | peak reserved GiB 18.67
+epoch 270 | lr 0.3357 | loss 0.1258 | rotation acc 0.9547 | test rotation acc 0.8951 | seconds 82.05 | peak reserved GiB 18.67
+epoch 271 | lr 0.3352 | loss 0.1191 | rotation acc 0.9573 | seconds 72.17 | peak reserved GiB 18.67
+epoch 272 | lr 0.3348 | loss 0.1236 | rotation acc 0.9554 | seconds 72.36 | peak reserved GiB 18.67
+epoch 273 | lr 0.3343 | loss 0.1214 | rotation acc 0.9561 | seconds 72.37 | peak reserved GiB 18.67
+epoch 274 | lr 0.3338 | loss 0.1211 | rotation acc 0.9568 | seconds 72.33 | peak reserved GiB 18.67
+epoch 275 | lr 0.3334 | loss 0.1219 | rotation acc 0.9563 | seconds 72.72 | peak reserved GiB 18.67
+epoch 276 | lr 0.3329 | loss 0.1201 | rotation acc 0.9565 | seconds 72.33 | peak reserved GiB 18.67
+epoch 277 | lr 0.3324 | loss 0.1233 | rotation acc 0.9555 | seconds 72.41 | peak reserved GiB 18.67
+epoch 278 | lr 0.3319 | loss 0.1182 | rotation acc 0.9570 | seconds 72.31 | peak reserved GiB 18.67
+epoch 279 | lr 0.3315 | loss 0.1199 | rotation acc 0.9567 | seconds 72.32 | peak reserved GiB 18.67
+epoch 280 | lr 0.331 | loss 0.1210 | rotation acc 0.9568 | test rotation acc 0.9054 | seconds 81.98 | peak reserved GiB 18.67
+epoch 281 | lr 0.3305 | loss 0.1185 | rotation acc 0.9572 | seconds 72.32 | peak reserved GiB 18.67
+epoch 282 | lr 0.33 | loss 0.1191 | rotation acc 0.9576 | seconds 72.28 | peak reserved GiB 18.67
+epoch 283 | lr 0.3295 | loss 0.1206 | rotation acc 0.9565 | seconds 72.36 | peak reserved GiB 18.67
+epoch 284 | lr 0.329 | loss 0.1200 | rotation acc 0.9572 | seconds 72.45 | peak reserved GiB 18.67
+epoch 285 | lr 0.3286 | loss 0.1203 | rotation acc 0.9571 | seconds 72.36 | peak reserved GiB 18.67
+epoch 286 | lr 0.3281 | loss 0.1189 | rotation acc 0.9570 | seconds 72.35 | peak reserved GiB 18.67
+epoch 287 | lr 0.3276 | loss 0.1178 | rotation acc 0.9574 | seconds 72.26 | peak reserved GiB 18.67
+epoch 288 | lr 0.3271 | loss 0.1165 | rotation acc 0.9580 | seconds 72.29 | peak reserved GiB 18.67
+epoch 289 | lr 0.3266 | loss 0.1194 | rotation acc 0.9569 | seconds 72.34 | peak reserved GiB 18.67
+epoch 290 | lr 0.3261 | loss 0.1189 | rotation acc 0.9577 | test rotation acc 0.9189 | seconds 81.97 | peak reserved GiB 18.67
+epoch 291 | lr 0.3256 | loss 0.1178 | rotation acc 0.9582 | seconds 72.35 | peak reserved GiB 18.67
+epoch 292 | lr 0.3251 | loss 0.1149 | rotation acc 0.9589 | seconds 72.38 | peak reserved GiB 18.67
+epoch 293 | lr 0.3246 | loss 0.1165 | rotation acc 0.9582 | seconds 72.40 | peak reserved GiB 18.67
+epoch 294 | lr 0.3241 | loss 0.1151 | rotation acc 0.9580 | seconds 72.33 | peak reserved GiB 18.67
+epoch 295 | lr 0.3236 | loss 0.1144 | rotation acc 0.9588 | seconds 72.28 | peak reserved GiB 18.67
+epoch 296 | lr 0.3231 | loss 0.1162 | rotation acc 0.9585 | seconds 72.29 | peak reserved GiB 18.67
+epoch 297 | lr 0.3226 | loss 0.1201 | rotation acc 0.9569 | seconds 72.42 | peak reserved GiB 18.67
+epoch 298 | lr 0.3221 | loss 0.1208 | rotation acc 0.9564 | seconds 72.36 | peak reserved GiB 18.67
+epoch 299 | lr 0.3216 | loss 0.1190 | rotation acc 0.9573 | seconds 72.39 | peak reserved GiB 18.67
+epoch 300 | lr 0.3211 | loss 0.1169 | rotation acc 0.9579 | test rotation acc 0.9144 | seconds 82.08 | peak reserved GiB 18.67
+epoch 301 | lr 0.3206 | loss 0.1141 | rotation acc 0.9589 | seconds 72.32 | peak reserved GiB 18.67
+epoch 302 | lr 0.3201 | loss 0.1170 | rotation acc 0.9576 | seconds 72.36 | peak reserved GiB 18.67
+epoch 303 | lr 0.3196 | loss 0.1133 | rotation acc 0.9589 | seconds 72.45 | peak reserved GiB 18.67
+epoch 304 | lr 0.3191 | loss 0.1166 | rotation acc 0.9580 | seconds 72.37 | peak reserved GiB 18.67
+epoch 305 | lr 0.3186 | loss 0.1166 | rotation acc 0.9579 | seconds 72.39 | peak reserved GiB 18.67
+epoch 306 | lr 0.3181 | loss 0.1166 | rotation acc 0.9575 | seconds 72.32 | peak reserved GiB 18.67
+epoch 307 | lr 0.3176 | loss 0.1145 | rotation acc 0.9587 | seconds 72.28 | peak reserved GiB 18.67
+epoch 308 | lr 0.317 | loss 0.1137 | rotation acc 0.9594 | seconds 72.34 | peak reserved GiB 18.67
+epoch 309 | lr 0.3165 | loss 0.1129 | rotation acc 0.9598 | seconds 72.35 | peak reserved GiB 18.67
+epoch 310 | lr 0.316 | loss 0.1121 | rotation acc 0.9599 | test rotation acc 0.9088 | seconds 81.95 | peak reserved GiB 18.67
+epoch 311 | lr 0.3155 | loss 0.1146 | rotation acc 0.9588 | seconds 72.30 | peak reserved GiB 18.67
+epoch 312 | lr 0.315 | loss 0.1136 | rotation acc 0.9587 | seconds 72.40 | peak reserved GiB 18.67
+epoch 313 | lr 0.3145 | loss 0.1138 | rotation acc 0.9586 | seconds 72.35 | peak reserved GiB 18.67
+epoch 314 | lr 0.3139 | loss 0.1151 | rotation acc 0.9586 | seconds 72.32 | peak reserved GiB 18.67
+epoch 315 | lr 0.3134 | loss 0.1116 | rotation acc 0.9599 | seconds 72.31 | peak reserved GiB 18.67
+epoch 316 | lr 0.3129 | loss 0.1137 | rotation acc 0.9588 | seconds 72.32 | peak reserved GiB 18.67
+epoch 317 | lr 0.3124 | loss 0.1126 | rotation acc 0.9593 | seconds 72.25 | peak reserved GiB 18.67
+epoch 318 | lr 0.3118 | loss 0.1165 | rotation acc 0.9578 | seconds 72.35 | peak reserved GiB 18.67
+epoch 319 | lr 0.3113 | loss 0.1118 | rotation acc 0.9599 | seconds 72.30 | peak reserved GiB 18.67
+epoch 320 | lr 0.3108 | loss 0.1084 | rotation acc 0.9610 | test rotation acc 0.9148 | seconds 82.20 | peak reserved GiB 18.67
+epoch 321 | lr 0.3103 | loss 0.1120 | rotation acc 0.9593 | seconds 75.67 | peak reserved GiB 18.67
+epoch 322 | lr 0.3097 | loss 0.1127 | rotation acc 0.9594 | seconds 72.41 | peak reserved GiB 18.67
+epoch 323 | lr 0.3092 | loss 0.1096 | rotation acc 0.9604 | seconds 72.39 | peak reserved GiB 18.67
+epoch 324 | lr 0.3087 | loss 0.1080 | rotation acc 0.9609 | seconds 72.26 | peak reserved GiB 18.67
+epoch 325 | lr 0.3081 | loss 0.1115 | rotation acc 0.9599 | seconds 72.43 | peak reserved GiB 18.67
+epoch 326 | lr 0.3076 | loss 0.1079 | rotation acc 0.9612 | seconds 72.43 | peak reserved GiB 18.67
+epoch 327 | lr 0.3071 | loss 0.1102 | rotation acc 0.9605 | seconds 72.35 | peak reserved GiB 18.67
+epoch 328 | lr 0.3065 | loss 0.1102 | rotation acc 0.9604 | seconds 72.33 | peak reserved GiB 18.67
+epoch 329 | lr 0.306 | loss 0.1118 | rotation acc 0.9595 | seconds 72.43 | peak reserved GiB 18.67
+epoch 330 | lr 0.3054 | loss 0.1096 | rotation acc 0.9604 | test rotation acc 0.9238 | seconds 82.11 | peak reserved GiB 18.67
+epoch 331 | lr 0.3049 | loss 0.1088 | rotation acc 0.9609 | seconds 72.45 | peak reserved GiB 18.67
+epoch 332 | lr 0.3044 | loss 0.1093 | rotation acc 0.9607 | seconds 72.30 | peak reserved GiB 18.67
+epoch 333 | lr 0.3038 | loss 0.1103 | rotation acc 0.9606 | seconds 72.39 | peak reserved GiB 18.67
+epoch 334 | lr 0.3033 | loss 0.1057 | rotation acc 0.9622 | seconds 72.35 | peak reserved GiB 18.67
+epoch 335 | lr 0.3027 | loss 0.1088 | rotation acc 0.9612 | seconds 72.41 | peak reserved GiB 18.67
+epoch 336 | lr 0.3022 | loss 0.1090 | rotation acc 0.9610 | seconds 72.25 | peak reserved GiB 18.67
+epoch 337 | lr 0.3016 | loss 0.1108 | rotation acc 0.9597 | seconds 72.40 | peak reserved GiB 18.67
+epoch 338 | lr 0.3011 | loss 0.1082 | rotation acc 0.9609 | seconds 72.29 | peak reserved GiB 18.67
+epoch 339 | lr 0.3005 | loss 0.1088 | rotation acc 0.9608 | seconds 72.39 | peak reserved GiB 18.67
+epoch 340 | lr 0.3 | loss 0.1063 | rotation acc 0.9619 | test rotation acc 0.9256 | seconds 81.85 | peak reserved GiB 18.67
+epoch 341 | lr 0.2994 | loss 0.1033 | rotation acc 0.9630 | seconds 72.40 | peak reserved GiB 18.67
+epoch 342 | lr 0.2989 | loss 0.1075 | rotation acc 0.9616 | seconds 72.41 | peak reserved GiB 18.67
+epoch 343 | lr 0.2983 | loss 0.1105 | rotation acc 0.9601 | seconds 72.44 | peak reserved GiB 18.67
+epoch 344 | lr 0.2978 | loss 0.1087 | rotation acc 0.9607 | seconds 72.39 | peak reserved GiB 18.67
+epoch 345 | lr 0.2972 | loss 0.1077 | rotation acc 0.9617 | seconds 72.35 | peak reserved GiB 18.67
+epoch 346 | lr 0.2967 | loss 0.1065 | rotation acc 0.9615 | seconds 72.36 | peak reserved GiB 18.67
+epoch 347 | lr 0.2961 | loss 0.1062 | rotation acc 0.9621 | seconds 72.34 | peak reserved GiB 18.67
+epoch 348 | lr 0.2956 | loss 0.1070 | rotation acc 0.9618 | seconds 72.37 | peak reserved GiB 18.67
+epoch 349 | lr 0.295 | loss 0.1035 | rotation acc 0.9628 | seconds 72.37 | peak reserved GiB 18.67
+epoch 350 | lr 0.2945 | loss 0.1034 | rotation acc 0.9629 | test rotation acc 0.8974 | seconds 81.93 | peak reserved GiB 18.67
+epoch 351 | lr 0.2939 | loss 0.1045 | rotation acc 0.9624 | seconds 72.35 | peak reserved GiB 18.67
+epoch 352 | lr 0.2933 | loss 0.1049 | rotation acc 0.9622 | seconds 72.28 | peak reserved GiB 18.67
+epoch 353 | lr 0.2928 | loss 0.1048 | rotation acc 0.9622 | seconds 72.29 | peak reserved GiB 18.67
+epoch 354 | lr 0.2922 | loss 0.1052 | rotation acc 0.9622 | seconds 72.40 | peak reserved GiB 18.67
+epoch 355 | lr 0.2916 | loss 0.1027 | rotation acc 0.9632 | seconds 72.12 | peak reserved GiB 18.67
+epoch 356 | lr 0.2911 | loss 0.1033 | rotation acc 0.9627 | seconds 72.32 | peak reserved GiB 18.67
+epoch 357 | lr 0.2905 | loss 0.1009 | rotation acc 0.9637 | seconds 72.34 | peak reserved GiB 18.67
+epoch 358 | lr 0.2899 | loss 0.1003 | rotation acc 0.9640 | seconds 72.32 | peak reserved GiB 18.67
+epoch 359 | lr 0.2894 | loss 0.1052 | rotation acc 0.9623 | seconds 72.38 | peak reserved GiB 18.67
+epoch 360 | lr 0.2888 | loss 0.1039 | rotation acc 0.9629 | test rotation acc 0.9159 | seconds 82.04 | peak reserved GiB 18.67
+epoch 361 | lr 0.2882 | loss 0.1058 | rotation acc 0.9619 | seconds 72.31 | peak reserved GiB 18.67
+epoch 362 | lr 0.2877 | loss 0.1041 | rotation acc 0.9627 | seconds 72.42 | peak reserved GiB 18.67
+epoch 363 | lr 0.2871 | loss 0.1026 | rotation acc 0.9631 | seconds 72.24 | peak reserved GiB 18.67
+epoch 364 | lr 0.2865 | loss 0.1001 | rotation acc 0.9637 | seconds 72.36 | peak reserved GiB 18.67
+epoch 365 | lr 0.286 | loss 0.1039 | rotation acc 0.9628 | seconds 72.41 | peak reserved GiB 18.67
+epoch 366 | lr 0.2854 | loss 0.1029 | rotation acc 0.9631 | seconds 72.34 | peak reserved GiB 18.67
+epoch 367 | lr 0.2848 | loss 0.1004 | rotation acc 0.9642 | seconds 72.42 | peak reserved GiB 18.67
+epoch 368 | lr 0.2842 | loss 0.1014 | rotation acc 0.9636 | seconds 72.37 | peak reserved GiB 18.67
+epoch 369 | lr 0.2837 | loss 0.0981 | rotation acc 0.9648 | seconds 72.27 | peak reserved GiB 18.67
+epoch 370 | lr 0.2831 | loss 0.1007 | rotation acc 0.9636 | test rotation acc 0.9175 | seconds 81.93 | peak reserved GiB 18.67
+epoch 371 | lr 0.2825 | loss 0.0980 | rotation acc 0.9647 | seconds 72.34 | peak reserved GiB 18.67
+epoch 372 | lr 0.2819 | loss 0.1005 | rotation acc 0.9636 | seconds 72.27 | peak reserved GiB 18.67
+epoch 373 | lr 0.2813 | loss 0.1020 | rotation acc 0.9632 | seconds 72.23 | peak reserved GiB 18.67
+epoch 374 | lr 0.2808 | loss 0.1001 | rotation acc 0.9641 | seconds 72.36 | peak reserved GiB 18.67
+epoch 375 | lr 0.2802 | loss 0.1010 | rotation acc 0.9638 | seconds 72.36 | peak reserved GiB 18.67
+epoch 376 | lr 0.2796 | loss 0.1012 | rotation acc 0.9638 | seconds 72.36 | peak reserved GiB 18.67
+epoch 377 | lr 0.279 | loss 0.0986 | rotation acc 0.9651 | seconds 72.22 | peak reserved GiB 18.67
+epoch 378 | lr 0.2784 | loss 0.0982 | rotation acc 0.9646 | seconds 72.31 | peak reserved GiB 18.67
+epoch 379 | lr 0.2779 | loss 0.0962 | rotation acc 0.9655 | seconds 72.31 | peak reserved GiB 18.67
+epoch 380 | lr 0.2773 | loss 0.0958 | rotation acc 0.9653 | test rotation acc 0.9150 | seconds 81.90 | peak reserved GiB 18.67
+epoch 381 | lr 0.2767 | loss 0.0985 | rotation acc 0.9648 | seconds 72.33 | peak reserved GiB 18.67
+epoch 382 | lr 0.2761 | loss 0.0999 | rotation acc 0.9638 | seconds 72.32 | peak reserved GiB 18.67
+epoch 383 | lr 0.2755 | loss 0.0985 | rotation acc 0.9648 | seconds 72.38 | peak reserved GiB 18.67
+epoch 384 | lr 0.2749 | loss 0.0958 | rotation acc 0.9657 | seconds 72.30 | peak reserved GiB 18.67
+epoch 385 | lr 0.2743 | loss 0.0982 | rotation acc 0.9645 | seconds 72.35 | peak reserved GiB 18.67
+epoch 386 | lr 0.2737 | loss 0.0995 | rotation acc 0.9643 | seconds 72.27 | peak reserved GiB 18.67
+epoch 387 | lr 0.2732 | loss 0.0964 | rotation acc 0.9650 | seconds 72.27 | peak reserved GiB 18.67
+epoch 388 | lr 0.2726 | loss 0.0973 | rotation acc 0.9650 | seconds 72.23 | peak reserved GiB 18.67
+epoch 389 | lr 0.272 | loss 0.0959 | rotation acc 0.9656 | seconds 72.25 | peak reserved GiB 18.67
+epoch 390 | lr 0.2714 | loss 0.1031 | rotation acc 0.9629 | test rotation acc 0.9235 | seconds 81.93 | peak reserved GiB 18.67
+epoch 391 | lr 0.2708 | loss 0.0988 | rotation acc 0.9647 | seconds 72.29 | peak reserved GiB 18.67
+epoch 392 | lr 0.2702 | loss 0.0965 | rotation acc 0.9656 | seconds 72.27 | peak reserved GiB 18.67
+epoch 393 | lr 0.2696 | loss 0.0926 | rotation acc 0.9667 | seconds 72.33 | peak reserved GiB 18.67
+epoch 394 | lr 0.269 | loss 0.0956 | rotation acc 0.9658 | seconds 72.32 | peak reserved GiB 18.67
+epoch 395 | lr 0.2684 | loss 0.0986 | rotation acc 0.9650 | seconds 72.31 | peak reserved GiB 18.67
+epoch 396 | lr 0.2678 | loss 0.0963 | rotation acc 0.9655 | seconds 72.31 | peak reserved GiB 18.67
+epoch 397 | lr 0.2672 | loss 0.0932 | rotation acc 0.9660 | seconds 72.25 | peak reserved GiB 18.67
+epoch 398 | lr 0.2666 | loss 0.0949 | rotation acc 0.9659 | seconds 72.24 | peak reserved GiB 18.67
+epoch 399 | lr 0.266 | loss 0.0961 | rotation acc 0.9653 | seconds 72.27 | peak reserved GiB 18.67
+epoch 400 | lr 0.2654 | loss 0.0922 | rotation acc 0.9669 | test rotation acc 0.9221 | seconds 81.96 | peak reserved GiB 18.67
+epoch 401 | lr 0.2648 | loss 0.0943 | rotation acc 0.9657 | seconds 72.28 | peak reserved GiB 18.67
+epoch 402 | lr 0.2642 | loss 0.0933 | rotation acc 0.9666 | seconds 72.30 | peak reserved GiB 18.67
+epoch 403 | lr 0.2636 | loss 0.0936 | rotation acc 0.9664 | seconds 72.31 | peak reserved GiB 18.67
+epoch 404 | lr 0.263 | loss 0.0942 | rotation acc 0.9662 | seconds 72.41 | peak reserved GiB 18.67
+epoch 405 | lr 0.2624 | loss 0.0933 | rotation acc 0.9665 | seconds 72.29 | peak reserved GiB 18.67
+epoch 406 | lr 0.2618 | loss 0.0932 | rotation acc 0.9664 | seconds 72.40 | peak reserved GiB 18.67
+epoch 407 | lr 0.2612 | loss 0.0904 | rotation acc 0.9671 | seconds 72.32 | peak reserved GiB 18.67
+epoch 408 | lr 0.2606 | loss 0.0912 | rotation acc 0.9672 | seconds 72.33 | peak reserved GiB 18.67
+epoch 409 | lr 0.26 | loss 0.0946 | rotation acc 0.9663 | seconds 72.24 | peak reserved GiB 18.67
+epoch 410 | lr 0.2594 | loss 0.0924 | rotation acc 0.9668 | test rotation acc 0.9205 | seconds 81.91 | peak reserved GiB 18.67
+epoch 411 | lr 0.2588 | loss 0.0906 | rotation acc 0.9674 | seconds 72.32 | peak reserved GiB 18.67
+epoch 412 | lr 0.2582 | loss 0.0906 | rotation acc 0.9673 | seconds 72.26 | peak reserved GiB 18.67
+epoch 413 | lr 0.2576 | loss 0.0945 | rotation acc 0.9662 | seconds 72.24 | peak reserved GiB 18.67
+epoch 414 | lr 0.257 | loss 0.0910 | rotation acc 0.9670 | seconds 72.34 | peak reserved GiB 18.67
+epoch 415 | lr 0.2563 | loss 0.0880 | rotation acc 0.9683 | seconds 72.35 | peak reserved GiB 18.67
+epoch 416 | lr 0.2557 | loss 0.0909 | rotation acc 0.9674 | seconds 72.25 | peak reserved GiB 18.67
+epoch 417 | lr 0.2551 | loss 0.0922 | rotation acc 0.9665 | seconds 72.29 | peak reserved GiB 18.67
+epoch 418 | lr 0.2545 | loss 0.0863 | rotation acc 0.9692 | seconds 72.21 | peak reserved GiB 18.67
+epoch 419 | lr 0.2539 | loss 0.0913 | rotation acc 0.9671 | seconds 72.23 | peak reserved GiB 18.67
+epoch 420 | lr 0.2533 | loss 0.0915 | rotation acc 0.9672 | test rotation acc 0.9177 | seconds 81.87 | peak reserved GiB 18.67
+epoch 421 | lr 0.2527 | loss 0.0895 | rotation acc 0.9677 | seconds 72.18 | peak reserved GiB 18.67
+epoch 422 | lr 0.2521 | loss 0.0864 | rotation acc 0.9694 | seconds 72.26 | peak reserved GiB 18.67
+epoch 423 | lr 0.2515 | loss 0.0888 | rotation acc 0.9682 | seconds 72.20 | peak reserved GiB 18.67
+epoch 424 | lr 0.2508 | loss 0.0885 | rotation acc 0.9683 | seconds 72.29 | peak reserved GiB 18.67
+epoch 425 | lr 0.2502 | loss 0.0869 | rotation acc 0.9689 | seconds 72.32 | peak reserved GiB 18.67
+epoch 426 | lr 0.2496 | loss 0.0880 | rotation acc 0.9685 | seconds 72.30 | peak reserved GiB 18.67
+epoch 427 | lr 0.249 | loss 0.0893 | rotation acc 0.9679 | seconds 72.33 | peak reserved GiB 18.67
+epoch 428 | lr 0.2484 | loss 0.0850 | rotation acc 0.9700 | seconds 72.31 | peak reserved GiB 18.67
+epoch 429 | lr 0.2478 | loss 0.0879 | rotation acc 0.9688 | seconds 72.36 | peak reserved GiB 18.67
+epoch 430 | lr 0.2472 | loss 0.0874 | rotation acc 0.9685 | test rotation acc 0.9294 | seconds 81.89 | peak reserved GiB 18.67
+epoch 431 | lr 0.2465 | loss 0.0863 | rotation acc 0.9693 | seconds 72.21 | peak reserved GiB 18.67
+epoch 432 | lr 0.2459 | loss 0.0877 | rotation acc 0.9688 | seconds 72.37 | peak reserved GiB 18.67
+epoch 433 | lr 0.2453 | loss 0.0873 | rotation acc 0.9691 | seconds 72.30 | peak reserved GiB 18.67
+epoch 434 | lr 0.2447 | loss 0.0864 | rotation acc 0.9691 | seconds 72.32 | peak reserved GiB 18.67
+epoch 435 | lr 0.2441 | loss 0.0833 | rotation acc 0.9698 | seconds 72.20 | peak reserved GiB 18.67
+epoch 436 | lr 0.2434 | loss 0.0850 | rotation acc 0.9695 | seconds 72.27 | peak reserved GiB 18.67
+epoch 437 | lr 0.2428 | loss 0.0853 | rotation acc 0.9696 | seconds 72.26 | peak reserved GiB 18.67
+epoch 438 | lr 0.2422 | loss 0.0847 | rotation acc 0.9696 | seconds 72.28 | peak reserved GiB 18.67
+epoch 439 | lr 0.2416 | loss 0.0838 | rotation acc 0.9704 | seconds 72.22 | peak reserved GiB 18.67
+epoch 440 | lr 0.241 | loss 0.0834 | rotation acc 0.9698 | test rotation acc 0.9122 | seconds 81.88 | peak reserved GiB 18.67
+epoch 441 | lr 0.2403 | loss 0.0839 | rotation acc 0.9699 | seconds 72.28 | peak reserved GiB 18.67
+epoch 442 | lr 0.2397 | loss 0.0879 | rotation acc 0.9688 | seconds 72.19 | peak reserved GiB 18.67
+epoch 443 | lr 0.2391 | loss 0.0813 | rotation acc 0.9709 | seconds 72.22 | peak reserved GiB 18.67
+epoch 444 | lr 0.2385 | loss 0.0853 | rotation acc 0.9695 | seconds 72.29 | peak reserved GiB 18.67
+epoch 445 | lr 0.2379 | loss 0.0856 | rotation acc 0.9693 | seconds 72.22 | peak reserved GiB 18.67
+epoch 446 | lr 0.2372 | loss 0.0821 | rotation acc 0.9705 | seconds 72.25 | peak reserved GiB 18.67
+epoch 447 | lr 0.2366 | loss 0.0850 | rotation acc 0.9696 | seconds 72.27 | peak reserved GiB 18.67
+epoch 448 | lr 0.236 | loss 0.0856 | rotation acc 0.9690 | seconds 72.52 | peak reserved GiB 18.67
+epoch 449 | lr 0.2354 | loss 0.0803 | rotation acc 0.9715 | seconds 72.30 | peak reserved GiB 18.67
+epoch 450 | lr 0.2347 | loss 0.0822 | rotation acc 0.9708 | test rotation acc 0.9290 | seconds 81.88 | peak reserved GiB 18.67
+epoch 451 | lr 0.2341 | loss 0.0795 | rotation acc 0.9718 | seconds 72.21 | peak reserved GiB 18.67
+epoch 452 | lr 0.2335 | loss 0.0820 | rotation acc 0.9705 | seconds 72.24 | peak reserved GiB 18.67
+epoch 453 | lr 0.2329 | loss 0.0833 | rotation acc 0.9705 | seconds 72.28 | peak reserved GiB 18.67
+epoch 454 | lr 0.2322 | loss 0.0770 | rotation acc 0.9722 | seconds 72.29 | peak reserved GiB 18.67
+epoch 455 | lr 0.2316 | loss 0.0798 | rotation acc 0.9717 | seconds 72.28 | peak reserved GiB 18.67
+epoch 456 | lr 0.231 | loss 0.0803 | rotation acc 0.9710 | seconds 72.22 | peak reserved GiB 18.67
+epoch 457 | lr 0.2303 | loss 0.0792 | rotation acc 0.9721 | seconds 72.23 | peak reserved GiB 18.67
+epoch 458 | lr 0.2297 | loss 0.0794 | rotation acc 0.9714 | seconds 72.26 | peak reserved GiB 18.67
+epoch 459 | lr 0.2291 | loss 0.0841 | rotation acc 0.9699 | seconds 72.33 | peak reserved GiB 18.67
+epoch 460 | lr 0.2285 | loss 0.0811 | rotation acc 0.9712 | test rotation acc 0.9182 | seconds 82.07 | peak reserved GiB 18.67
+epoch 461 | lr 0.2278 | loss 0.0814 | rotation acc 0.9706 | seconds 72.30 | peak reserved GiB 18.67
+epoch 462 | lr 0.2272 | loss 0.0760 | rotation acc 0.9728 | seconds 72.21 | peak reserved GiB 18.67
+epoch 463 | lr 0.2266 | loss 0.0807 | rotation acc 0.9713 | seconds 72.19 | peak reserved GiB 18.67
+epoch 464 | lr 0.2259 | loss 0.0789 | rotation acc 0.9718 | seconds 72.30 | peak reserved GiB 18.67
+epoch 465 | lr 0.2253 | loss 0.0755 | rotation acc 0.9730 | seconds 72.20 | peak reserved GiB 18.67
+epoch 466 | lr 0.2247 | loss 0.0791 | rotation acc 0.9718 | seconds 72.33 | peak reserved GiB 18.67
+epoch 467 | lr 0.2241 | loss 0.0775 | rotation acc 0.9725 | seconds 72.32 | peak reserved GiB 18.67
+epoch 468 | lr 0.2234 | loss 0.0776 | rotation acc 0.9724 | seconds 72.30 | peak reserved GiB 18.67
+epoch 469 | lr 0.2228 | loss 0.0801 | rotation acc 0.9713 | seconds 72.17 | peak reserved GiB 18.67
+epoch 470 | lr 0.2222 | loss 0.0781 | rotation acc 0.9727 | test rotation acc 0.9311 | seconds 81.89 | peak reserved GiB 18.67
+epoch 471 | lr 0.2215 | loss 0.0774 | rotation acc 0.9724 | seconds 72.22 | peak reserved GiB 18.67
+epoch 472 | lr 0.2209 | loss 0.0774 | rotation acc 0.9721 | seconds 72.31 | peak reserved GiB 18.67
+epoch 473 | lr 0.2203 | loss 0.0768 | rotation acc 0.9727 | seconds 72.32 | peak reserved GiB 18.67
+epoch 474 | lr 0.2196 | loss 0.0748 | rotation acc 0.9733 | seconds 72.19 | peak reserved GiB 18.67
+epoch 475 | lr 0.219 | loss 0.0757 | rotation acc 0.9730 | seconds 72.28 | peak reserved GiB 18.67
+epoch 476 | lr 0.2184 | loss 0.0764 | rotation acc 0.9729 | seconds 72.19 | peak reserved GiB 18.67
+epoch 477 | lr 0.2177 | loss 0.0746 | rotation acc 0.9737 | seconds 72.23 | peak reserved GiB 18.67
+epoch 478 | lr 0.2171 | loss 0.0732 | rotation acc 0.9740 | seconds 72.28 | peak reserved GiB 18.67
+epoch 479 | lr 0.2165 | loss 0.0721 | rotation acc 0.9746 | seconds 72.30 | peak reserved GiB 18.67
+epoch 480 | lr 0.2158 | loss 0.0747 | rotation acc 0.9736 | test rotation acc 0.9336 | seconds 81.87 | peak reserved GiB 18.67
+epoch 481 | lr 0.2152 | loss 0.0748 | rotation acc 0.9731 | seconds 72.30 | peak reserved GiB 18.67
+epoch 482 | lr 0.2146 | loss 0.0740 | rotation acc 0.9734 | seconds 72.29 | peak reserved GiB 18.67
+epoch 483 | lr 0.214 | loss 0.0761 | rotation acc 0.9730 | seconds 72.19 | peak reserved GiB 18.67
+epoch 484 | lr 0.2133 | loss 0.0742 | rotation acc 0.9739 | seconds 72.31 | peak reserved GiB 18.67
+epoch 485 | lr 0.2127 | loss 0.0733 | rotation acc 0.9739 | seconds 72.38 | peak reserved GiB 18.67
+epoch 486 | lr 0.2121 | loss 0.0740 | rotation acc 0.9737 | seconds 72.24 | peak reserved GiB 18.67
+epoch 487 | lr 0.2114 | loss 0.0729 | rotation acc 0.9739 | seconds 72.26 | peak reserved GiB 18.67
+epoch 488 | lr 0.2108 | loss 0.0757 | rotation acc 0.9729 | seconds 72.25 | peak reserved GiB 18.67
+epoch 489 | lr 0.2102 | loss 0.0725 | rotation acc 0.9742 | seconds 72.03 | peak reserved GiB 18.67
+epoch 490 | lr 0.2095 | loss 0.0738 | rotation acc 0.9738 | test rotation acc 0.9278 | seconds 81.84 | peak reserved GiB 18.67
+epoch 491 | lr 0.2089 | loss 0.0728 | rotation acc 0.9742 | seconds 72.23 | peak reserved GiB 18.67
+epoch 492 | lr 0.2082 | loss 0.0708 | rotation acc 0.9753 | seconds 72.28 | peak reserved GiB 18.67
+epoch 493 | lr 0.2076 | loss 0.0722 | rotation acc 0.9741 | seconds 72.24 | peak reserved GiB 18.67
+epoch 494 | lr 0.207 | loss 0.0721 | rotation acc 0.9741 | seconds 72.22 | peak reserved GiB 18.67
+epoch 495 | lr 0.2063 | loss 0.0715 | rotation acc 0.9744 | seconds 72.33 | peak reserved GiB 18.67
+epoch 496 | lr 0.2057 | loss 0.0696 | rotation acc 0.9753 | seconds 72.21 | peak reserved GiB 18.67
+epoch 497 | lr 0.2051 | loss 0.0714 | rotation acc 0.9744 | seconds 72.34 | peak reserved GiB 18.67
+epoch 498 | lr 0.2044 | loss 0.0726 | rotation acc 0.9743 | seconds 72.23 | peak reserved GiB 18.67
+epoch 499 | lr 0.2038 | loss 0.0709 | rotation acc 0.9745 | seconds 72.27 | peak reserved GiB 18.67
+epoch 500 | lr 0.2032 | loss 0.0700 | rotation acc 0.9750 | test rotation acc 0.9259 | seconds 81.71 | peak reserved GiB 18.67
+epoch 501 | lr 0.2025 | loss 0.0686 | rotation acc 0.9758 | seconds 72.25 | peak reserved GiB 18.67
+epoch 502 | lr 0.2019 | loss 0.0713 | rotation acc 0.9748 | seconds 72.21 | peak reserved GiB 18.67
+epoch 503 | lr 0.2013 | loss 0.0707 | rotation acc 0.9745 | seconds 72.22 | peak reserved GiB 18.67
+epoch 504 | lr 0.2006 | loss 0.0664 | rotation acc 0.9764 | seconds 72.20 | peak reserved GiB 18.67
+epoch 505 | lr 0.2 | loss 0.0685 | rotation acc 0.9756 | seconds 72.19 | peak reserved GiB 18.67
+epoch 506 | lr 0.1994 | loss 0.0652 | rotation acc 0.9768 | seconds 72.24 | peak reserved GiB 18.67
+epoch 507 | lr 0.1987 | loss 0.0667 | rotation acc 0.9768 | seconds 72.31 | peak reserved GiB 18.67
+epoch 508 | lr 0.1981 | loss 0.0680 | rotation acc 0.9761 | seconds 72.26 | peak reserved GiB 18.67
+epoch 509 | lr 0.1975 | loss 0.0674 | rotation acc 0.9761 | seconds 72.39 | peak reserved GiB 18.67
+epoch 510 | lr 0.1968 | loss 0.0648 | rotation acc 0.9770 | test rotation acc 0.9232 | seconds 81.85 | peak reserved GiB 18.67
+epoch 511 | lr 0.1962 | loss 0.0698 | rotation acc 0.9753 | seconds 72.19 | peak reserved GiB 18.67
+epoch 512 | lr 0.1956 | loss 0.0677 | rotation acc 0.9759 | seconds 72.18 | peak reserved GiB 18.67
+epoch 513 | lr 0.1949 | loss 0.0668 | rotation acc 0.9763 | seconds 72.29 | peak reserved GiB 18.67
+epoch 514 | lr 0.1943 | loss 0.0684 | rotation acc 0.9756 | seconds 72.26 | peak reserved GiB 18.67
+epoch 515 | lr 0.1937 | loss 0.0650 | rotation acc 0.9770 | seconds 72.43 | peak reserved GiB 18.67
+epoch 516 | lr 0.193 | loss 0.0644 | rotation acc 0.9768 | seconds 72.52 | peak reserved GiB 18.67
+epoch 517 | lr 0.1924 | loss 0.0678 | rotation acc 0.9759 | seconds 72.23 | peak reserved GiB 18.67
+epoch 518 | lr 0.1918 | loss 0.0635 | rotation acc 0.9776 | seconds 72.21 | peak reserved GiB 18.67
+epoch 519 | lr 0.1911 | loss 0.0676 | rotation acc 0.9761 | seconds 72.28 | peak reserved GiB 18.67
+epoch 520 | lr 0.1905 | loss 0.0650 | rotation acc 0.9770 | test rotation acc 0.9293 | seconds 81.89 | peak reserved GiB 18.67
+epoch 521 | lr 0.1898 | loss 0.0643 | rotation acc 0.9769 | seconds 72.26 | peak reserved GiB 18.67
+epoch 522 | lr 0.1892 | loss 0.0647 | rotation acc 0.9774 | seconds 72.18 | peak reserved GiB 18.67
+epoch 523 | lr 0.1886 | loss 0.0648 | rotation acc 0.9769 | seconds 72.18 | peak reserved GiB 18.67
+epoch 524 | lr 0.1879 | loss 0.0652 | rotation acc 0.9769 | seconds 72.19 | peak reserved GiB 18.67
+epoch 525 | lr 0.1873 | loss 0.0644 | rotation acc 0.9771 | seconds 72.23 | peak reserved GiB 18.67
+epoch 526 | lr 0.1867 | loss 0.0652 | rotation acc 0.9768 | seconds 72.22 | peak reserved GiB 18.67
+epoch 527 | lr 0.186 | loss 0.0663 | rotation acc 0.9765 | seconds 72.27 | peak reserved GiB 18.67
+epoch 528 | lr 0.1854 | loss 0.0617 | rotation acc 0.9781 | seconds 72.25 | peak reserved GiB 18.67
+epoch 529 | lr 0.1848 | loss 0.0591 | rotation acc 0.9790 | seconds 72.18 | peak reserved GiB 18.67
+epoch 530 | lr 0.1842 | loss 0.0604 | rotation acc 0.9785 | test rotation acc 0.9326 | seconds 81.87 | peak reserved GiB 18.67
+epoch 531 | lr 0.1835 | loss 0.0622 | rotation acc 0.9778 | seconds 72.26 | peak reserved GiB 18.67
+epoch 532 | lr 0.1829 | loss 0.0645 | rotation acc 0.9769 | seconds 72.12 | peak reserved GiB 18.67
+epoch 533 | lr 0.1823 | loss 0.0622 | rotation acc 0.9780 | seconds 72.21 | peak reserved GiB 18.67
+epoch 534 | lr 0.1816 | loss 0.0615 | rotation acc 0.9783 | seconds 72.32 | peak reserved GiB 18.67
+epoch 535 | lr 0.181 | loss 0.0655 | rotation acc 0.9768 | seconds 72.22 | peak reserved GiB 18.67
+epoch 536 | lr 0.1804 | loss 0.0611 | rotation acc 0.9782 | seconds 72.40 | peak reserved GiB 18.67
+epoch 537 | lr 0.1797 | loss 0.0608 | rotation acc 0.9785 | seconds 72.21 | peak reserved GiB 18.67
+epoch 538 | lr 0.1791 | loss 0.0598 | rotation acc 0.9787 | seconds 72.27 | peak reserved GiB 18.67
+epoch 539 | lr 0.1785 | loss 0.0575 | rotation acc 0.9797 | seconds 72.24 | peak reserved GiB 18.67
+epoch 540 | lr 0.1778 | loss 0.0616 | rotation acc 0.9782 | test rotation acc 0.9307 | seconds 81.87 | peak reserved GiB 18.67
+epoch 541 | lr 0.1772 | loss 0.0615 | rotation acc 0.9783 | seconds 72.19 | peak reserved GiB 18.67
+epoch 542 | lr 0.1766 | loss 0.0602 | rotation acc 0.9786 | seconds 72.25 | peak reserved GiB 18.67
+epoch 543 | lr 0.1759 | loss 0.0593 | rotation acc 0.9795 | seconds 72.20 | peak reserved GiB 18.67
+epoch 544 | lr 0.1753 | loss 0.0581 | rotation acc 0.9794 | seconds 72.23 | peak reserved GiB 18.67
+epoch 545 | lr 0.1747 | loss 0.0602 | rotation acc 0.9785 | seconds 72.23 | peak reserved GiB 18.67
+epoch 546 | lr 0.1741 | loss 0.0580 | rotation acc 0.9796 | seconds 72.19 | peak reserved GiB 18.67
+epoch 547 | lr 0.1734 | loss 0.0607 | rotation acc 0.9786 | seconds 72.29 | peak reserved GiB 18.67
+epoch 548 | lr 0.1728 | loss 0.0592 | rotation acc 0.9788 | seconds 72.30 | peak reserved GiB 18.67
+epoch 549 | lr 0.1722 | loss 0.0551 | rotation acc 0.9806 | seconds 72.32 | peak reserved GiB 18.67
+epoch 550 | lr 0.1715 | loss 0.0593 | rotation acc 0.9790 | test rotation acc 0.9215 | seconds 81.86 | peak reserved GiB 18.67
+epoch 551 | lr 0.1709 | loss 0.0572 | rotation acc 0.9798 | seconds 72.21 | peak reserved GiB 18.67
+epoch 552 | lr 0.1703 | loss 0.0606 | rotation acc 0.9786 | seconds 72.29 | peak reserved GiB 18.67
+epoch 553 | lr 0.1697 | loss 0.0578 | rotation acc 0.9794 | seconds 72.25 | peak reserved GiB 18.67
+epoch 554 | lr 0.169 | loss 0.0590 | rotation acc 0.9792 | seconds 72.33 | peak reserved GiB 18.67
+epoch 555 | lr 0.1684 | loss 0.0544 | rotation acc 0.9812 | seconds 72.31 | peak reserved GiB 18.67
+epoch 556 | lr 0.1678 | loss 0.0550 | rotation acc 0.9808 | seconds 72.09 | peak reserved GiB 18.67
+epoch 557 | lr 0.1671 | loss 0.0582 | rotation acc 0.9789 | seconds 72.20 | peak reserved GiB 18.67
+epoch 558 | lr 0.1665 | loss 0.0533 | rotation acc 0.9816 | seconds 72.35 | peak reserved GiB 18.67
+epoch 559 | lr 0.1659 | loss 0.0555 | rotation acc 0.9806 | seconds 72.03 | peak reserved GiB 18.67
+epoch 560 | lr 0.1653 | loss 0.0559 | rotation acc 0.9804 | test rotation acc 0.9360 | seconds 81.92 | peak reserved GiB 18.67
+epoch 561 | lr 0.1646 | loss 0.0540 | rotation acc 0.9810 | seconds 72.30 | peak reserved GiB 18.67
+epoch 562 | lr 0.164 | loss 0.0545 | rotation acc 0.9808 | seconds 72.29 | peak reserved GiB 18.67
+epoch 563 | lr 0.1634 | loss 0.0537 | rotation acc 0.9812 | seconds 72.34 | peak reserved GiB 18.67
+epoch 564 | lr 0.1628 | loss 0.0547 | rotation acc 0.9806 | seconds 72.36 | peak reserved GiB 18.67
+epoch 565 | lr 0.1621 | loss 0.0529 | rotation acc 0.9814 | seconds 72.26 | peak reserved GiB 18.67
+epoch 566 | lr 0.1615 | loss 0.0538 | rotation acc 0.9812 | seconds 72.37 | peak reserved GiB 18.67
+epoch 567 | lr 0.1609 | loss 0.0545 | rotation acc 0.9809 | seconds 72.10 | peak reserved GiB 18.67
+epoch 568 | lr 0.1603 | loss 0.0525 | rotation acc 0.9817 | seconds 72.38 | peak reserved GiB 18.67
+epoch 569 | lr 0.1597 | loss 0.0532 | rotation acc 0.9813 | seconds 72.24 | peak reserved GiB 18.67
+epoch 570 | lr 0.159 | loss 0.0548 | rotation acc 0.9806 | test rotation acc 0.9292 | seconds 81.88 | peak reserved GiB 18.67
+epoch 571 | lr 0.1584 | loss 0.0533 | rotation acc 0.9812 | seconds 72.24 | peak reserved GiB 18.67
+epoch 572 | lr 0.1578 | loss 0.0515 | rotation acc 0.9819 | seconds 72.27 | peak reserved GiB 18.67
+epoch 573 | lr 0.1572 | loss 0.0519 | rotation acc 0.9817 | seconds 72.28 | peak reserved GiB 18.67
+epoch 574 | lr 0.1566 | loss 0.0519 | rotation acc 0.9816 | seconds 72.27 | peak reserved GiB 18.67
+epoch 575 | lr 0.1559 | loss 0.0508 | rotation acc 0.9820 | seconds 72.25 | peak reserved GiB 18.67
+epoch 576 | lr 0.1553 | loss 0.0515 | rotation acc 0.9817 | seconds 72.16 | peak reserved GiB 18.67
+epoch 577 | lr 0.1547 | loss 0.0523 | rotation acc 0.9812 | seconds 72.18 | peak reserved GiB 18.67
+epoch 578 | lr 0.1541 | loss 0.0502 | rotation acc 0.9821 | seconds 72.34 | peak reserved GiB 18.67
+epoch 579 | lr 0.1535 | loss 0.0510 | rotation acc 0.9822 | seconds 72.23 | peak reserved GiB 18.67
+epoch 580 | lr 0.1528 | loss 0.0508 | rotation acc 0.9822 | test rotation acc 0.9336 | seconds 81.83 | peak reserved GiB 18.67
+epoch 581 | lr 0.1522 | loss 0.0515 | rotation acc 0.9822 | seconds 72.19 | peak reserved GiB 18.67
+epoch 582 | lr 0.1516 | loss 0.0515 | rotation acc 0.9820 | seconds 72.14 | peak reserved GiB 18.67
+epoch 583 | lr 0.151 | loss 0.0486 | rotation acc 0.9830 | seconds 72.26 | peak reserved GiB 18.67
+epoch 584 | lr 0.1504 | loss 0.0470 | rotation acc 0.9837 | seconds 72.26 | peak reserved GiB 18.67
+epoch 585 | lr 0.1498 | loss 0.0483 | rotation acc 0.9830 | seconds 72.23 | peak reserved GiB 18.67
+epoch 586 | lr 0.1492 | loss 0.0488 | rotation acc 0.9831 | seconds 72.24 | peak reserved GiB 18.67
+epoch 587 | lr 0.1485 | loss 0.0498 | rotation acc 0.9825 | seconds 72.20 | peak reserved GiB 18.67
+epoch 588 | lr 0.1479 | loss 0.0494 | rotation acc 0.9825 | seconds 72.17 | peak reserved GiB 18.67
+epoch 589 | lr 0.1473 | loss 0.0497 | rotation acc 0.9825 | seconds 73.56 | peak reserved GiB 18.67
+epoch 590 | lr 0.1467 | loss 0.0494 | rotation acc 0.9828 | test rotation acc 0.9284 | seconds 81.88 | peak reserved GiB 18.67
+epoch 591 | lr 0.1461 | loss 0.0474 | rotation acc 0.9832 | seconds 72.34 | peak reserved GiB 18.67
+epoch 592 | lr 0.1455 | loss 0.0501 | rotation acc 0.9825 | seconds 72.24 | peak reserved GiB 18.67
+epoch 593 | lr 0.1449 | loss 0.0477 | rotation acc 0.9832 | seconds 72.16 | peak reserved GiB 18.67
+epoch 594 | lr 0.1443 | loss 0.0465 | rotation acc 0.9836 | seconds 72.20 | peak reserved GiB 18.67
+epoch 595 | lr 0.1437 | loss 0.0468 | rotation acc 0.9834 | seconds 72.30 | peak reserved GiB 18.67
+epoch 596 | lr 0.143 | loss 0.0472 | rotation acc 0.9837 | seconds 72.20 | peak reserved GiB 18.67
+epoch 597 | lr 0.1424 | loss 0.0455 | rotation acc 0.9838 | seconds 72.22 | peak reserved GiB 18.67
+epoch 598 | lr 0.1418 | loss 0.0441 | rotation acc 0.9850 | seconds 72.16 | peak reserved GiB 18.67
+epoch 599 | lr 0.1412 | loss 0.0465 | rotation acc 0.9838 | seconds 72.19 | peak reserved GiB 18.67
+epoch 600 | lr 0.1406 | loss 0.0469 | rotation acc 0.9836 | test rotation acc 0.9327 | seconds 81.79 | peak reserved GiB 18.67
+epoch 601 | lr 0.14 | loss 0.0448 | rotation acc 0.9843 | seconds 72.24 | peak reserved GiB 18.67
+epoch 602 | lr 0.1394 | loss 0.0456 | rotation acc 0.9841 | seconds 72.24 | peak reserved GiB 18.67
+epoch 603 | lr 0.1388 | loss 0.0455 | rotation acc 0.9841 | seconds 72.21 | peak reserved GiB 18.67
+epoch 604 | lr 0.1382 | loss 0.0482 | rotation acc 0.9833 | seconds 72.22 | peak reserved GiB 18.67
+epoch 605 | lr 0.1376 | loss 0.0434 | rotation acc 0.9853 | seconds 72.21 | peak reserved GiB 18.67
+epoch 606 | lr 0.137 | loss 0.0436 | rotation acc 0.9848 | seconds 72.24 | peak reserved GiB 18.67
+epoch 607 | lr 0.1364 | loss 0.0441 | rotation acc 0.9846 | seconds 72.19 | peak reserved GiB 18.67
+epoch 608 | lr 0.1358 | loss 0.0438 | rotation acc 0.9848 | seconds 72.20 | peak reserved GiB 18.67
+epoch 609 | lr 0.1352 | loss 0.0439 | rotation acc 0.9849 | seconds 72.25 | peak reserved GiB 18.67
+epoch 610 | lr 0.1346 | loss 0.0447 | rotation acc 0.9844 | test rotation acc 0.9367 | seconds 81.90 | peak reserved GiB 18.67
+epoch 611 | lr 0.134 | loss 0.0442 | rotation acc 0.9844 | seconds 72.20 | peak reserved GiB 18.67
+epoch 612 | lr 0.1334 | loss 0.0428 | rotation acc 0.9851 | seconds 72.38 | peak reserved GiB 18.67
+epoch 613 | lr 0.1328 | loss 0.0418 | rotation acc 0.9854 | seconds 72.26 | peak reserved GiB 18.67
+epoch 614 | lr 0.1322 | loss 0.0431 | rotation acc 0.9848 | seconds 72.20 | peak reserved GiB 18.67
+epoch 615 | lr 0.1316 | loss 0.0445 | rotation acc 0.9844 | seconds 72.22 | peak reserved GiB 18.67
+epoch 616 | lr 0.131 | loss 0.0430 | rotation acc 0.9849 | seconds 72.21 | peak reserved GiB 18.67
+epoch 617 | lr 0.1304 | loss 0.0442 | rotation acc 0.9844 | seconds 75.43 | peak reserved GiB 18.67
+epoch 618 | lr 0.1298 | loss 0.0419 | rotation acc 0.9858 | seconds 72.20 | peak reserved GiB 18.67
+epoch 619 | lr 0.1292 | loss 0.0423 | rotation acc 0.9851 | seconds 72.25 | peak reserved GiB 18.67
+epoch 620 | lr 0.1286 | loss 0.0409 | rotation acc 0.9856 | test rotation acc 0.9364 | seconds 81.73 | peak reserved GiB 18.67
+epoch 621 | lr 0.128 | loss 0.0439 | rotation acc 0.9845 | seconds 72.15 | peak reserved GiB 18.67
+epoch 622 | lr 0.1274 | loss 0.0415 | rotation acc 0.9857 | seconds 72.25 | peak reserved GiB 18.67
+epoch 623 | lr 0.1268 | loss 0.0387 | rotation acc 0.9865 | seconds 72.15 | peak reserved GiB 18.67
+epoch 624 | lr 0.1263 | loss 0.0421 | rotation acc 0.9853 | seconds 72.27 | peak reserved GiB 18.67
+epoch 625 | lr 0.1257 | loss 0.0400 | rotation acc 0.9860 | seconds 72.24 | peak reserved GiB 18.67
+epoch 626 | lr 0.1251 | loss 0.0403 | rotation acc 0.9857 | seconds 72.24 | peak reserved GiB 18.67
+epoch 627 | lr 0.1245 | loss 0.0423 | rotation acc 0.9853 | seconds 72.26 | peak reserved GiB 18.67
+epoch 628 | lr 0.1239 | loss 0.0395 | rotation acc 0.9864 | seconds 72.22 | peak reserved GiB 18.67
+epoch 629 | lr 0.1233 | loss 0.0376 | rotation acc 0.9869 | seconds 72.20 | peak reserved GiB 18.67
+epoch 630 | lr 0.1227 | loss 0.0379 | rotation acc 0.9869 | test rotation acc 0.9376 | seconds 81.77 | peak reserved GiB 18.67
+epoch 631 | lr 0.1221 | loss 0.0381 | rotation acc 0.9867 | seconds 72.17 | peak reserved GiB 18.67
+epoch 632 | lr 0.1216 | loss 0.0401 | rotation acc 0.9861 | seconds 72.13 | peak reserved GiB 18.67
+epoch 633 | lr 0.121 | loss 0.0380 | rotation acc 0.9867 | seconds 72.22 | peak reserved GiB 18.67
+epoch 634 | lr 0.1204 | loss 0.0394 | rotation acc 0.9865 | seconds 72.22 | peak reserved GiB 18.67
+epoch 635 | lr 0.1198 | loss 0.0382 | rotation acc 0.9869 | seconds 72.25 | peak reserved GiB 18.67
+epoch 636 | lr 0.1192 | loss 0.0406 | rotation acc 0.9859 | seconds 72.45 | peak reserved GiB 18.67
+epoch 637 | lr 0.1187 | loss 0.0394 | rotation acc 0.9861 | seconds 72.25 | peak reserved GiB 18.67
+epoch 638 | lr 0.1181 | loss 0.0348 | rotation acc 0.9881 | seconds 72.28 | peak reserved GiB 18.67
+epoch 639 | lr 0.1175 | loss 0.0378 | rotation acc 0.9870 | seconds 72.48 | peak reserved GiB 18.67
+epoch 640 | lr 0.1169 | loss 0.0396 | rotation acc 0.9864 | test rotation acc 0.9331 | seconds 81.81 | peak reserved GiB 18.67
+epoch 641 | lr 0.1163 | loss 0.0374 | rotation acc 0.9872 | seconds 72.23 | peak reserved GiB 18.67
+epoch 642 | lr 0.1158 | loss 0.0353 | rotation acc 0.9879 | seconds 72.23 | peak reserved GiB 18.67
+epoch 643 | lr 0.1152 | loss 0.0381 | rotation acc 0.9868 | seconds 72.25 | peak reserved GiB 18.67
+epoch 644 | lr 0.1146 | loss 0.0355 | rotation acc 0.9877 | seconds 72.24 | peak reserved GiB 18.67
+epoch 645 | lr 0.114 | loss 0.0393 | rotation acc 0.9863 | seconds 72.23 | peak reserved GiB 18.67
+epoch 646 | lr 0.1135 | loss 0.0367 | rotation acc 0.9874 | seconds 72.24 | peak reserved GiB 18.67
+epoch 647 | lr 0.1129 | loss 0.0370 | rotation acc 0.9874 | seconds 72.23 | peak reserved GiB 18.67
+epoch 648 | lr 0.1123 | loss 0.0368 | rotation acc 0.9873 | seconds 72.28 | peak reserved GiB 18.67
+epoch 649 | lr 0.1118 | loss 0.0352 | rotation acc 0.9877 | seconds 72.20 | peak reserved GiB 18.67
+epoch 650 | lr 0.1112 | loss 0.0341 | rotation acc 0.9883 | test rotation acc 0.9419 | seconds 81.84 | peak reserved GiB 18.67
+epoch 651 | lr 0.1106 | loss 0.0324 | rotation acc 0.9887 | seconds 72.16 | peak reserved GiB 18.67
+epoch 652 | lr 0.1101 | loss 0.0336 | rotation acc 0.9885 | seconds 72.28 | peak reserved GiB 18.67
+epoch 653 | lr 0.1095 | loss 0.0313 | rotation acc 0.9893 | seconds 72.20 | peak reserved GiB 18.67
+epoch 654 | lr 0.1089 | loss 0.0355 | rotation acc 0.9877 | seconds 72.25 | peak reserved GiB 18.67
+epoch 655 | lr 0.1084 | loss 0.0338 | rotation acc 0.9884 | seconds 72.17 | peak reserved GiB 18.67
+epoch 656 | lr 0.1078 | loss 0.0335 | rotation acc 0.9883 | seconds 73.20 | peak reserved GiB 18.67
+epoch 657 | lr 0.1072 | loss 0.0325 | rotation acc 0.9888 | seconds 72.21 | peak reserved GiB 18.67
+epoch 658 | lr 0.1067 | loss 0.0329 | rotation acc 0.9888 | seconds 72.28 | peak reserved GiB 18.67
+epoch 659 | lr 0.1061 | loss 0.0350 | rotation acc 0.9881 | seconds 72.23 | peak reserved GiB 18.67
+epoch 660 | lr 0.1055 | loss 0.0327 | rotation acc 0.9885 | test rotation acc 0.9383 | seconds 81.82 | peak reserved GiB 18.67
+epoch 661 | lr 0.105 | loss 0.0346 | rotation acc 0.9882 | seconds 72.22 | peak reserved GiB 18.67
+epoch 662 | lr 0.1044 | loss 0.0323 | rotation acc 0.9890 | seconds 72.21 | peak reserved GiB 18.67
+epoch 663 | lr 0.1039 | loss 0.0325 | rotation acc 0.9888 | seconds 72.26 | peak reserved GiB 18.67
+epoch 664 | lr 0.1033 | loss 0.0303 | rotation acc 0.9896 | seconds 72.24 | peak reserved GiB 18.67
+epoch 665 | lr 0.1028 | loss 0.0335 | rotation acc 0.9886 | seconds 72.24 | peak reserved GiB 18.67
+epoch 666 | lr 0.1022 | loss 0.0328 | rotation acc 0.9888 | seconds 72.20 | peak reserved GiB 18.67
+epoch 667 | lr 0.1017 | loss 0.0327 | rotation acc 0.9889 | seconds 72.16 | peak reserved GiB 18.67
+epoch 668 | lr 0.1011 | loss 0.0332 | rotation acc 0.9883 | seconds 72.19 | peak reserved GiB 18.67
+epoch 669 | lr 0.1006 | loss 0.0298 | rotation acc 0.9898 | seconds 72.01 | peak reserved GiB 18.67
+epoch 670 | lr 0.1 | loss 0.0312 | rotation acc 0.9893 | test rotation acc 0.9334 | seconds 81.82 | peak reserved GiB 18.67
+epoch 671 | lr 0.09945 | loss 0.0293 | rotation acc 0.9902 | seconds 72.15 | peak reserved GiB 18.67
+epoch 672 | lr 0.0989 | loss 0.0314 | rotation acc 0.9893 | seconds 72.21 | peak reserved GiB 18.67
+epoch 673 | lr 0.09836 | loss 0.0304 | rotation acc 0.9898 | seconds 72.20 | peak reserved GiB 18.67
+epoch 674 | lr 0.09781 | loss 0.0297 | rotation acc 0.9898 | seconds 72.22 | peak reserved GiB 18.67
+epoch 675 | lr 0.09726 | loss 0.0314 | rotation acc 0.9894 | seconds 72.22 | peak reserved GiB 18.67
+epoch 676 | lr 0.09672 | loss 0.0303 | rotation acc 0.9897 | seconds 72.29 | peak reserved GiB 18.67
+epoch 677 | lr 0.09618 | loss 0.0302 | rotation acc 0.9898 | seconds 72.18 | peak reserved GiB 18.67
+epoch 678 | lr 0.09564 | loss 0.0298 | rotation acc 0.9899 | seconds 72.17 | peak reserved GiB 18.67
+epoch 679 | lr 0.09509 | loss 0.0284 | rotation acc 0.9902 | seconds 72.18 | peak reserved GiB 18.67
+epoch 680 | lr 0.09455 | loss 0.0283 | rotation acc 0.9903 | test rotation acc 0.9390 | seconds 81.71 | peak reserved GiB 18.67
+epoch 681 | lr 0.09402 | loss 0.0298 | rotation acc 0.9897 | seconds 72.11 | peak reserved GiB 18.67
+epoch 682 | lr 0.09348 | loss 0.0290 | rotation acc 0.9899 | seconds 72.16 | peak reserved GiB 18.67
+epoch 683 | lr 0.09294 | loss 0.0294 | rotation acc 0.9897 | seconds 72.22 | peak reserved GiB 18.67
+epoch 684 | lr 0.09241 | loss 0.0293 | rotation acc 0.9898 | seconds 72.16 | peak reserved GiB 18.67
+epoch 685 | lr 0.09187 | loss 0.0276 | rotation acc 0.9907 | seconds 72.20 | peak reserved GiB 18.67
+epoch 686 | lr 0.09134 | loss 0.0281 | rotation acc 0.9903 | seconds 72.20 | peak reserved GiB 18.67
+epoch 687 | lr 0.09081 | loss 0.0260 | rotation acc 0.9912 | seconds 72.17 | peak reserved GiB 18.67
+epoch 688 | lr 0.09028 | loss 0.0270 | rotation acc 0.9909 | seconds 72.16 | peak reserved GiB 18.67
+epoch 689 | lr 0.08974 | loss 0.0270 | rotation acc 0.9908 | seconds 72.37 | peak reserved GiB 18.67
+epoch 690 | lr 0.08922 | loss 0.0276 | rotation acc 0.9907 | test rotation acc 0.9371 | seconds 81.83 | peak reserved GiB 18.67
+epoch 691 | lr 0.08869 | loss 0.0258 | rotation acc 0.9914 | seconds 72.31 | peak reserved GiB 18.67
+epoch 692 | lr 0.08816 | loss 0.0263 | rotation acc 0.9910 | seconds 72.56 | peak reserved GiB 18.67
+epoch 693 | lr 0.08764 | loss 0.0278 | rotation acc 0.9906 | seconds 72.13 | peak reserved GiB 18.67
+epoch 694 | lr 0.08711 | loss 0.0285 | rotation acc 0.9903 | seconds 72.16 | peak reserved GiB 18.67
+epoch 695 | lr 0.08659 | loss 0.0265 | rotation acc 0.9911 | seconds 72.37 | peak reserved GiB 18.67
+epoch 696 | lr 0.08607 | loss 0.0241 | rotation acc 0.9920 | seconds 72.16 | peak reserved GiB 18.67
+epoch 697 | lr 0.08554 | loss 0.0238 | rotation acc 0.9919 | seconds 72.22 | peak reserved GiB 18.67
+epoch 698 | lr 0.08502 | loss 0.0251 | rotation acc 0.9916 | seconds 72.19 | peak reserved GiB 18.67
+epoch 699 | lr 0.08451 | loss 0.0257 | rotation acc 0.9911 | seconds 72.25 | peak reserved GiB 18.67
+epoch 700 | lr 0.08399 | loss 0.0250 | rotation acc 0.9916 | test rotation acc 0.9353 | seconds 81.78 | peak reserved GiB 18.67
+epoch 701 | lr 0.08347 | loss 0.0243 | rotation acc 0.9917 | seconds 72.20 | peak reserved GiB 18.67
+epoch 702 | lr 0.08296 | loss 0.0245 | rotation acc 0.9918 | seconds 72.15 | peak reserved GiB 18.67
+epoch 703 | lr 0.08244 | loss 0.0249 | rotation acc 0.9916 | seconds 72.11 | peak reserved GiB 18.67
+epoch 704 | lr 0.08193 | loss 0.0246 | rotation acc 0.9917 | seconds 72.20 | peak reserved GiB 18.67
+epoch 705 | lr 0.08142 | loss 0.0250 | rotation acc 0.9915 | seconds 72.21 | peak reserved GiB 18.67
+epoch 706 | lr 0.08091 | loss 0.0248 | rotation acc 0.9918 | seconds 72.17 | peak reserved GiB 18.67
+epoch 707 | lr 0.0804 | loss 0.0228 | rotation acc 0.9923 | seconds 72.26 | peak reserved GiB 18.67
+epoch 708 | lr 0.07989 | loss 0.0218 | rotation acc 0.9926 | seconds 72.07 | peak reserved GiB 18.67
+epoch 709 | lr 0.07938 | loss 0.0247 | rotation acc 0.9916 | seconds 72.33 | peak reserved GiB 18.67
+epoch 710 | lr 0.07888 | loss 0.0239 | rotation acc 0.9919 | test rotation acc 0.9429 | seconds 81.95 | peak reserved GiB 18.67
+epoch 711 | lr 0.07837 | loss 0.0234 | rotation acc 0.9920 | seconds 72.19 | peak reserved GiB 18.67
+epoch 712 | lr 0.07787 | loss 0.0253 | rotation acc 0.9914 | seconds 72.12 | peak reserved GiB 18.67
+epoch 713 | lr 0.07737 | loss 0.0231 | rotation acc 0.9921 | seconds 72.08 | peak reserved GiB 18.67
+epoch 714 | lr 0.07687 | loss 0.0226 | rotation acc 0.9923 | seconds 72.16 | peak reserved GiB 18.67
+epoch 715 | lr 0.07637 | loss 0.0210 | rotation acc 0.9929 | seconds 72.21 | peak reserved GiB 18.67
+epoch 716 | lr 0.07587 | loss 0.0228 | rotation acc 0.9924 | seconds 72.15 | peak reserved GiB 18.67
+epoch 717 | lr 0.07537 | loss 0.0229 | rotation acc 0.9924 | seconds 72.15 | peak reserved GiB 18.67
+epoch 718 | lr 0.07488 | loss 0.0221 | rotation acc 0.9925 | seconds 72.21 | peak reserved GiB 18.67
+epoch 719 | lr 0.07438 | loss 0.0213 | rotation acc 0.9928 | seconds 72.29 | peak reserved GiB 18.67
+epoch 720 | lr 0.07389 | loss 0.0211 | rotation acc 0.9929 | test rotation acc 0.9414 | seconds 81.80 | peak reserved GiB 18.67
+epoch 721 | lr 0.0734 | loss 0.0227 | rotation acc 0.9923 | seconds 72.17 | peak reserved GiB 18.67
+epoch 722 | lr 0.07291 | loss 0.0212 | rotation acc 0.9928 | seconds 72.21 | peak reserved GiB 18.67
+epoch 723 | lr 0.07242 | loss 0.0211 | rotation acc 0.9929 | seconds 72.18 | peak reserved GiB 18.67
+epoch 724 | lr 0.07193 | loss 0.0212 | rotation acc 0.9928 | seconds 72.23 | peak reserved GiB 18.67
+epoch 725 | lr 0.07144 | loss 0.0214 | rotation acc 0.9929 | seconds 72.23 | peak reserved GiB 18.67
+epoch 726 | lr 0.07096 | loss 0.0205 | rotation acc 0.9933 | seconds 72.16 | peak reserved GiB 18.67
+epoch 727 | lr 0.07047 | loss 0.0213 | rotation acc 0.9927 | seconds 72.15 | peak reserved GiB 18.67
+epoch 728 | lr 0.06999 | loss 0.0204 | rotation acc 0.9930 | seconds 71.91 | peak reserved GiB 18.67
+epoch 729 | lr 0.06951 | loss 0.0200 | rotation acc 0.9935 | seconds 72.19 | peak reserved GiB 18.67
+epoch 730 | lr 0.06903 | loss 0.0187 | rotation acc 0.9937 | test rotation acc 0.9401 | seconds 81.75 | peak reserved GiB 18.67
+epoch 731 | lr 0.06855 | loss 0.0207 | rotation acc 0.9931 | seconds 72.18 | peak reserved GiB 18.67
+epoch 732 | lr 0.06807 | loss 0.0227 | rotation acc 0.9922 | seconds 72.19 | peak reserved GiB 18.67
+epoch 733 | lr 0.06759 | loss 0.0180 | rotation acc 0.9941 | seconds 72.14 | peak reserved GiB 18.67
+epoch 734 | lr 0.06712 | loss 0.0201 | rotation acc 0.9934 | seconds 72.20 | peak reserved GiB 18.67
+epoch 735 | lr 0.06665 | loss 0.0186 | rotation acc 0.9938 | seconds 72.19 | peak reserved GiB 18.67
+epoch 736 | lr 0.06617 | loss 0.0185 | rotation acc 0.9939 | seconds 72.18 | peak reserved GiB 18.67
+epoch 737 | lr 0.0657 | loss 0.0188 | rotation acc 0.9936 | seconds 72.20 | peak reserved GiB 18.67
+epoch 738 | lr 0.06523 | loss 0.0184 | rotation acc 0.9939 | seconds 72.21 | peak reserved GiB 18.67
+epoch 739 | lr 0.06477 | loss 0.0163 | rotation acc 0.9946 | seconds 72.16 | peak reserved GiB 18.67
+epoch 740 | lr 0.0643 | loss 0.0181 | rotation acc 0.9939 | test rotation acc 0.9435 | seconds 81.78 | peak reserved GiB 18.67
+epoch 741 | lr 0.06383 | loss 0.0198 | rotation acc 0.9936 | seconds 72.19 | peak reserved GiB 18.67
+epoch 742 | lr 0.06337 | loss 0.0172 | rotation acc 0.9943 | seconds 72.17 | peak reserved GiB 18.67
+epoch 743 | lr 0.06291 | loss 0.0172 | rotation acc 0.9943 | seconds 72.22 | peak reserved GiB 18.67
+epoch 744 | lr 0.06244 | loss 0.0169 | rotation acc 0.9944 | seconds 72.13 | peak reserved GiB 18.67
+epoch 745 | lr 0.06198 | loss 0.0168 | rotation acc 0.9945 | seconds 72.16 | peak reserved GiB 18.67
+epoch 746 | lr 0.06153 | loss 0.0160 | rotation acc 0.9948 | seconds 72.24 | peak reserved GiB 18.67
+epoch 747 | lr 0.06107 | loss 0.0166 | rotation acc 0.9943 | seconds 72.05 | peak reserved GiB 18.67
+epoch 748 | lr 0.06061 | loss 0.0157 | rotation acc 0.9948 | seconds 72.14 | peak reserved GiB 18.67
+epoch 749 | lr 0.06016 | loss 0.0183 | rotation acc 0.9938 | seconds 72.20 | peak reserved GiB 18.67
+epoch 750 | lr 0.05971 | loss 0.0170 | rotation acc 0.9944 | test rotation acc 0.9450 | seconds 81.75 | peak reserved GiB 18.67
+epoch 751 | lr 0.05925 | loss 0.0150 | rotation acc 0.9951 | seconds 72.19 | peak reserved GiB 18.67
+epoch 752 | lr 0.0588 | loss 0.0147 | rotation acc 0.9952 | seconds 72.18 | peak reserved GiB 18.67
+epoch 753 | lr 0.05835 | loss 0.0159 | rotation acc 0.9947 | seconds 72.21 | peak reserved GiB 18.67
+epoch 754 | lr 0.05791 | loss 0.0164 | rotation acc 0.9946 | seconds 72.18 | peak reserved GiB 18.67
+epoch 755 | lr 0.05746 | loss 0.0156 | rotation acc 0.9948 | seconds 72.60 | peak reserved GiB 18.67
+epoch 756 | lr 0.05702 | loss 0.0135 | rotation acc 0.9956 | seconds 72.22 | peak reserved GiB 18.67
+epoch 757 | lr 0.05657 | loss 0.0164 | rotation acc 0.9945 | seconds 72.21 | peak reserved GiB 18.67
+epoch 758 | lr 0.05613 | loss 0.0165 | rotation acc 0.9945 | seconds 72.44 | peak reserved GiB 18.67
+epoch 759 | lr 0.05569 | loss 0.0153 | rotation acc 0.9949 | seconds 72.26 | peak reserved GiB 18.67
+epoch 760 | lr 0.05525 | loss 0.0152 | rotation acc 0.9950 | test rotation acc 0.9445 | seconds 82.04 | peak reserved GiB 18.67
+epoch 761 | lr 0.05482 | loss 0.0155 | rotation acc 0.9948 | seconds 72.23 | peak reserved GiB 18.67
+epoch 762 | lr 0.05438 | loss 0.0144 | rotation acc 0.9953 | seconds 72.18 | peak reserved GiB 18.67
+epoch 763 | lr 0.05395 | loss 0.0138 | rotation acc 0.9955 | seconds 72.29 | peak reserved GiB 18.67
+epoch 764 | lr 0.05351 | loss 0.0137 | rotation acc 0.9956 | seconds 72.18 | peak reserved GiB 18.67
+epoch 765 | lr 0.05308 | loss 0.0154 | rotation acc 0.9949 | seconds 72.26 | peak reserved GiB 18.67
+epoch 766 | lr 0.05265 | loss 0.0143 | rotation acc 0.9953 | seconds 72.21 | peak reserved GiB 18.67
+epoch 767 | lr 0.05222 | loss 0.0139 | rotation acc 0.9953 | seconds 72.24 | peak reserved GiB 18.67
+epoch 768 | lr 0.0518 | loss 0.0141 | rotation acc 0.9955 | seconds 72.10 | peak reserved GiB 18.67
+epoch 769 | lr 0.05137 | loss 0.0114 | rotation acc 0.9962 | seconds 72.17 | peak reserved GiB 18.67
+epoch 770 | lr 0.05095 | loss 0.0124 | rotation acc 0.9960 | test rotation acc 0.9479 | seconds 81.67 | peak reserved GiB 18.67
+epoch 771 | lr 0.05052 | loss 0.0138 | rotation acc 0.9956 | seconds 72.16 | peak reserved GiB 18.67
+epoch 772 | lr 0.0501 | loss 0.0132 | rotation acc 0.9957 | seconds 72.18 | peak reserved GiB 18.67
+epoch 773 | lr 0.04968 | loss 0.0144 | rotation acc 0.9954 | seconds 72.17 | peak reserved GiB 18.67
+epoch 774 | lr 0.04927 | loss 0.0120 | rotation acc 0.9961 | seconds 72.13 | peak reserved GiB 18.67
+epoch 775 | lr 0.04885 | loss 0.0120 | rotation acc 0.9960 | seconds 72.17 | peak reserved GiB 18.67
+epoch 776 | lr 0.04844 | loss 0.0121 | rotation acc 0.9960 | seconds 72.15 | peak reserved GiB 18.67
+epoch 777 | lr 0.04802 | loss 0.0127 | rotation acc 0.9957 | seconds 72.17 | peak reserved GiB 18.67
+epoch 778 | lr 0.04761 | loss 0.0113 | rotation acc 0.9962 | seconds 72.12 | peak reserved GiB 18.67
+epoch 779 | lr 0.0472 | loss 0.0124 | rotation acc 0.9961 | seconds 72.23 | peak reserved GiB 18.67
+epoch 780 | lr 0.04679 | loss 0.0113 | rotation acc 0.9965 | test rotation acc 0.9471 | seconds 81.62 | peak reserved GiB 18.67
+epoch 781 | lr 0.04638 | loss 0.0122 | rotation acc 0.9960 | seconds 72.17 | peak reserved GiB 18.67
+epoch 782 | lr 0.04598 | loss 0.0122 | rotation acc 0.9962 | seconds 72.24 | peak reserved GiB 18.67
+epoch 783 | lr 0.04557 | loss 0.0125 | rotation acc 0.9958 | seconds 72.30 | peak reserved GiB 18.67
+epoch 784 | lr 0.04517 | loss 0.0109 | rotation acc 0.9965 | seconds 72.22 | peak reserved GiB 18.67
+epoch 785 | lr 0.04477 | loss 0.0106 | rotation acc 0.9966 | seconds 72.16 | peak reserved GiB 18.67
+epoch 786 | lr 0.04437 | loss 0.0116 | rotation acc 0.9963 | seconds 72.23 | peak reserved GiB 18.67
+epoch 787 | lr 0.04397 | loss 0.0103 | rotation acc 0.9967 | seconds 72.22 | peak reserved GiB 18.67
+epoch 788 | lr 0.04358 | loss 0.0114 | rotation acc 0.9963 | seconds 72.19 | peak reserved GiB 18.67
+epoch 789 | lr 0.04318 | loss 0.0105 | rotation acc 0.9965 | seconds 72.15 | peak reserved GiB 18.67
+epoch 790 | lr 0.04279 | loss 0.0096 | rotation acc 0.9969 | test rotation acc 0.9427 | seconds 81.77 | peak reserved GiB 18.67
+epoch 791 | lr 0.0424 | loss 0.0099 | rotation acc 0.9969 | seconds 72.15 | peak reserved GiB 18.67
+epoch 792 | lr 0.04201 | loss 0.0095 | rotation acc 0.9970 | seconds 72.10 | peak reserved GiB 18.67
+epoch 793 | lr 0.04162 | loss 0.0094 | rotation acc 0.9969 | seconds 72.19 | peak reserved GiB 18.67
+epoch 794 | lr 0.04123 | loss 0.0102 | rotation acc 0.9967 | seconds 72.18 | peak reserved GiB 18.67
+epoch 795 | lr 0.04085 | loss 0.0103 | rotation acc 0.9966 | seconds 72.16 | peak reserved GiB 18.67
+epoch 796 | lr 0.04046 | loss 0.0097 | rotation acc 0.9969 | seconds 72.23 | peak reserved GiB 18.67
+epoch 797 | lr 0.04008 | loss 0.0105 | rotation acc 0.9967 | seconds 72.17 | peak reserved GiB 18.67
+epoch 798 | lr 0.0397 | loss 0.0085 | rotation acc 0.9973 | seconds 72.12 | peak reserved GiB 18.67
+epoch 799 | lr 0.03932 | loss 0.0082 | rotation acc 0.9975 | seconds 72.18 | peak reserved GiB 18.67
+epoch 800 | lr 0.03895 | loss 0.0101 | rotation acc 0.9967 | test rotation acc 0.9470 | seconds 81.73 | peak reserved GiB 18.67
+epoch 801 | lr 0.03857 | loss 0.0090 | rotation acc 0.9972 | seconds 72.14 | peak reserved GiB 18.67
+epoch 802 | lr 0.0382 | loss 0.0083 | rotation acc 0.9973 | seconds 72.23 | peak reserved GiB 18.67
+epoch 803 | lr 0.03782 | loss 0.0086 | rotation acc 0.9973 | seconds 72.28 | peak reserved GiB 18.67
+epoch 804 | lr 0.03745 | loss 0.0084 | rotation acc 0.9974 | seconds 72.18 | peak reserved GiB 18.67
+epoch 805 | lr 0.03708 | loss 0.0072 | rotation acc 0.9978 | seconds 72.16 | peak reserved GiB 18.67
+epoch 806 | lr 0.03672 | loss 0.0073 | rotation acc 0.9977 | seconds 72.18 | peak reserved GiB 18.67
+epoch 807 | lr 0.03635 | loss 0.0076 | rotation acc 0.9975 | seconds 72.19 | peak reserved GiB 18.67
+epoch 808 | lr 0.03599 | loss 0.0074 | rotation acc 0.9976 | seconds 72.27 | peak reserved GiB 18.67
+epoch 809 | lr 0.03563 | loss 0.0079 | rotation acc 0.9974 | seconds 72.24 | peak reserved GiB 18.67
+epoch 810 | lr 0.03526 | loss 0.0081 | rotation acc 0.9974 | test rotation acc 0.9480 | seconds 81.72 | peak reserved GiB 18.67
+epoch 811 | lr 0.03491 | loss 0.0081 | rotation acc 0.9975 | seconds 72.24 | peak reserved GiB 18.67
+epoch 812 | lr 0.03455 | loss 0.0066 | rotation acc 0.9979 | seconds 72.10 | peak reserved GiB 18.67
+epoch 813 | lr 0.03419 | loss 0.0072 | rotation acc 0.9977 | seconds 72.18 | peak reserved GiB 18.67
+epoch 814 | lr 0.03384 | loss 0.0074 | rotation acc 0.9977 | seconds 72.21 | peak reserved GiB 18.67
+epoch 815 | lr 0.03349 | loss 0.0064 | rotation acc 0.9980 | seconds 72.12 | peak reserved GiB 18.67
+epoch 816 | lr 0.03314 | loss 0.0066 | rotation acc 0.9980 | seconds 72.19 | peak reserved GiB 18.67
+epoch 817 | lr 0.03279 | loss 0.0064 | rotation acc 0.9981 | seconds 72.09 | peak reserved GiB 18.67
+epoch 818 | lr 0.03244 | loss 0.0056 | rotation acc 0.9983 | seconds 72.17 | peak reserved GiB 18.67
+epoch 819 | lr 0.03209 | loss 0.0052 | rotation acc 0.9985 | seconds 72.19 | peak reserved GiB 18.67
+epoch 820 | lr 0.03175 | loss 0.0055 | rotation acc 0.9983 | test rotation acc 0.9506 | seconds 81.63 | peak reserved GiB 18.67
+epoch 821 | lr 0.03141 | loss 0.0060 | rotation acc 0.9982 | seconds 72.24 | peak reserved GiB 18.67
+epoch 822 | lr 0.03107 | loss 0.0060 | rotation acc 0.9983 | seconds 72.12 | peak reserved GiB 18.67
+epoch 823 | lr 0.03073 | loss 0.0058 | rotation acc 0.9984 | seconds 72.04 | peak reserved GiB 18.67
+epoch 824 | lr 0.03039 | loss 0.0052 | rotation acc 0.9985 | seconds 72.08 | peak reserved GiB 18.67
+epoch 825 | lr 0.03005 | loss 0.0053 | rotation acc 0.9984 | seconds 72.20 | peak reserved GiB 18.67
+epoch 826 | lr 0.02972 | loss 0.0060 | rotation acc 0.9981 | seconds 72.17 | peak reserved GiB 18.67
+epoch 827 | lr 0.02939 | loss 0.0061 | rotation acc 0.9982 | seconds 72.08 | peak reserved GiB 18.67
+epoch 828 | lr 0.02906 | loss 0.0045 | rotation acc 0.9987 | seconds 72.11 | peak reserved GiB 18.67
+epoch 829 | lr 0.02873 | loss 0.0051 | rotation acc 0.9984 | seconds 72.07 | peak reserved GiB 18.67
+epoch 830 | lr 0.0284 | loss 0.0052 | rotation acc 0.9984 | test rotation acc 0.9512 | seconds 81.81 | peak reserved GiB 18.67
+epoch 831 | lr 0.02808 | loss 0.0054 | rotation acc 0.9984 | seconds 72.08 | peak reserved GiB 18.67
+epoch 832 | lr 0.02775 | loss 0.0057 | rotation acc 0.9983 | seconds 72.20 | peak reserved GiB 18.67
+epoch 833 | lr 0.02743 | loss 0.0046 | rotation acc 0.9987 | seconds 72.16 | peak reserved GiB 18.67
+epoch 834 | lr 0.02711 | loss 0.0053 | rotation acc 0.9983 | seconds 72.13 | peak reserved GiB 18.67
+epoch 835 | lr 0.02679 | loss 0.0049 | rotation acc 0.9986 | seconds 72.16 | peak reserved GiB 18.67
+epoch 836 | lr 0.02648 | loss 0.0047 | rotation acc 0.9986 | seconds 72.19 | peak reserved GiB 18.67
+epoch 837 | lr 0.02616 | loss 0.0045 | rotation acc 0.9987 | seconds 72.16 | peak reserved GiB 18.67
+epoch 838 | lr 0.02585 | loss 0.0044 | rotation acc 0.9989 | seconds 72.10 | peak reserved GiB 18.67
+epoch 839 | lr 0.02554 | loss 0.0041 | rotation acc 0.9988 | seconds 72.04 | peak reserved GiB 18.67
+epoch 840 | lr 0.02523 | loss 0.0036 | rotation acc 0.9990 | test rotation acc 0.9509 | seconds 81.73 | peak reserved GiB 18.67
+epoch 841 | lr 0.02492 | loss 0.0042 | rotation acc 0.9989 | seconds 72.13 | peak reserved GiB 18.67
+epoch 842 | lr 0.02462 | loss 0.0036 | rotation acc 0.9990 | seconds 72.13 | peak reserved GiB 18.67
+epoch 843 | lr 0.02431 | loss 0.0038 | rotation acc 0.9990 | seconds 72.13 | peak reserved GiB 18.67
+epoch 844 | lr 0.02401 | loss 0.0032 | rotation acc 0.9991 | seconds 72.29 | peak reserved GiB 18.67
+epoch 845 | lr 0.02371 | loss 0.0030 | rotation acc 0.9993 | seconds 72.08 | peak reserved GiB 18.67
+epoch 846 | lr 0.02341 | loss 0.0025 | rotation acc 0.9993 | seconds 72.68 | peak reserved GiB 18.67
+epoch 847 | lr 0.02311 | loss 0.0029 | rotation acc 0.9992 | seconds 72.21 | peak reserved GiB 18.67
+epoch 848 | lr 0.02282 | loss 0.0031 | rotation acc 0.9992 | seconds 72.11 | peak reserved GiB 18.67
+epoch 849 | lr 0.02252 | loss 0.0028 | rotation acc 0.9993 | seconds 72.17 | peak reserved GiB 18.67
+epoch 850 | lr 0.02223 | loss 0.0021 | rotation acc 0.9995 | test rotation acc 0.9535 | seconds 81.76 | peak reserved GiB 18.67
+epoch 851 | lr 0.02194 | loss 0.0025 | rotation acc 0.9993 | seconds 72.15 | peak reserved GiB 18.67
+epoch 852 | lr 0.02165 | loss 0.0028 | rotation acc 0.9993 | seconds 72.28 | peak reserved GiB 18.67
+epoch 853 | lr 0.02137 | loss 0.0023 | rotation acc 0.9995 | seconds 72.24 | peak reserved GiB 18.67
+epoch 854 | lr 0.02108 | loss 0.0024 | rotation acc 0.9994 | seconds 72.12 | peak reserved GiB 18.67
+epoch 855 | lr 0.0208 | loss 0.0027 | rotation acc 0.9993 | seconds 72.34 | peak reserved GiB 18.67
+epoch 856 | lr 0.02052 | loss 0.0026 | rotation acc 0.9994 | seconds 72.17 | peak reserved GiB 18.67
+epoch 857 | lr 0.02024 | loss 0.0022 | rotation acc 0.9995 | seconds 72.15 | peak reserved GiB 18.67
+epoch 858 | lr 0.01996 | loss 0.0019 | rotation acc 0.9996 | seconds 72.10 | peak reserved GiB 18.67
+epoch 859 | lr 0.01969 | loss 0.0019 | rotation acc 0.9995 | seconds 72.28 | peak reserved GiB 18.67
+epoch 860 | lr 0.01941 | loss 0.0023 | rotation acc 0.9995 | test rotation acc 0.9531 | seconds 81.96 | peak reserved GiB 18.67
+epoch 861 | lr 0.01914 | loss 0.0020 | rotation acc 0.9996 | seconds 72.11 | peak reserved GiB 18.67
+epoch 862 | lr 0.01887 | loss 0.0017 | rotation acc 0.9997 | seconds 72.03 | peak reserved GiB 18.67
+epoch 863 | lr 0.0186 | loss 0.0022 | rotation acc 0.9995 | seconds 72.10 | peak reserved GiB 18.67
+epoch 864 | lr 0.01834 | loss 0.0020 | rotation acc 0.9996 | seconds 72.13 | peak reserved GiB 18.67
+epoch 865 | lr 0.01807 | loss 0.0018 | rotation acc 0.9996 | seconds 72.07 | peak reserved GiB 18.67
+epoch 866 | lr 0.01781 | loss 0.0016 | rotation acc 0.9997 | seconds 72.08 | peak reserved GiB 18.67
+epoch 867 | lr 0.01755 | loss 0.0018 | rotation acc 0.9996 | seconds 71.88 | peak reserved GiB 18.67
+epoch 868 | lr 0.01729 | loss 0.0017 | rotation acc 0.9996 | seconds 72.12 | peak reserved GiB 18.67
+epoch 869 | lr 0.01703 | loss 0.0013 | rotation acc 0.9998 | seconds 72.05 | peak reserved GiB 18.67
+epoch 870 | lr 0.01678 | loss 0.0013 | rotation acc 0.9998 | test rotation acc 0.9551 | seconds 81.66 | peak reserved GiB 18.67
+epoch 871 | lr 0.01652 | loss 0.0011 | rotation acc 0.9998 | seconds 72.03 | peak reserved GiB 18.67
+epoch 872 | lr 0.01627 | loss 0.0012 | rotation acc 0.9998 | seconds 72.01 | peak reserved GiB 18.67
+epoch 873 | lr 0.01602 | loss 0.0011 | rotation acc 0.9999 | seconds 72.09 | peak reserved GiB 18.67
+epoch 874 | lr 0.01578 | loss 0.0011 | rotation acc 0.9998 | seconds 72.07 | peak reserved GiB 18.67
+epoch 875 | lr 0.01553 | loss 0.0011 | rotation acc 0.9998 | seconds 72.11 | peak reserved GiB 18.67
+epoch 876 | lr 0.01528 | loss 0.0010 | rotation acc 0.9999 | seconds 72.13 | peak reserved GiB 18.67
+epoch 877 | lr 0.01504 | loss 0.0010 | rotation acc 0.9999 | seconds 71.94 | peak reserved GiB 18.67
+epoch 878 | lr 0.0148 | loss 0.0009 | rotation acc 0.9999 | seconds 71.98 | peak reserved GiB 18.67
+epoch 879 | lr 0.01456 | loss 0.0010 | rotation acc 0.9998 | seconds 72.13 | peak reserved GiB 18.67
+epoch 880 | lr 0.01433 | loss 0.0011 | rotation acc 0.9998 | test rotation acc 0.9569 | seconds 81.66 | peak reserved GiB 18.67
+epoch 881 | lr 0.01409 | loss 0.0009 | rotation acc 0.9999 | seconds 72.12 | peak reserved GiB 18.67
+epoch 882 | lr 0.01386 | loss 0.0009 | rotation acc 0.9999 | seconds 72.06 | peak reserved GiB 18.67
+epoch 883 | lr 0.01363 | loss 0.0009 | rotation acc 0.9999 | seconds 72.03 | peak reserved GiB 18.67
+epoch 884 | lr 0.0134 | loss 0.0009 | rotation acc 0.9999 | seconds 71.96 | peak reserved GiB 18.67
+epoch 885 | lr 0.01317 | loss 0.0008 | rotation acc 0.9999 | seconds 71.99 | peak reserved GiB 18.67
+epoch 886 | lr 0.01294 | loss 0.0007 | rotation acc 0.9999 | seconds 72.00 | peak reserved GiB 18.67
+epoch 887 | lr 0.01272 | loss 0.0007 | rotation acc 1.0000 | seconds 72.53 | peak reserved GiB 18.67
+epoch 888 | lr 0.0125 | loss 0.0007 | rotation acc 0.9999 | seconds 72.67 | peak reserved GiB 18.67
+epoch 889 | lr 0.01228 | loss 0.0007 | rotation acc 0.9999 | seconds 71.97 | peak reserved GiB 18.67
+epoch 890 | lr 0.01206 | loss 0.0007 | rotation acc 1.0000 | test rotation acc 0.9580 | seconds 81.79 | peak reserved GiB 18.67
+epoch 891 | lr 0.01185 | loss 0.0006 | rotation acc 1.0000 | seconds 72.00 | peak reserved GiB 18.67
+epoch 892 | lr 0.01163 | loss 0.0007 | rotation acc 1.0000 | seconds 72.04 | peak reserved GiB 18.67
+epoch 893 | lr 0.01142 | loss 0.0007 | rotation acc 1.0000 | seconds 72.11 | peak reserved GiB 18.67
+epoch 894 | lr 0.01121 | loss 0.0006 | rotation acc 1.0000 | seconds 72.01 | peak reserved GiB 18.67
+epoch 895 | lr 0.011 | loss 0.0006 | rotation acc 1.0000 | seconds 72.30 | peak reserved GiB 18.67
+epoch 896 | lr 0.01079 | loss 0.0007 | rotation acc 0.9999 | seconds 72.17 | peak reserved GiB 18.67
+epoch 897 | lr 0.01059 | loss 0.0006 | rotation acc 1.0000 | seconds 72.08 | peak reserved GiB 18.67
+epoch 898 | lr 0.01039 | loss 0.0006 | rotation acc 1.0000 | seconds 71.95 | peak reserved GiB 18.67
+epoch 899 | lr 0.01018 | loss 0.0006 | rotation acc 1.0000 | seconds 72.01 | peak reserved GiB 18.67
+epoch 900 | lr 0.009986 | loss 0.0006 | rotation acc 1.0000 | test rotation acc 0.9583 | seconds 81.56 | peak reserved GiB 18.67
+epoch 901 | lr 0.009789 | loss 0.0006 | rotation acc 1.0000 | seconds 72.11 | peak reserved GiB 18.67
+epoch 902 | lr 0.009594 | loss 0.0006 | rotation acc 1.0000 | seconds 72.00 | peak reserved GiB 18.67
+epoch 903 | lr 0.0094 | loss 0.0006 | rotation acc 1.0000 | seconds 72.00 | peak reserved GiB 18.67
+epoch 904 | lr 0.009209 | loss 0.0006 | rotation acc 1.0000 | seconds 72.11 | peak reserved GiB 18.67
+epoch 905 | lr 0.00902 | loss 0.0006 | rotation acc 1.0000 | seconds 72.07 | peak reserved GiB 18.67
+epoch 906 | lr 0.008832 | loss 0.0006 | rotation acc 1.0000 | seconds 71.99 | peak reserved GiB 18.67
+epoch 907 | lr 0.008647 | loss 0.0006 | rotation acc 1.0000 | seconds 72.09 | peak reserved GiB 18.67
+epoch 908 | lr 0.008463 | loss 0.0006 | rotation acc 1.0000 | seconds 71.92 | peak reserved GiB 18.67
+epoch 909 | lr 0.008281 | loss 0.0006 | rotation acc 1.0000 | seconds 71.96 | peak reserved GiB 18.67
+epoch 910 | lr 0.008101 | loss 0.0006 | rotation acc 1.0000 | test rotation acc 0.9587 | seconds 81.66 | peak reserved GiB 18.67
+epoch 911 | lr 0.007924 | loss 0.0006 | rotation acc 1.0000 | seconds 71.98 | peak reserved GiB 18.67
+epoch 912 | lr 0.007748 | loss 0.0006 | rotation acc 1.0000 | seconds 72.03 | peak reserved GiB 18.67
+epoch 913 | lr 0.007574 | loss 0.0006 | rotation acc 1.0000 | seconds 71.95 | peak reserved GiB 18.67
+epoch 914 | lr 0.007402 | loss 0.0006 | rotation acc 1.0000 | seconds 72.02 | peak reserved GiB 18.67
+epoch 915 | lr 0.007232 | loss 0.0006 | rotation acc 1.0000 | seconds 72.04 | peak reserved GiB 18.67
+epoch 916 | lr 0.007063 | loss 0.0006 | rotation acc 1.0000 | seconds 72.07 | peak reserved GiB 18.67
+epoch 917 | lr 0.006897 | loss 0.0006 | rotation acc 1.0000 | seconds 71.99 | peak reserved GiB 18.67
+epoch 918 | lr 0.006733 | loss 0.0006 | rotation acc 1.0000 | seconds 72.05 | peak reserved GiB 18.67
+epoch 919 | lr 0.006571 | loss 0.0006 | rotation acc 1.0000 | seconds 72.01 | peak reserved GiB 18.67
+epoch 920 | lr 0.00641 | loss 0.0006 | rotation acc 1.0000 | test rotation acc 0.9580 | seconds 81.63 | peak reserved GiB 18.67
+epoch 921 | lr 0.006252 | loss 0.0006 | rotation acc 1.0000 | seconds 71.95 | peak reserved GiB 18.67
+epoch 922 | lr 0.006095 | loss 0.0006 | rotation acc 1.0000 | seconds 72.81 | peak reserved GiB 18.67
+epoch 923 | lr 0.005941 | loss 0.0006 | rotation acc 1.0000 | seconds 72.08 | peak reserved GiB 18.67
+epoch 924 | lr 0.005788 | loss 0.0006 | rotation acc 1.0000 | seconds 72.11 | peak reserved GiB 18.67
+epoch 925 | lr 0.005638 | loss 0.0006 | rotation acc 1.0000 | seconds 72.03 | peak reserved GiB 18.67
+epoch 926 | lr 0.005489 | loss 0.0006 | rotation acc 1.0000 | seconds 72.00 | peak reserved GiB 18.67
+epoch 927 | lr 0.005342 | loss 0.0006 | rotation acc 1.0000 | seconds 72.02 | peak reserved GiB 18.67
+epoch 928 | lr 0.005198 | loss 0.0006 | rotation acc 1.0000 | seconds 71.97 | peak reserved GiB 18.67
+epoch 929 | lr 0.005055 | loss 0.0006 | rotation acc 1.0000 | seconds 72.03 | peak reserved GiB 18.67
+epoch 930 | lr 0.004914 | loss 0.0006 | rotation acc 1.0000 | test rotation acc 0.9585 | seconds 81.70 | peak reserved GiB 18.67
+epoch 931 | lr 0.004775 | loss 0.0006 | rotation acc 1.0000 | seconds 72.15 | peak reserved GiB 18.67
+epoch 932 | lr 0.004638 | loss 0.0006 | rotation acc 1.0000 | seconds 72.06 | peak reserved GiB 18.67
+epoch 933 | lr 0.004503 | loss 0.0006 | rotation acc 1.0000 | seconds 72.01 | peak reserved GiB 18.67
+epoch 934 | lr 0.00437 | loss 0.0006 | rotation acc 1.0000 | seconds 72.37 | peak reserved GiB 18.67
+epoch 935 | lr 0.00424 | loss 0.0006 | rotation acc 1.0000 | seconds 71.95 | peak reserved GiB 18.67
+epoch 936 | lr 0.004111 | loss 0.0006 | rotation acc 1.0000 | seconds 72.02 | peak reserved GiB 18.67
+epoch 937 | lr 0.003983 | loss 0.0006 | rotation acc 1.0000 | seconds 71.98 | peak reserved GiB 18.67
+epoch 938 | lr 0.003858 | loss 0.0006 | rotation acc 1.0000 | seconds 72.03 | peak reserved GiB 18.67
+epoch 939 | lr 0.003735 | loss 0.0006 | rotation acc 1.0000 | seconds 72.02 | peak reserved GiB 18.67
+epoch 940 | lr 0.003614 | loss 0.0006 | rotation acc 1.0000 | test rotation acc 0.9581 | seconds 81.50 | peak reserved GiB 18.67
+epoch 941 | lr 0.003495 | loss 0.0006 | rotation acc 1.0000 | seconds 72.04 | peak reserved GiB 18.67
+epoch 942 | lr 0.003378 | loss 0.0006 | rotation acc 1.0000 | seconds 71.99 | peak reserved GiB 18.67
+epoch 943 | lr 0.003263 | loss 0.0006 | rotation acc 1.0000 | seconds 71.98 | peak reserved GiB 18.67
+epoch 944 | lr 0.00315 | loss 0.0006 | rotation acc 1.0000 | seconds 71.95 | peak reserved GiB 18.67
+epoch 945 | lr 0.003038 | loss 0.0006 | rotation acc 1.0000 | seconds 71.97 | peak reserved GiB 18.67
+epoch 946 | lr 0.002929 | loss 0.0006 | rotation acc 1.0000 | seconds 71.95 | peak reserved GiB 18.67
+epoch 947 | lr 0.002822 | loss 0.0006 | rotation acc 1.0000 | seconds 72.03 | peak reserved GiB 18.67
+epoch 948 | lr 0.002717 | loss 0.0006 | rotation acc 1.0000 | seconds 71.99 | peak reserved GiB 18.67
+epoch 949 | lr 0.002613 | loss 0.0006 | rotation acc 1.0000 | seconds 72.13 | peak reserved GiB 18.67
+epoch 950 | lr 0.002512 | loss 0.0006 | rotation acc 1.0000 | test rotation acc 0.9581 | seconds 82.18 | peak reserved GiB 18.67
+epoch 951 | lr 0.002413 | loss 0.0006 | rotation acc 1.0000 | seconds 72.10 | peak reserved GiB 18.67
+epoch 952 | lr 0.002316 | loss 0.0006 | rotation acc 1.0000 | seconds 72.05 | peak reserved GiB 18.67
+epoch 953 | lr 0.00222 | loss 0.0006 | rotation acc 1.0000 | seconds 72.10 | peak reserved GiB 18.67
+epoch 954 | lr 0.002127 | loss 0.0006 | rotation acc 1.0000 | seconds 72.03 | peak reserved GiB 18.67
+epoch 955 | lr 0.002036 | loss 0.0006 | rotation acc 1.0000 | seconds 71.98 | peak reserved GiB 18.67
+epoch 956 | lr 0.001946 | loss 0.0006 | rotation acc 1.0000 | seconds 72.05 | peak reserved GiB 18.67
+epoch 957 | lr 0.001859 | loss 0.0006 | rotation acc 1.0000 | seconds 72.08 | peak reserved GiB 18.67
+epoch 958 | lr 0.001774 | loss 0.0006 | rotation acc 1.0000 | seconds 71.99 | peak reserved GiB 18.67
+epoch 959 | lr 0.00169 | loss 0.0006 | rotation acc 1.0000 | seconds 71.87 | peak reserved GiB 18.67
+epoch 960 | lr 0.001609 | loss 0.0006 | rotation acc 1.0000 | test rotation acc 0.9582 | seconds 81.62 | peak reserved GiB 18.67
+epoch 961 | lr 0.00153 | loss 0.0006 | rotation acc 1.0000 | seconds 72.88 | peak reserved GiB 18.67
+epoch 962 | lr 0.001452 | loss 0.0006 | rotation acc 1.0000 | seconds 72.06 | peak reserved GiB 18.67
+epoch 963 | lr 0.001377 | loss 0.0006 | rotation acc 1.0000 | seconds 72.10 | peak reserved GiB 18.67
+epoch 964 | lr 0.001304 | loss 0.0006 | rotation acc 1.0000 | seconds 72.07 | peak reserved GiB 18.67
+epoch 965 | lr 0.001232 | loss 0.0006 | rotation acc 1.0000 | seconds 71.91 | peak reserved GiB 18.67
+epoch 966 | lr 0.001163 | loss 0.0006 | rotation acc 1.0000 | seconds 71.95 | peak reserved GiB 18.67
+epoch 967 | lr 0.001096 | loss 0.0006 | rotation acc 1.0000 | seconds 72.06 | peak reserved GiB 18.67
+epoch 968 | lr 0.00103 | loss 0.0006 | rotation acc 1.0000 | seconds 71.98 | peak reserved GiB 18.67
+epoch 969 | lr 0.0009669 | loss 0.0006 | rotation acc 1.0000 | seconds 72.12 | peak reserved GiB 18.67
+epoch 970 | lr 0.0009056 | loss 0.0006 | rotation acc 1.0000 | test rotation acc 0.9583 | seconds 81.69 | peak reserved GiB 18.67
+epoch 971 | lr 0.0008463 | loss 0.0006 | rotation acc 1.0000 | seconds 71.88 | peak reserved GiB 18.67
+epoch 972 | lr 0.000789 | loss 0.0006 | rotation acc 1.0000 | seconds 72.10 | peak reserved GiB 18.67
+epoch 973 | lr 0.0007337 | loss 0.0006 | rotation acc 1.0000 | seconds 72.10 | peak reserved GiB 18.67
+epoch 974 | lr 0.0006803 | loss 0.0006 | rotation acc 1.0000 | seconds 71.99 | peak reserved GiB 18.67
+epoch 975 | lr 0.000629 | loss 0.0006 | rotation acc 1.0000 | seconds 71.99 | peak reserved GiB 18.67
+epoch 976 | lr 0.0005798 | loss 0.0006 | rotation acc 1.0000 | seconds 72.05 | peak reserved GiB 18.67
+epoch 977 | lr 0.0005325 | loss 0.0006 | rotation acc 1.0000 | seconds 72.09 | peak reserved GiB 18.67
+epoch 978 | lr 0.0004872 | loss 0.0006 | rotation acc 1.0000 | seconds 72.18 | peak reserved GiB 18.67
+epoch 979 | lr 0.0004439 | loss 0.0006 | rotation acc 1.0000 | seconds 72.08 | peak reserved GiB 18.67
+epoch 980 | lr 0.0004027 | loss 0.0006 | rotation acc 1.0000 | test rotation acc 0.9580 | seconds 81.82 | peak reserved GiB 18.67
+epoch 981 | lr 0.0003634 | loss 0.0006 | rotation acc 1.0000 | seconds 72.15 | peak reserved GiB 18.67
+epoch 982 | lr 0.0003262 | loss 0.0006 | rotation acc 1.0000 | seconds 72.31 | peak reserved GiB 18.67
+epoch 983 | lr 0.000291 | loss 0.0006 | rotation acc 1.0000 | seconds 72.00 | peak reserved GiB 18.67
+epoch 984 | lr 0.0002577 | loss 0.0006 | rotation acc 1.0000 | seconds 72.07 | peak reserved GiB 18.67
+epoch 985 | lr 0.0002265 | loss 0.0006 | rotation acc 1.0000 | seconds 72.24 | peak reserved GiB 18.67
+epoch 986 | lr 0.0001973 | loss 0.0006 | rotation acc 1.0000 | seconds 71.97 | peak reserved GiB 18.67
+epoch 987 | lr 0.0001702 | loss 0.0006 | rotation acc 1.0000 | seconds 72.06 | peak reserved GiB 18.67
+epoch 988 | lr 0.000145 | loss 0.0006 | rotation acc 1.0000 | seconds 72.09 | peak reserved GiB 18.67
+epoch 989 | lr 0.0001218 | loss 0.0006 | rotation acc 1.0000 | seconds 71.98 | peak reserved GiB 18.67
+epoch 990 | lr 0.0001007 | loss 0.0006 | rotation acc 1.0000 | test rotation acc 0.9582 | seconds 81.69 | peak reserved GiB 18.67
+epoch 991 | lr 8.156e-05 | loss 0.0006 | rotation acc 1.0000 | seconds 72.05 | peak reserved GiB 18.67
+epoch 992 | lr 6.444e-05 | loss 0.0006 | rotation acc 1.0000 | seconds 72.02 | peak reserved GiB 18.67
+epoch 993 | lr 4.934e-05 | loss 0.0006 | rotation acc 1.0000 | seconds 72.09 | peak reserved GiB 18.67
+epoch 994 | lr 3.625e-05 | loss 0.0006 | rotation acc 1.0000 | seconds 72.07 | peak reserved GiB 18.67
+epoch 995 | lr 2.517e-05 | loss 0.0006 | rotation acc 1.0000 | seconds 72.00 | peak reserved GiB 18.67
+epoch 996 | lr 1.611e-05 | loss 0.0006 | rotation acc 1.0000 | seconds 72.06 | peak reserved GiB 18.67
+epoch 997 | lr 9.063e-06 | loss 0.0006 | rotation acc 1.0000 | seconds 72.03 | peak reserved GiB 18.67
+epoch 998 | lr 4.028e-06 | loss 0.0006 | rotation acc 1.0000 | seconds 71.95 | peak reserved GiB 18.67
+epoch 999 | lr 1.007e-06 | loss 0.0006 | rotation acc 1.0000 | seconds 72.12 | peak reserved GiB 18.67
+epoch 1000 | lr 0 | loss 0.0006 | rotation acc 1.0000 | test rotation acc 0.9583 | seconds 81.68 | peak reserved GiB 18.67
+Saved encoder to checkpoints/r50/rotnet_r50_b1024_lr0p4_seed0/encoder.pt

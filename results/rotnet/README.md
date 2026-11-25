@@ -44,8 +44,9 @@ probe trains only the linear classifier. Single seed, CIFAR-10 test top-1.
 | 20% | 10,000 | 83.74% | 83.26% | +0.48 | 60.48% |
 | 100% | 50,000 | 91.74% | 92.19% | −0.45 | 65.97% |
 
-RotNet initialization helps only at 1%. From 5% onward, fine-tuning and training
-from scratch are within 2 points, too small to separate with one seed per run. The
+RotNet initialization gives a large gain only at 1% (+10.92 points). From 5% onward,
+fine-tuning and training from scratch are within 2 points either way (RotNet leads
+at 8% and 20%, trails at 5%, 10% and 100%), too small to separate with one seed per run. The
 100% frozen probe reproduces the 65.97% anchor score. The frozen probe at 1%
 gets 200 optimizer updates in total, so its low value partly reflects the
 fixed probe recipe.

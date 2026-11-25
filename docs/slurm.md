@@ -16,13 +16,13 @@ smaller GPU, using the live node list, plus the four nodes the team avoids
 `dcc-core-gpu-ferc-s-h36-6`, `dcc-majoroslab-gpu-ferc-a-r32-34`, the list in
 ECE662's `scripts/grid_driver.py`). Each job also refuses a GPU under 22 GiB.
 
-| Step | Command | What it does |
-|---|---|---|
-| 1. Pilot | `bash scripts/slurm/r50_sbatch.sh scripts/slurm/r50_pilot.sbatch` | Capped at 22 GiB so its choices fit every allowed GPU. Finds the largest RotNet sub-batch (`ROTNET_MICRO`) and fine-tune sub-batch (`FT_MICRO`, at most 256), and times one epoch of each stage. Writes only `pilot/` |
-| 2. Pretrain | `bash scripts/slurm/r50_sbatch.sh --export=ALL,MICRO=<ROTNET_MICRO> scripts/slurm/r50_rotnet_pretrain.sbatch` | Tasks 0 and 1: batch 256 (LR 0.1) and 1024 (LR 0.4), 1,000 epochs, encoders every 100 epochs in `checkpoints/r50/<run>/` |
-| 3. Linear eval | `bash scripts/slurm/r50_sbatch.sh --export=ALL,MODE=linear --array=0-20%4 scripts/slurm/r50_downstream.sbatch` | 20 checkpoints plus the random-init control; frozen encoder, 100% labels. The control (task 20) first recalibrates its batch-norm statistics and uses LR 0.001, since its features are ~120x larger than a trained encoder's and LR 0.1 diverges |
-| 4. Fine-tune | `bash scripts/slurm/r50_sbatch.sh --export=ALL,MODE=finetune,FT_MICRO=<FT_MICRO> --array=0-7%4 scripts/slurm/r50_downstream.sbatch` | Both epoch-1,000 encoders at 1, 3, 5, and 10% labels |
-| 5. Collect | `python scripts/collect_r50.py` | Merges `results/r50/*/**/result.json` into `results/r50/linear.csv` and `finetune.csv`; lists missing runs |
+| Step | Command | What it does | Status |
+|---|---|---|---|
+| 1. Pilot | `bash scripts/slurm/r50_sbatch.sh scripts/slurm/r50_pilot.sbatch` | Capped at 22 GiB so its choices fit every allowed GPU. Finds the largest RotNet sub-batch (`ROTNET_MICRO`) and fine-tune sub-batch (`FT_MICRO`, at most 256), and times one epoch of each stage. Writes only `pilot/` | ✅ Done (`pilot/b1024_warmup`) |
+| 2. Pretrain | `bash scripts/slurm/r50_sbatch.sh --export=ALL,MICRO=<ROTNET_MICRO> scripts/slurm/r50_rotnet_pretrain.sbatch` | Tasks 0 and 1: batch 256 (LR 0.1) and 1024 (LR 0.4), 1,000 epochs, encoders every 100 epochs in `checkpoints/r50/<run>/` | ✅ Done, job 62403214 (Nov 23) |
+| 3. Linear eval | `bash scripts/slurm/r50_sbatch.sh --export=ALL,MODE=linear --array=0-20%4 scripts/slurm/r50_downstream.sbatch` | 20 checkpoints plus the random-init control; frozen encoder, 100% labels. The control (task 20) first recalibrates its batch-norm statistics and uses LR 0.001, since its features are ~120x larger than a trained encoder's and LR 0.1 diverges | ✅ Done, 21/21: jobs 62490826 (tasks 0–19) and 62554133 (task 20 rerun, Nov 24) |
+| 4. Fine-tune | `bash scripts/slurm/r50_sbatch.sh --export=ALL,MODE=finetune,FT_MICRO=<FT_MICRO> --array=0-7%4 scripts/slurm/r50_downstream.sbatch` | Both epoch-1,000 encoders at 1, 3, 5, and 10% labels | ✅ Done, 8/8: job 62490827 (Nov 23) |
+| 5. Collect | `python scripts/collect_r50.py` | Merges `results/r50/*/**/result.json` into `results/r50/linear.csv` and `finetune.csv`; lists missing runs | ✅ Done (Nov 25): 21 linear + 8 fine-tune rows, none missing |
 
 - **Fixed sub-batches:** a run splits each batch into sub-batches of a fixed size
   and accumulates their gradients. The gradient matches the full batch; batch norm
